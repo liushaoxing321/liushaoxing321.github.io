@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
   <channel>
-    <title>胡俊的博客</title>
-    <link>http://ioshj.com</link>
-    <description>胡俊的博客</description>
+    <title>刘少星的博客</title>
+    <link>http://liushaoxing321.github.io</link>
+    <description>刘少星的博客</description>
     
       <item>
         <title>IOS 获取网络图片大小</title>
-        <link>http://ioshj.com/2015/12/18/get-cgsize-from-urlstr.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/12/18/get-cgsize-from-urlstr.html</guid>
+        <link>http://liushaoxing321.github.io/2015/12/18/get-cgsize-from-urlstr.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/12/18/get-cgsize-from-urlstr.html</guid>
         <pubDate>Fri, 18 Dec 2015 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;遇到很多次，大家都会去问，在获取服务器url的时候如何获取图片的大小；&lt;/p&gt;
@@ -338,8 +338,8 @@ NSString *const kGifRangeValue = @&quot;bytes=6-9&quot;;
     
       <item>
         <title>如何简单使用极光推送</title>
-        <link>http://ioshj.com/2015/12/17/push-jpush.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/12/17/push-jpush.html</guid>
+        <link>http://liushaoxing321.github.io/2015/12/17/push-jpush.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/12/17/push-jpush.html</guid>
         <pubDate>Thu, 17 Dec 2015 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;做过几次极光推送的iOS端；发现每次都有那么几个坑，希望能对你有帮助&lt;/p&gt;
@@ -380,8 +380,8 @@ NSString *const kGifRangeValue = @&quot;bytes=6-9&quot;;
     
       <item>
         <title>如何简单使用oschina的git上传删除操作</title>
-        <link>http://ioshj.com/2015/12/17/git-oschina.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/12/17/git-oschina.html</guid>
+        <link>http://liushaoxing321.github.io/2015/12/17/git-oschina.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/12/17/git-oschina.html</guid>
         <pubDate>Thu, 17 Dec 2015 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;很多时候大家都懒的使用命令来进行操作；而是使用简单易用的客户端；其实呢！使用命令更方便更快捷&lt;/p&gt;
@@ -416,8 +416,8 @@ git pull origin master  下载 服务器的和本地合并
     
       <item>
         <title>IOS企业开发者帐号如何把ipa包和plist文件托管在oschina</title>
-        <link>http://ioshj.com/2015/12/17/enterprise-ipaandplist-trusteeship-oschina.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/12/17/enterprise-ipaandplist-trusteeship-oschina.html</guid>
+        <link>http://liushaoxing321.github.io/2015/12/17/enterprise-ipaandplist-trusteeship-oschina.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/12/17/enterprise-ipaandplist-trusteeship-oschina.html</guid>
         <pubDate>Thu, 17 Dec 2015 00:00:00 +0800</pubDate>
         <description>&lt;h1 id=&quot;oschinaios&quot;&gt;oschina企业分发iOS步骤&lt;/h1&gt;
 
@@ -504,8 +504,8 @@ itms-services://?action=download-manifest&amp;amp;url=https://git.oschina.net/2x
     
       <item>
         <title>IOS企业开发者帐号自动化打包脚本</title>
-        <link>http://ioshj.com/2015/12/17/enterprise-Archive-shell-mail.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/12/17/enterprise-Archive-shell-mail.html</guid>
+        <link>http://liushaoxing321.github.io/2015/12/17/enterprise-Archive-shell-mail.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/12/17/enterprise-Archive-shell-mail.html</guid>
         <pubDate>Thu, 17 Dec 2015 00:00:00 +0800</pubDate>
         <description>&lt;h1 id=&quot;xcodebuild--xcrun-&quot;&gt;xcodebuild 和 xcrun 简单介绍&lt;/h1&gt;
 &lt;pre&gt;&lt;code&gt;xctool 是FaceBook开源的一个命令行工具，用来替代苹果的xcodebuild工具。
@@ -697,8 +697,8 @@ echo &#39;hi,\n\nThe app is updated recently. Use the safari browser on iOS devi
     
       <item>
         <title>如何使用google and gmail呢</title>
-        <link>http://ioshj.com/2015/12/16/google-gmail.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/12/16/google-gmail.html</guid>
+        <link>http://liushaoxing321.github.io/2015/12/16/google-gmail.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/12/16/google-gmail.html</guid>
         <pubDate>Wed, 16 Dec 2015 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;复制下面的内容到 /etc/hosts 就ok了&lt;/p&gt;
@@ -9410,8 +9410,8 @@ fe80::1%lo0 localhost
     
       <item>
         <title>如何导出推送证书P12</title>
-        <link>http://ioshj.com/2015/12/15/export-P12.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/12/15/export-P12.html</guid>
+        <link>http://liushaoxing321.github.io/2015/12/15/export-P12.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/12/15/export-P12.html</guid>
         <pubDate>Tue, 15 Dec 2015 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;之前导出很多次推送的证书，最后都是误打误撞的成功了；在网上也查了很多相似的例子；都不能解决，知道今天彻底领悟为什么失败的原因；因为缺少私钥。&lt;/p&gt;
@@ -9444,60 +9444,9 @@ fe80::1%lo0 localhost
       </item>
     
       <item>
-        <title>我们得比自己更努力</title>
-        <link>http://ioshj.com/2015/12/14/the-start-of-myblog.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/12/14/the-start-of-myblog.html</guid>
-        <pubDate>Mon, 14 Dec 2015 00:00:00 +0800</pubDate>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;之前一直在Evernote上面记录自己的一些经验，突然发现大家都在blog上记录一些点点滴滴，方便别人查看也方便自己查看；所以找个一个github搭建的blog来copy了一下；效果还算不错&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;选择了与众不同，就要准备好面对自己选择的道路的曲折，以及周围人们的不解。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;我们的家庭乃至这个社会，都已经为我们设计好了一条道路。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;如果你听从父母的建议，或者接受社会舆论的引导，&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;那么你只需要埋头把事情做好，即可过上大家认为不错的日子。&lt;/p&gt;
-
-&lt;p&gt;这条路是大家踩出来的，有方向有同伴，走起来不会太累，但是路途的风景确大同小异。&lt;/p&gt;
-
-&lt;p&gt;有一部分人天生就不喜欢条条框框，以变化为美，以差异为美，那么我们是同一类人。&lt;/p&gt;
-
-&lt;p&gt;我们希望自己去探索生命的意义，我们经常问自己为什么要这么做，&lt;/p&gt;
-
-&lt;p&gt;我们时常在思考，这个世界是不是可以更好。&lt;/p&gt;
-
-&lt;p&gt;但是，选择了与众不同，就要准备好面对自己选择的道路的曲折，以及周围人们的不解。&lt;/p&gt;
-
-&lt;p&gt;我们都在荆棘中探索，希望找到一个属于自己的世外桃源。&lt;/p&gt;
-
-&lt;p&gt;有些人会不断的来打听我们的状况然后提出一些他们认为对的意见，这些人都是好意，&lt;/p&gt;
-
-&lt;p&gt;但是他们却不断在影响我们的决心。&lt;/p&gt;
-
-&lt;p&gt;也许你还在路途中，也许你已经找到一个归属，&lt;/p&gt;
-
-&lt;p&gt;让我们坚持下去的，从来不是别人的看法，&lt;/p&gt;
-
-&lt;p&gt;而是对自己十足的信心。&lt;/p&gt;
-
-&lt;p&gt;差异和个性从来不是我们的最终目标，&lt;/p&gt;
-
-&lt;p&gt;我们只为不断超越和完善自己，&lt;/p&gt;
-</description>
-      </item>
-    
-      <item>
         <title>Vim 常用资源</title>
-        <link>http://ioshj.com/2015/10/04/general-vim-resources.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/10/04/general-vim-resources.html</guid>
+        <link>http://liushaoxing321.github.io/2015/10/04/general-vim-resources.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/10/04/general-vim-resources.html</guid>
         <pubDate>Sun, 04 Oct 2015 00:00:00 +0800</pubDate>
         <description>&lt;h2 id=&quot;section&quot;&gt;在粘贴代码时不启动自动缩进&lt;/h2&gt;
 
@@ -9514,8 +9463,8 @@ fe80::1%lo0 localhost
     
       <item>
         <title>七种常见经典排序算法总结（C++实现）</title>
-        <link>http://ioshj.com/2015/09/07/sort-algorithms.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/09/07/sort-algorithms.html</guid>
+        <link>http://liushaoxing321.github.io/2015/09/07/sort-algorithms.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/09/07/sort-algorithms.html</guid>
         <pubDate>Mon, 07 Sep 2015 00:00:00 +0800</pubDate>
         <description>&lt;p&gt;排序算法是非常常见也非常基础的算法，以至于大部分情况下它们都被集成到了语言的辅助库中。排序算法虽然已经可以很方便的使用，但是理解排序算法可以帮助我们找到解题的方向。&lt;/p&gt;
 
@@ -9864,8 +9813,8 @@ void heap_sort(vector&lt;int&gt; &amp;amp;nums)
     
       <item>
         <title>SEO 常用资源</title>
-        <link>http://ioshj.com/2015/02/13/general-seo-resources.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/02/13/general-seo-resources.html</guid>
+        <link>http://liushaoxing321.github.io/2015/02/13/general-seo-resources.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/02/13/general-seo-resources.html</guid>
         <pubDate>Fri, 13 Feb 2015 00:00:00 +0800</pubDate>
         <description>&lt;h2 id=&quot;section&quot;&gt;小技巧&lt;/h2&gt;
 
@@ -9877,8 +9826,8 @@ void heap_sort(vector&lt;int&gt; &amp;amp;nums)
     
       <item>
         <title>使用Dropzone和七牛云存储来优化博客图床</title>
-        <link>http://ioshj.com/2015/01/10/use-dropzone-and-qiniu-to-store-blog-images.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/01/10/use-dropzone-and-qiniu-to-store-blog-images.html</guid>
+        <link>http://liushaoxing321.github.io/2015/01/10/use-dropzone-and-qiniu-to-store-blog-images.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/01/10/use-dropzone-and-qiniu-to-store-blog-images.html</guid>
         <pubDate>Sat, 10 Jan 2015 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;之前我在用SAE的Storage作为博客图床，但是令我非常不爽的是没有一个很好的上传和获得公共链接的方法。现在总算用Dropzone和七牛把这个问题解决了，下面是我上传图片和获得URL的操作，方法再往下看。&lt;/p&gt;
@@ -9971,8 +9920,8 @@ void heap_sort(vector&lt;int&gt; &amp;amp;nums)
     
       <item>
         <title>Laravel 关联模型由于名称一致性导致的问题</title>
-        <link>http://ioshj.com/2015/01/08/conflict-between-camel-and-snake-in-laravel.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2015/01/08/conflict-between-camel-and-snake-in-laravel.html</guid>
+        <link>http://liushaoxing321.github.io/2015/01/08/conflict-between-camel-and-snake-in-laravel.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2015/01/08/conflict-between-camel-and-snake-in-laravel.html</guid>
         <pubDate>Thu, 08 Jan 2015 00:00:00 +0800</pubDate>
         <description>&lt;h2 id=&quot;section&quot;&gt;1. 定义关联模型&lt;/h2&gt;
 
@@ -10040,8 +9989,8 @@ $my_post-&amp;gt;myPostInfo;
     
       <item>
         <title>Laravel 核心：控制反转（Inversion of Control）和门面模式（Facade）</title>
-        <link>http://ioshj.com/2014/12/06/ioc-and-facade-in-laravel.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2014/12/06/ioc-and-facade-in-laravel.html</guid>
+        <link>http://liushaoxing321.github.io/2014/12/06/ioc-and-facade-in-laravel.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2014/12/06/ioc-and-facade-in-laravel.html</guid>
         <pubDate>Sat, 06 Dec 2014 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;这两个概念对于 Laravel 的使用者来说应该并不陌生，尤其是当你希望扩展或者替换 Laravel 核心库的时候，理解和合理使用它们可以极大提升 Laravel 的战斗力。这里以创建一个自己的 ServiceProvider 为例理解 Inversion of Control 和 Facade 在 Laravel 中的应用。&lt;/p&gt;
@@ -10200,8 +10149,8 @@ use Illuminate\Support\Facades\Facade;&lt;/p&gt;
     
       <item>
         <title>回退Mac上用Brew安装的PHP版本</title>
-        <link>http://ioshj.com/2014/09/26/use-old-version-of-brew-php.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2014/09/26/use-old-version-of-brew-php.html</guid>
+        <link>http://liushaoxing321.github.io/2014/09/26/use-old-version-of-brew-php.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2014/09/26/use-old-version-of-brew-php.html</guid>
         <pubDate>Fri, 26 Sep 2014 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;昨天随手一点&lt;code&gt;brew upadte &amp;amp; brew upgrade&lt;/code&gt;后phpunit出现了各种F，细查下来原来是 php 5.5.17 的一个&lt;a href=&quot;https://bugs.php.net/bug.php?id=67839&quot;&gt;bug fix&lt;/a&gt; 引起的。为了暂时正常使用phpunit，只能回退php的版本。&lt;/p&gt;
@@ -10266,8 +10215,8 @@ php-version 5.5.15
     
       <item>
         <title>Mac 常用资源</title>
-        <link>http://ioshj.com/2014/08/03/general-mac-resources.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2014/08/03/general-mac-resources.html</guid>
+        <link>http://liushaoxing321.github.io/2014/08/03/general-mac-resources.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2014/08/03/general-mac-resources.html</guid>
         <pubDate>Sun, 03 Aug 2014 00:00:00 +0800</pubDate>
         <description>&lt;h2 id=&quot;section&quot;&gt;常用软件&lt;/h2&gt;
 
@@ -10369,8 +10318,8 @@ chmod 600 ~/Desktop/.localized
     
       <item>
         <title>MySQL常用资源</title>
-        <link>http://ioshj.com/2014/05/11/general-mysql-resources.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2014/05/11/general-mysql-resources.html</guid>
+        <link>http://liushaoxing321.github.io/2014/05/11/general-mysql-resources.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2014/05/11/general-mysql-resources.html</guid>
         <pubDate>Sun, 11 May 2014 00:00:00 +0800</pubDate>
         <description>&lt;h2 id=&quot;section&quot;&gt;常用命令&lt;/h2&gt;
 
@@ -10421,8 +10370,8 @@ grant all privileges on *.* to test@&#39;localhost&#39; identified by &#39;test&
     
       <item>
         <title>为PHP设置服务器(Apache/Nginx)环境变量</title>
-        <link>http://ioshj.com/2014/05/04/set-environment-variables-of-server-for-php.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2014/05/04/set-environment-variables-of-server-for-php.html</guid>
+        <link>http://liushaoxing321.github.io/2014/05/04/set-environment-variables-of-server-for-php.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2014/05/04/set-environment-variables-of-server-for-php.html</guid>
         <pubDate>Sun, 04 May 2014 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;设置环境变量常见的地方为区分开发环境/生产环境，或者定义一些数据库的帐号密码&lt;/p&gt;
@@ -10552,8 +10501,8 @@ fastcgi_param MYSQL_PASSWORD &#39;root&#39;;
     
       <item>
         <title>PHP中的魔术方法和魔术常量简介和使用</title>
-        <link>http://ioshj.com/2014/04/27/magic-methods-and-magic-constants-in-php.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2014/04/27/magic-methods-and-magic-constants-in-php.html</guid>
+        <link>http://liushaoxing321.github.io/2014/04/27/magic-methods-and-magic-constants-in-php.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2014/04/27/magic-methods-and-magic-constants-in-php.html</guid>
         <pubDate>Sun, 27 Apr 2014 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;有些东西如果不是经常使用，很容易忘记，比如魔术方法和魔术常量。&lt;/p&gt;
@@ -10803,8 +10752,8 @@ public function __clone(){
     
       <item>
         <title>ROC曲线</title>
-        <link>http://ioshj.com/2014/04/23/roc-curve.html</link>
-        <guid isPermaLink="true">http://ioshj.com/2014/04/23/roc-curve.html</guid>
+        <link>http://liushaoxing321.github.io/2014/04/23/roc-curve.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2014/04/23/roc-curve.html</guid>
         <pubDate>Wed, 23 Apr 2014 00:00:00 +0800</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;最近在读的几篇论文中都使用ROC曲线来分析算法的好坏，这里总结一下这个曲线的一些名词和用法。我这里只列举一些很简单的内容，想要掌握详细的用法请移步参考中维基百科链接，那里讲解非常详细。&lt;/p&gt;
@@ -10836,6 +10785,2136 @@ public function __clone(){
 &lt;h2 id=&quot;section-1&quot;&gt;参考&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/ROC%E6%9B%B2%E7%BA%BF&quot;&gt;Wikipedia: ROC曲线&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>设计模式详解及PHP实现</title>
+        <link>http://liushaoxing321.github.io/2014/04/19/design-patterns-of-php.html</link>
+        <guid isPermaLink="true">http://liushaoxing321.github.io/2014/04/19/design-patterns-of-php.html</guid>
+        <pubDate>Sat, 19 Apr 2014 00:00:00 +0800</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由于工作中需要写一个比较复杂的类库，这个类库需要很高的扩展性、维护性及复用性。为了麻烦现在简单未来，使用设计模式思想来优化类库可以使工作事半功倍，在这里记录一下各种设计模式，总结一下知识，顺便也可以做为自己日后的参考。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;design-patterns&quot;&gt;设计模式（Design Patterns）&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。   –&lt;a href=&quot;http://baike.baidu.com/view/66964.htm&quot;&gt;百度百科&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In software engineering, a design pattern is a general reusable solution to a commonly occurring problem within a given context in software design.   –&lt;a href=&quot;http://en.wikipedia.org/wiki/Software_design_pattern&quot;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在软件开发过程中，一个功能的实现方式多种多样，不同方法的可扩展性、可维护性以及复用性都是不一样的。随着一个人对自己项目代码的要求增加，他会逐渐思考和实践出自己的一套方法或者思想，这种方法或思想决定了他设计出的架构或者编写出的代码的质量优劣。设计模式就属于这样一种经验的积累，是由大量优秀的工程师或者架构师总结和提炼的精华，学习好设计模式等于让我们站在了巨人的肩膀上，从一个高的起点出发，可以避免走很多弯路。&lt;/p&gt;
+
+&lt;p&gt;设计模式的使用一定是根据场景来选择的，而且设计模式的实现方式也不是固定的，我们一定要在理解现有设计模式的基础上，根据自己实际的情况不断实践不断理解。就像所谓的《泡妞大全》，读千万遍都不如实践一次来的实际。&lt;/p&gt;
+
+&lt;p&gt;如果你对设计模式完全没有感觉，那么去好好写一个类库，或者一个简单的MVC框架，这个过程会让你感觉到自己缺失的部分。&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;分类&lt;/h3&gt;
+&lt;p&gt;在《设计模式：可复用面向对象软件的基础》(Design Patterns: Elements of Reusable Object-Oriented Software) 这本书中，作者把设计模式分了三大类：&lt;/p&gt;
+
+&lt;h4 id=&quot;creational-patterns&quot;&gt;创建型模式（Creational patterns）&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Creational_pattern&quot;&gt;创建型模式&lt;/a&gt;是为了解决创建对象时候遇到的问题。因为基本的对象创建方式可能会导致设计上的问题，或增加设计的复杂度。创建型模式有两个主导思想：一是将系统使用的具体类封装起来，二是隐藏这些具体类的实例创建和结合方式。&lt;/p&gt;
+
+&lt;p&gt;最常见的五种创建型模式如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;工厂方法模式（Factory method pattern)&lt;/li&gt;
+  &lt;li&gt;抽象工厂模式（Abstract factory pattern)&lt;/li&gt;
+  &lt;li&gt;单例模式（Singleton pattern）&lt;/li&gt;
+  &lt;li&gt;建造者模式（Builder pattern）&lt;/li&gt;
+  &lt;li&gt;原型模式（Prototype pattern）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;structural-pattern&quot;&gt;结构型模式（Structural pattern）&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Structural_pattern&quot;&gt;结构型模式&lt;/a&gt;是通过定义一个简单的方法来实现和了解实体间关系，从而简化设计。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;适配器模式（Adapter pattern）&lt;/li&gt;
+  &lt;li&gt;桥接模式（Bridge pattern）&lt;/li&gt;
+  &lt;li&gt;合成模式（Composite pattern）&lt;/li&gt;
+  &lt;li&gt;装饰器模式（Decorator pattern）&lt;/li&gt;
+  &lt;li&gt;门面模式（Facade pattern）&lt;/li&gt;
+  &lt;li&gt;代理模式（Proxy pattern）&lt;/li&gt;
+  &lt;li&gt;享元模式（Flyweight Pattern）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;behavioral-pattern&quot;&gt;行为型模式（Behavioral pattern）&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Behavioral_pattern&quot;&gt;行为型模式&lt;/a&gt;用来识别对象之间的常用交流模式并加以实现，使得交流变得更加灵活。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;策略模式（Strategy pattern）&lt;/li&gt;
+  &lt;li&gt;模板方法模式（Template method pattern）&lt;/li&gt;
+  &lt;li&gt;观察者模式（Observer pattern）&lt;/li&gt;
+  &lt;li&gt;迭代器模式（Iterator pattern）&lt;/li&gt;
+  &lt;li&gt;责任链模式（Chain of responsibility pattern）&lt;/li&gt;
+  &lt;li&gt;命令模式（Command pattern）&lt;/li&gt;
+  &lt;li&gt;备忘录模式（Memento pattern）&lt;/li&gt;
+  &lt;li&gt;状态模式（State pattern）&lt;/li&gt;
+  &lt;li&gt;访问者模式（Visitor pattern）&lt;/li&gt;
+  &lt;li&gt;中介者模式（Mediator pattern）&lt;/li&gt;
+  &lt;li&gt;解释器模式（Interpreter pattern）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;关系&lt;/h3&gt;
+&lt;p&gt;这里有一张各个模式关系图，可以在了解各个模式以后梳理一下&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-design-patterns.jpg&quot; alt=&quot;设计模式&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Software_design_pattern&quot;&gt;Wikipedia: Software design pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://baike.baidu.com/view/66964.htm&quot;&gt;百度百科：设计模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;builder-pattern&quot;&gt;建造者模式（Builder pattern）&lt;/h2&gt;
+&lt;p&gt;建造者模式是一种创建型模式，它可以让一个产品的内部表象和和产品的生产过程分离开，从而可以生成具有不同内部表象的产品。&lt;/p&gt;
+
+&lt;h3 id=&quot;builder&quot;&gt;Builder模式中主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象建造者(Builder)角色：定义抽象接口，规范产品各个部分的建造，必须包括建造方法和返回方法。&lt;/li&gt;
+  &lt;li&gt;具体建造者(Concrete)角色：实现抽象建造者接口。应用程序最终根据此角色中实现的业务逻辑创造产品。&lt;/li&gt;
+  &lt;li&gt;导演者(Director)角色：调用具体的建造者角色创造产品。&lt;/li&gt;
+  &lt;li&gt;产品(Product)角色：在导演者的指导下所创建的复杂对象。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;当创建复杂对象的算法应该独立于该对象的组成部分以及它们的装配方式时。&lt;/li&gt;
+  &lt;li&gt;当构造过程必须允许被构造的对象有不同的表示时。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;类图&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-builder-pattern-uml.png&quot; alt=&quot;builder pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php&lt;/p&gt;
+
+&lt;p&gt;class Product { // 产品本身
+    private $_parts; 
+    public function __construct() { $this-&amp;gt;_parts = array(); } 
+    public function add($part) { return array_push($this-&amp;gt;_parts, $part); }
+}&lt;/p&gt;
+
+&lt;p&gt;abstract class Builder { // 建造者抽象类
+    public abstract function buildPart1();
+    public abstract function buildPart2();
+    public abstract function getResult();
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteBuilder extends Builder { // 具体建造者
+    private $_product;
+    public function __construct() { $this-&amp;gt;_product = new Product(); }
+    public function buildPart1() { $this-&amp;gt;_product-&amp;gt;add(“Part1”); } 
+    public function buildPart2() { $this-&amp;gt;_product-&amp;gt;add(“Part2”); }
+    public function getResult() { return $this-&amp;gt;_product; }
+}&lt;/p&gt;
+
+&lt;p&gt;class Director { 
+    public function __construct(Builder $builder) {
+        $builder-&amp;gt;buildPart1();
+        $builder-&amp;gt;buildPart2();
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;// client 
+$buidler = new ConcreteBuilder();
+$director = new Director($buidler);
+$product = $buidler-&amp;gt;getResult();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-7&quot;&gt;优点&lt;/h4&gt;
+&lt;p&gt;建造者模式可以很好的将一个对象的实现与相关的“业务”逻辑分离开来，从而可以在不改变事件逻辑的前提下，使增加(或改变)实现变得非常容易。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-8&quot;&gt;缺点&lt;/h4&gt;
+&lt;p&gt;建造者接口的修改会导致所有执行类的修改。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-9&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Builder_pattern&quot;&gt;Wikipedia: Bulider pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E7%94%9F%E6%88%90%E5%99%A8%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 生成器模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/05/php-design-pattern-2-builder/&quot;&gt;PHP设计模式笔记：使用PHP实现建造者模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;singleton-pattern&quot;&gt;单例模式（Singleton pattern）&lt;/h2&gt;
+&lt;p&gt;抽象工厂模式是一种创建型模式，在应用这个模式时，单例对象的类必须保证只有一个实例存在。&lt;/p&gt;
+
+&lt;p&gt;实现单例模式的思路是：一个类能返回对象一个引用(永远是同一个)和一个获得该实例的方法（必须是静态方法，通常使用getInstance这个名称）；当我们调用这个方法时，如果类持有的引用不为空就返回这个引用，如果类保持的引用为空就创建该类的实例并将实例的引用赋予该类保持的引用；同时我们还将该类的构造函数定义为私有方法，这样其他处的代码就无法通过调用该类的构造函数来实例化该类的对象，只有通过该类提供的静态方法来得到该类的唯一实例。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-10&quot;&gt;单例模式中主要角色&lt;/h3&gt;
+&lt;p&gt;Singleton定义一个getInstance操作，允许客户访问它唯一的实例。&lt;/p&gt;
+
+&lt;p&gt;这个例子也简单，就像我有6个老婆（快醒醒!），她们在喊”老公”的时候都是指我。不管什么时候，喊老公擦地，做饭，洗衣服都是指同一个人，PHP不编写多线程，所以不存在抢占问题，如果换别的语言编写，一定得考虑到抢占问题！老公是不可以边擦地边做饭的！&lt;/p&gt;
+
+&lt;h3 id=&quot;section-11&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;当类只能有一个实例而且客户可以从一个众所周知的访问点访问它时&lt;/li&gt;
+  &lt;li&gt;当这个唯一实例应该是通过子类化可扩展的。并且用户应该无需更改代码就能使用一个扩展的实例时。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-12&quot;&gt;类图&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-singleton-pattern-uml.png&quot; alt=&quot;singleton pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-13&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php 
+public class Singleton {
+    private static $_instance = NULL;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// 私有构造方法 
+private function __construct() {}
+
+public static function getInstance() {
+    if (is_null(self::$_instance)) {
+        self::$_instance = new Singleton();
+    }
+    return self::$_instance;
+}
+
+// 防止克隆实例
+public function __clone(){
+    die(&#39;Clone is not allowed.&#39; . E_USER_ERROR);
+} } ?&amp;gt; ```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在此实例中，Singleton禁止了克隆及外部初始化，使得此类只可以通过&lt;code&gt;getInstance()&lt;/code&gt;方法来获得实例，而这个实例只会在第一次使用时创建，以后每次都获得同一实例。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-14&quot;&gt;优缺点&lt;/h3&gt;
+&lt;p&gt;#### 优点
+- 对唯一实例的受控访问
+- 缩小命名空间 单例模式是对全局变量的一种改进。它避免了那些存储唯一实例的全局变量污染命名空间
+- 允许对操作和表示的精华，单例类可以有子类。而且用这个扩展类的实例来配置一个应用是很容易的。你可以用你所需要的类的实例在运行时刻配置应用。
+- 允许可变数目的实例（多例模式）
+- 比类操作更灵活&lt;/p&gt;
+
+&lt;h4 id=&quot;section-15&quot;&gt;缺点&lt;/h4&gt;
+&lt;p&gt;单例模式在多线程的应用场合下必须小心使用。如果当唯一实例尚未创建时，有两个线程同时调用创建方法，那么它们同时没有检测到唯一实例的存在，从而同时各自创建了一个实例，这样就有两个实例被构造出来，从而违反了单例模式中实例唯一的原则。解决这个问题的办法是为指示类是否已经实例化的变量提供一个互斥锁(虽然这样会降低效率)。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-16&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 单例模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Singleton_pattern&quot;&gt;Wikipedia: Singleton pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/06/php-design-pattern-6-singleton/&quot;&gt;PHP设计模式笔记：使用PHP实现单例模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;adapter-pattern&quot;&gt;适配器模式（Adapter pattern）&lt;/h2&gt;
+&lt;p&gt;适配器模式是一种结构型模式，它将一个类的接口转接成用户所期待的。一个适配使得因接口不兼容而不能在一起工作的类工作在一起，做法是将类别自己的接口包裹在一个已存在的类中。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-17&quot;&gt;适配器模式中主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;目标(Target)角色：定义客户端使用的与特定领域相关的接口，这也就是我们所期待得到的&lt;/li&gt;
+  &lt;li&gt;源(Adaptee)角色：需要进行适配的接口&lt;/li&gt;
+  &lt;li&gt;适配器(Adapter)角色：对Adaptee的接口与Target接口进行适配；适配器是本模式的核心，适配器把源接口转换成目标接口，此角色为具体类&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-18&quot;&gt;适用性&lt;/h3&gt;
+&lt;p&gt;1、你想使用一个已经存在的类，而它的接口不符合你的需求
+2、你想创建一个可以复用的类，该类可以与其他不相关的类或不可预见的类协同工作
+3、你想使用一个已经存在的子类，但是不可能对每一个都进行子类化以匹配它们的接口。对象适配器可以适配它的父类接口（仅限于对象适配器）&lt;/p&gt;
+
+&lt;h3 id=&quot;section-19&quot;&gt;类适配器模式与对象适配器&lt;/h3&gt;
+
+&lt;p&gt;类适配器：Adapter与Adaptee是继承关系&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;用一个具体的Adapter类和Target进行匹配。结果是当我们想要一个匹配一个类以及所有它的子类时，类Adapter将不能胜任工作&lt;/li&gt;
+  &lt;li&gt;使得Adapter可以重定义Adaptee的部分行为，因为Adapter是Adaptee的一个子集&lt;/li&gt;
+  &lt;li&gt;仅仅引入一个对象，并不需要额外的指针以间接取得adaptee&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;对象适配器：Adapter与Adaptee是委托关系&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;允许一个Adapter与多个Adaptee同时工作。Adapter也可以一次给所有的Adaptee添加功能&lt;/li&gt;
+  &lt;li&gt;使用重定义Adaptee的行为比较困难&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-20&quot;&gt;类图&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-21&quot;&gt;类适配器&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-class-adapter-pattern-uml.jpg&quot; alt=&quot;class adapter pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-22&quot;&gt;对象适配器&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-object-adapter-pattern-uml.jpg&quot; alt=&quot;object adapter pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-23&quot;&gt;实例&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-24&quot;&gt;类适配器&lt;/h4&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php&lt;/p&gt;
+
+&lt;p&gt;interface Target {
+    public function sampleMethod1();
+    public function sampleMethod2();
+}&lt;/p&gt;
+
+&lt;p&gt;class Adaptee { // 源角色
+    public function sampleMethod1() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class Adapter extends Adaptee implements Target { // 适配后角色
+    public function sampleMethod2() {} 
+}&lt;/p&gt;
+
+&lt;p&gt;// client
+$adapter = new Adapter();
+$adapter-&amp;gt;sampleMethod1();
+$adapter-&amp;gt;sampleMethod2();&lt;/p&gt;
+
+&lt;p&gt;?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h4 id=&quot;section-25&quot;&gt;对象适配器&lt;/h4&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php&lt;/p&gt;
+
+&lt;p&gt;interface Target {
+    public function sampleMethod1();
+    public function sampleMethod2();
+}&lt;/p&gt;
+
+&lt;p&gt;class Adaptee {
+    public function sampleMethod1() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class Adapter implements Target {
+    private $_adaptee;
+    public function __construct(Adaptee $adaptee) {
+        $this-&amp;gt;_adaptee = $adaptee;
+    }&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function sampleMethod1() { $this-&amp;gt;_adaptee-&amp;gt;sampleMethod1(); }
+ 
+public function sampleMethod2() {} }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;$adaptee = new Adaptee();
+$adapter = new Adapter($adaptee);
+$adapter-&amp;gt;sampleMethod1();
+$adapter-&amp;gt;sampleMethod2();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-26&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Adapter_pattern&quot;&gt;Wikipedia: Adapter pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 适配器模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/07/php-design-pattern-10-adapter/&quot;&gt;PHP设计模式笔记：使用PHP实现适配器模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;bridge-pattern&quot;&gt;桥接模式（Bridge pattern）&lt;/h2&gt;
+&lt;p&gt;桥接模式是一种结构型模式，它是软件设计模式中最复杂的模式之一，它把事物对象和其具体行为、具体特征分离开来，使它们可以各自独立的变化。事物对象仅是一个抽象的概念。如“圆形”、“三角形”归于抽象的“形状”之下，而“画圆”、“画三角”归于实现行为的“画图”类之下，然后由“形状”调用“画图”。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-27&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象化(Abstraction)角色：定义抽象类的接口并保存一个对实现化对象的引用。&lt;/li&gt;
+  &lt;li&gt;修正抽象化(Refined Abstraction)角色：扩展抽象化角色，改变和修正父类对抽象化的定义。&lt;/li&gt;
+  &lt;li&gt;实现化(Implementor)角色：定义实现类的接口，不给出具体的实现。此接口不一定和抽象化角色的接口定义相同，实际上，这两个接口可以完全不同。实现化角色应当只给出底层操作，而抽象化角色应当只给出基于底层操作的更高一层的操作。&lt;/li&gt;
+  &lt;li&gt;具体实现化(Concrete Implementor)角色：实现实现化角色接口并定义它的具体实现。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-28&quot;&gt;适用性&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;如果一个系统需要在构件的抽象化和具体化角色之间增加更多的灵活性，避免在两个层次之间建立静态的联系。&lt;/li&gt;
+  &lt;li&gt;设计要求实现化角色的任何改变不应当影响客户端，或者说实现化角色的改变对客户端是完全透明的。&lt;/li&gt;
+  &lt;li&gt;一个构件有多于一个的抽象化角色和实现化角色，并且系统需要它们之间进行动态的耦合。&lt;/li&gt;
+  &lt;li&gt;虽然在系统中使用继承是没有问题的，但是由于抽象化角色和具体化角色需要独立变化，设计要求需要独立管理这两者。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-29&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-bridge-pattern-uml.jpg&quot; alt=&quot;bridge pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-30&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+abstract class Abstraction { // 抽象化角色，抽象化给出的定义，并保存一个对实现化对象的引用。  &lt;br /&gt;
+    protected $imp; // 对实现化对象的引用
+    public function operation() {
+        $this-&amp;gt;imp-&amp;gt;operationImp();
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;class RefinedAbstraction extends Abstraction { // 修正抽象化角色, 扩展抽象化角色，改变和修正父类对抽象化的定义。
+     public function __construct(Implementor $imp) {
+        $this-&amp;gt;imp = $imp;
+    }
+    public function operation() { $this-&amp;gt;imp-&amp;gt;operationImp(); }
+}&lt;/p&gt;
+
+&lt;p&gt;abstract class Implementor { // 实现化角色, 给出实现化角色的接口，但不给出具体的实现。
+    abstract public function operationImp();
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteImplementorA extends Implementor { // 具体化角色A
+    public function operationImp() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteImplementorB extends Implementor { // 具体化角色B
+    public function operationImp() {}
+}&lt;/p&gt;
+
+&lt;p&gt;// client
+$abstraction = new RefinedAbstraction(new ConcreteImplementorA());
+$abstraction-&amp;gt;operation();&lt;/p&gt;
+
+&lt;p&gt;$abstraction = new RefinedAbstraction(new ConcreteImplementorB());
+$abstraction-&amp;gt;operation();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-31&quot;&gt;优点&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;分离接口及其实现部分, 将Abstraction与Implementor分享有助于降低对实现部分编译时刻的依赖性, 接口与实现分享有助于分层，从而产生更好的结构化系统&lt;/li&gt;
+  &lt;li&gt;提高可扩充性&lt;/li&gt;
+  &lt;li&gt;实现细节对客户透明。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-32&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Bridge_pattern&quot;&gt;Wikipedia: Bridge pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E6%A9%8B%E6%8E%A5%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 桥接模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/06/php-design-pattern-5-bridge/&quot;&gt;PHP设计模式笔记：使用PHP实现桥接模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;composite-pattern&quot;&gt;合成模式（Composite pattern）&lt;/h2&gt;
+&lt;p&gt;合成模式是一种结构型模式，它将对象组合成树形结构以表示”部分-整体”的层次结构。Composite使用户对单个对象和组合对象的使用具有一致性。
+Composite变化的是一个对象的结构和组成。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-33&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象组件(Component)角色：抽象角色，给参加组合的对象规定一个接口。在适当的情况下，实现所有类共有接口的缺省行为。声明一个接口用于访问和管理Component的子组件&lt;/li&gt;
+  &lt;li&gt;树叶组件(Leaf)角色：在组合中表示叶节点对象，叶节点没有子节点。在组合中定义图元对象的行为。&lt;/li&gt;
+  &lt;li&gt;树枝组件(Composite)角色：存储子部件。定义有子部件的那些部件的行为。在Component接口中实现与子部件有关的操作。&lt;/li&gt;
+  &lt;li&gt;客户端(Client)：通过Component接口操纵组合部件的对象&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-34&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;你想表示对象的部分-整体层次结构。&lt;/li&gt;
+  &lt;li&gt;你希望用户忽略组合对象和单个对象的不同，用户将统一地使用组合结构中的所有对象。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-35&quot;&gt;类图&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-36&quot;&gt;安全式合成模式&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-safe-composite-pattern-uml.jpg&quot; alt=&quot;safe composite pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-37&quot;&gt;透明式合成模式&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-transparent-composite-pattern-uml.jpg&quot; alt=&quot;transparent composite pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-38&quot;&gt;实例&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-39&quot;&gt;安全式合成模式&lt;/h4&gt;
+
+&lt;p&gt;在Composite类里面声明所有的用来管理子类对象的方法。这样的做法是安全的。因为树叶类型的对象根本就没有管理子类的方法，因此，如果客户端对树叶类对象使用这些方法时，程序会在编译时期出错。编译通不过，就不会出现运行时期错误。这样的缺点是不够透明，因为树叶类和合成类将具有不同的接口。&lt;/p&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+interface Component {
+    public function getComposite(); //返回自己的实例
+    public function operation();
+}&lt;/p&gt;
+
+&lt;p&gt;class Composite implements Component { // 树枝组件角色
+    private $_composites;
+    public function __construct() { $this-&amp;gt;_composites = array(); }
+    public function getComposite() { return $this; }
+     public function operation() {
+         foreach ($this-&amp;gt;_composites as $composite) {
+            $composite-&amp;gt;operation();
+        }
+     }&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function add(Component $component) {  //聚集管理方法 添加一个子对象
+    $this-&amp;gt;_composites[] = $component;
+}
+ 
+public function remove(Component $component) { // 聚集管理方法 删除一个子对象
+    foreach ($this-&amp;gt;_composites as $key =&amp;gt; $row) {
+        if ($component == $row) { unset($this-&amp;gt;_composites[$key]); return TRUE; }
+    } 
+    return FALSE;
+}
+
+public function getChild() { // 聚集管理方法 返回所有的子对象
+   return $this-&amp;gt;_composites;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;class Leaf implements Component {
+    private $_name; 
+    public function __construct($name) { $this-&amp;gt;_name = $name; }
+    public function operation() {}
+    public function getComposite() {return null;}
+}&lt;/p&gt;
+
+&lt;p&gt;// client
+$leaf1 = new Leaf(‘first’);
+$leaf2 = new Leaf(‘second’);&lt;/p&gt;
+
+&lt;p&gt;$composite = new Composite();
+$composite-&amp;gt;add($leaf1);
+$composite-&amp;gt;add($leaf2);
+$composite-&amp;gt;operation();&lt;/p&gt;
+
+&lt;p&gt;$composite-&amp;gt;remove($leaf2);
+$composite-&amp;gt;operation();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h4 id=&quot;section-40&quot;&gt;透明式合成模式&lt;/h4&gt;
+&lt;p&gt;在Composite类里面声明所有的用来管理子类对象的方法。这样做的是好处是所有的组件类都有相同的接口。在客户端看来，树叶类和合成类对象的区别起码在接口层次上消失了，客户端可以同等的对待所有的对象。这就是透明形式的合成模式，缺点就是不够安全，因为树叶类对象和合成类对象在本质上是有区别的。树叶类对象不可能有下一个层次的对象，因此调用其添加或删除方法就没有意义了，这在编译期间是不会出错的，而只会在运行时期才会出错。&lt;/p&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+interface Component { // 抽象组件角色
+    public function getComposite(); // 返回自己的实例
+    public function operation(); // 示例方法
+    public function add(Component $component); // 聚集管理方法,添加一个子对象
+    public function remove(Component $component); // 聚集管理方法 删除一个子对象
+    public function getChild(); // 聚集管理方法 返回所有的子对象
+}&lt;/p&gt;
+
+&lt;p&gt;class Composite implements Component { // 树枝组件角色
+    private $_composites;
+    public function __construct() { $this-&amp;gt;_composites = array(); } 
+    public function getComposite() { return $this; }
+    public function operation() { // 示例方法，调用各个子对象的operation方法
+        foreach ($this-&amp;gt;_composites as $composite) {
+            $composite-&amp;gt;operation();
+        }
+    }
+    public function add(Component $component) { // 聚集管理方法 添加一个子对象
+        $this-&amp;gt;_composites[] = $component;
+    }
+    public function remove(Component $component) { // 聚集管理方法 删除一个子对象
+        foreach ($this-&amp;gt;_composites as $key =&amp;gt; $row) {
+            if ($component == $row) { unset($this-&amp;gt;_composites[$key]); return TRUE; }
+        } 
+        return FALSE;
+    }
+    public function getChild() { // 聚集管理方法 返回所有的子对象
+       return $this-&amp;gt;_composites;
+    }&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;class Leaf implements Component {
+    private $_name;
+    public function __construct($name) {$this-&amp;gt;_name = $name;}
+    public function operation() {}
+    public function getComposite() { return null; }
+    public function add(Component $component) { return FALSE; }
+    public function remove(Component $component) { return FALSE; }
+    public function getChild() { return null; }
+}&lt;/p&gt;
+
+&lt;p&gt;// client 
+$leaf1 = new Leaf(‘first’);
+$leaf2 = new Leaf(‘second’);&lt;/p&gt;
+
+&lt;p&gt;$composite = new Composite();
+$composite-&amp;gt;add($leaf1);
+$composite-&amp;gt;add($leaf2);
+$composite-&amp;gt;operation();&lt;/p&gt;
+
+&lt;p&gt;$composite-&amp;gt;remove($leaf2);
+$composite-&amp;gt;operation();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-41&quot;&gt;优缺点&lt;/h3&gt;
+&lt;p&gt;#### 优点&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;简化客户代码&lt;/li&gt;
+  &lt;li&gt;使得更容易增加新类型的组件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-42&quot;&gt;缺点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;使你的设计变得更加一般化，容易增加组件也会产生一些问题，那就是很难限制组合中的组件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-43&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Composite_pattern&quot;&gt;Wikipedia: Composite pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/08/php-design-pattern-14-composite/&quot;&gt;PHP设计模式笔记：使用PHP实现合成模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;decorator-pattern&quot;&gt;装饰器模式（Decorator pattern）&lt;/h2&gt;
+&lt;p&gt;装饰器模式是一种结构型模式，它动态的给一个对象添加一些额外的职责。就增加功能来说，Decorator模式相比生成子类更为灵活【GOF95】
+装饰模式是以对客户透明的方式动态地给一个对象附加上更多的职责。这也就是说，客户端并不会觉得对象在装饰前和装饰后有什么不同。装饰模式可以在不使用创造更多子类的情况下，将对象的功能加以扩展。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-44&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象构件(Component)角色：定义一个对象接口，以规范准备接收附加职责的对象，从而可以给这些对象动态地添加职责。&lt;/li&gt;
+  &lt;li&gt;具体构件(Concrete Component)角色：定义一个将要接收附加职责的类。&lt;/li&gt;
+  &lt;li&gt;装饰(Decorator)角色：持有一个指向Component对象的指针，并定义一个与Component接口一致的接口。&lt;/li&gt;
+  &lt;li&gt;具体装饰(Concrete Decorator)角色：负责给构件对象增加附加的职责。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-45&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在不影响其他对象的情况下，以动态、透明的方式给单个对象添加职责。&lt;/li&gt;
+  &lt;li&gt;处理那些可以撤消的职责，即需要动态的给一个对象添加功能并且这些功能是可以动态的撤消的。&lt;/li&gt;
+  &lt;li&gt;当不能彩生成子类的方法进行扩充时。一种情况是，可能有大量独立的扩展，为支持每一种组合将产生大量的子类，使得子类数目呈爆炸性增长。另一种情况可能是因为类定义被隐藏，或类定义不能用于生成子类。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-46&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-decorator-pattern-uml.jpg&quot; alt=&quot;decorator pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-47&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+interface Component {
+    public function operation();
+}&lt;/p&gt;
+
+&lt;p&gt;abstract class Decorator implements Component{ // 装饰角色 
+    protected  $_component;
+    public function __construct(Component $component) {
+        $this-&amp;gt;_component = $component;
+    }
+    public function operation() {
+        $this-&amp;gt;_component-&amp;gt;operation();
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteDecoratorA extends Decorator { // 具体装饰类A
+    public function __construct(Component $component) {
+        parent::__construct($component);
+    } 
+    public function operation() {
+        parent::operation();    //  调用装饰类的操作
+        $this-&amp;gt;addedOperationA();   //  新增加的操作
+    }
+    public function addedOperationA() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteDecoratorB extends Decorator { // 具体装饰类B
+    public function __construct(Component $component) {
+        parent::__construct($component);
+    } 
+    public function operation() {
+        parent::operation();
+        $this-&amp;gt;addedOperationB();
+    }
+    public function addedOperationB() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteComponent implements Component{ 
+    public function operation() {} 
+}&lt;/p&gt;
+
+&lt;p&gt;// clients
+$component = new ConcreteComponent();
+$decoratorA = new ConcreteDecoratorA($component);
+$decoratorB = new ConcreteDecoratorB($decoratorA);&lt;/p&gt;
+
+&lt;p&gt;$decoratorA-&amp;gt;operation();
+$decoratorB-&amp;gt;operation();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-48&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-49&quot;&gt;优点&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;比静态继承更灵活；&lt;/li&gt;
+  &lt;li&gt;避免在层次结构高层的类有太多的特征&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-50&quot;&gt;缺点&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;使用装饰模式会产生比使用继承关系更多的对象。并且这些对象看上去都很想像，从而使得查错变得困难。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-51&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;Wikipedia: Decorator pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E4%BF%AE%E9%A5%B0%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 修饰模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/06/php-design-pattern-4-decorator/&quot;&gt;PHP设计模式笔记：使用PHP实现装饰模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;facade-pattern&quot;&gt;门面模式（Facade pattern）&lt;/h2&gt;
+&lt;p&gt;门面模式是一种结构型模式，它为子系统中的一组接口提供一个一致的界面，Facade模式定义了一个高层次的接口，使得子系统更加容易使用。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-52&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;h4 id=&quot;facade&quot;&gt;门面(Facade)角色&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;此角色将被客户端调用&lt;/li&gt;
+  &lt;li&gt;知道哪些子系统负责处理请求&lt;/li&gt;
+  &lt;li&gt;将用户的请求指派给适当的子系统&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;subsystem&quot;&gt;子系统(subsystem)角色&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;实现子系统的功能&lt;/li&gt;
+  &lt;li&gt;处理由Facade对象指派的任务&lt;/li&gt;
+  &lt;li&gt;没有Facade的相关信息，可以被客户端直接调用&lt;/li&gt;
+  &lt;li&gt;可以同时有一个或多个子系统，每个子系统都不是一个单独的类，而一个类的集合。每个子系统都可以被客户端直接调用，或者被门面角色调用。子系统并知道门面模式的存在，对于子系统而言，门面仅仅是另一个客户端。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-53&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;为一些复杂的子系统提供一组接口&lt;/li&gt;
+  &lt;li&gt;提高子系统的独立性&lt;/li&gt;
+  &lt;li&gt;在层次化结构中，可以使用门面模式定义系统的每一层的接口&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-54&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-facade-pattern-uml.jpg&quot; alt=&quot;facade pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-55&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+class Camera {
+    public function turnOn() {}
+    public function turnOff() {}
+    public function rotate($degrees) {}
+}&lt;/p&gt;
+
+&lt;p&gt;class Light {
+    public function turnOn() {}
+    public function turnOff() {}
+    public function changeBulb() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class Sensor {
+    public function activate() {}
+    public function deactivate() {}
+    public function trigger() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class Alarm {
+    public function activate() {}
+    public function deactivate() {}
+    public function ring() {}
+    public function stopRing() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class SecurityFacade {
+    private $_camera1, $_camera2;
+    private $_light1, $_light2, $_light3;
+    private $_sensor;
+    private $_alarm;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function __construct() {
+    $this-&amp;gt;_camera1 = new Camera();
+    $this-&amp;gt;_camera2 = new Camera();
+ 
+    $this-&amp;gt;_light1 = new Light();
+    $this-&amp;gt;_light2 = new Light();
+    $this-&amp;gt;_light3 = new Light();
+ 
+    $this-&amp;gt;_sensor = new Sensor();
+    $this-&amp;gt;_alarm = new Alarm();
+}
+ 
+public function activate() {
+    $this-&amp;gt;_camera1-&amp;gt;turnOn();
+    $this-&amp;gt;_camera2-&amp;gt;turnOn();
+ 
+    $this-&amp;gt;_light1-&amp;gt;turnOn();
+    $this-&amp;gt;_light2-&amp;gt;turnOn();
+    $this-&amp;gt;_light3-&amp;gt;turnOn();
+ 
+    $this-&amp;gt;_sensor-&amp;gt;activate();
+    $this-&amp;gt;_alarm-&amp;gt;activate();
+}
+ 
+public  function deactivate() {
+    $this-&amp;gt;_camera1-&amp;gt;turnOff();
+    $this-&amp;gt;_camera2-&amp;gt;turnOff();
+ 
+    $this-&amp;gt;_light1-&amp;gt;turnOff();
+    $this-&amp;gt;_light2-&amp;gt;turnOff();
+    $this-&amp;gt;_light3-&amp;gt;turnOff();
+ 
+    $this-&amp;gt;_sensor-&amp;gt;deactivate();
+    $this-&amp;gt;_alarm-&amp;gt;deactivate();
+} }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;//client 
+$security = new SecurityFacade();
+$security-&amp;gt;activate();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-56&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-57&quot;&gt;优点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;它对客户屏蔽了子系统组件，因而减少了客户处理的对象的数目并使得子系统使用起来更加方便&lt;/li&gt;
+  &lt;li&gt;实现了子系统与客户之间的松耦合关系&lt;/li&gt;
+  &lt;li&gt;如果应用需要，它并不限制它们使用子系统类。因此可以在系统易用性与能用性之间加以选择&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-58&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Facade_pattern&quot;&gt;Wikipedia: Facade pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E5%A4%96%E8%A7%80%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 外观模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/06/php-design-pattern-7-facade/&quot;&gt;PHP设计模式笔记：使用PHP实现门面模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;flyweight-pattern&quot;&gt;享元模式（Flyweight Pattern）&lt;/h2&gt;
+&lt;p&gt;享元模式是一种结构型模式，它使用共享物件，用来尽可能减少内存使用量以及分享资讯给尽可能多的相似物件；它适合用于当大量物件只是重复因而导致无法令人接受的使用大量内存。通常物件中的部分状态是可以分享。常见做法是把它们放在外部数据结构，当需要使用时再将它们传递给享元。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-59&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象享元(Flyweight角色：此角色是所有的具体享元类的超类，为这些类规定出需要实现的公共接口。那些需要外蕴状态的操作可以通过调用商业以参数形式传入&lt;/li&gt;
+  &lt;li&gt;具体享元(ConcreteFlyweight角色：实现Flyweight接口，并为内部状态（如果有的话）拉回存储空间。ConcreteFlyweight对象必须是可共享的。它所存储的状态必须是内部的&lt;/li&gt;
+  &lt;li&gt;不共享的具体享元（UnsharedConcreteFlyweight）角色：并非所有的Flyweight子类都需要被共享。Flyweigth使共享成为可能，但它并不强制共享。&lt;/li&gt;
+  &lt;li&gt;享元工厂(FlyweightFactory)角色：负责创建和管理享元角色。本角色必须保证享元对象可能被系统适当地共享&lt;/li&gt;
+  &lt;li&gt;客户端(Client)角色：本角色需要维护一个对所有享元对象的引用。本角色需要自行存储所有享元对象的外部状态&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-60&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一个应用程序使用了大量的对象&lt;/li&gt;
+  &lt;li&gt;完全由于使用大量的对象，造成很大的存储开销&lt;/li&gt;
+  &lt;li&gt;对象的大多数状态都可变为外部状态&lt;/li&gt;
+  &lt;li&gt;如果删除对象的外部状态，那么可以用相对较少的共享对象取代很多组对象&lt;/li&gt;
+  &lt;li&gt;应用程序不依赖于对象标识。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-61&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-flyweight-pattern-uml.jpg&quot; alt=&quot;flyweight pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-62&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+abstract class Flyweight { // 抽象享元角色
+    abstract public function operation($state);
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteFlyweight extends Flyweight { // 具体享元角色
+    private $_intrinsicState = null; 
+    public function __construct($state) {
+        $this-&amp;gt;_intrinsicState = $state;
+    }
+    public function operation($state) {}
+}&lt;/p&gt;
+
+&lt;p&gt;class UnsharedConcreteFlyweight extends Flyweight { // 不共享的具体享元，客户端直接调用
+    private $_intrinsicState = null;
+    public function __construct($state) {
+        $this-&amp;gt;_intrinsicState = $state;
+    }
+    public function operation($state) {}
+}&lt;/p&gt;
+
+&lt;p&gt;class FlyweightFactory { // 享元工厂角色 
+    private $_flyweights;
+    public function __construct() {
+        $this-&amp;gt;_flyweights = array();
+    }
+    public function getFlyweigth($state) {
+        if (isset($this-&amp;gt;_flyweights[$state])) {
+            return $this-&amp;gt;_flyweights[$state];
+        } else {
+            return $this-&amp;gt;_flyweights[$state] = new ConcreteFlyweight($state);
+        }
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;// client
+$flyweightFactory = new FlyweightFactory();
+$flyweight = $flyweightFactory-&amp;gt;getFlyweigth(‘state A’);
+$flyweight-&amp;gt;operation(‘other state A’);&lt;/p&gt;
+
+&lt;p&gt;$flyweight = $flyweightFactory-&amp;gt;getFlyweigth(‘state B’);
+$flyweight-&amp;gt;operation(‘other state B’);&lt;/p&gt;
+
+&lt;p&gt;// 不共享的对象，单独调用
+$uflyweight = new UnsharedConcreteFlyweight(‘state A’);
+$uflyweight-&amp;gt;operation(‘other state A’);
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-63&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-64&quot;&gt;优点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Flyweight模式可以大幅度地降低内存中对象的数量。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-65&quot;&gt;缺点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Flyweight模式使得系统更加复杂&lt;/li&gt;
+  &lt;li&gt;Flyweigth模式将享元对象的状态外部化，而读取外部状态使得运行时间稍微变长&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-66&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Flyweight_pattern&quot;&gt;Wikipedia: Flyweight pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 享元模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/08/php-design-pattern-13-flyweight/&quot;&gt;PHP设计模式笔记：使用PHP实现享元模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;observer-pattern&quot;&gt;观察者模式（Observer pattern）&lt;/h2&gt;
+&lt;p&gt;观察者模式是一种行为型模式，它定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。&lt;/p&gt;
+
+&lt;p&gt;又称为发布-订阅（Publish-Subscribe）模式、模型-视图（Model-View）模式、源-监听（Source-Listener）模式、或从属者(Dependents)模式&lt;/p&gt;
+
+&lt;h3 id=&quot;section-67&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象主题（Subject）角色：主题角色将所有对观察者对象的引用保存在一个集合中，每个主题可以有任意多个观察者。抽象主题提供了增加和删除观察者对象的接口。&lt;/li&gt;
+  &lt;li&gt;抽象观察者（Observer）角色：为所有的具体观察者定义一个接口，在观察的主题发生改变时更新自己。&lt;/li&gt;
+  &lt;li&gt;具体主题（ConcreteSubject）角色：存储相关状态到具体观察者对象，当具体主题的内部状态改变时，给所有登记过的观察者发出通知。具体主题角色通常用一个具体子类实现。&lt;/li&gt;
+  &lt;li&gt;具体观察者（ConcretedObserver）角色：存储一个具体主题对象，存储相关状态，实现抽象观察者角色所要求的更新接口，以使得其自身状态和主题的状态保持一致。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-68&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;当一个抽象模型有两个方面，其中一个方面依赖于另一个方面。&lt;/li&gt;
+  &lt;li&gt;当对一个对象的改变需要同时改变其它对象，而不知道具体有多少个对象待改变。&lt;/li&gt;
+  &lt;li&gt;当一个对象必须通知其它对象，而它又不能假定其它对象是谁。换句话说，你不希望这些对象是紧密耦合的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-69&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-observer-pattern-uml.jpg&quot; alt=&quot;observer pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-70&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+interface Subject { // 抽象主题角色
+    public function attach(Observer $observer); // 增加一个新的观察者对象
+    public function detach(Observer $observer); // 删除一个已注册过的观察者对象
+    public function notifyObservers(); // 通知所有注册过的观察者对象
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteSubject implements Subject { // 具体主题角色
+    private $_observers; 
+    public function __construct() { $this-&amp;gt;_observers = array(); }
+    public function attach(Observer $observer) {
+        return array_push($this-&amp;gt;_observers, $observer);
+    }
+    public function detach(Observer $observer) {
+        $index = array_search($observer, $this-&amp;gt;_observers);
+        if ($index === FALSE || ! array_key_exists($index, $this-&amp;gt;_observers)) {
+            return FALSE;
+        } 
+        unset($this-&amp;gt;_observers[$index]);
+        return TRUE;
+    }
+    public function notifyObservers() {
+        if (!is_array($this-&amp;gt;_observers)) { return FALSE; } 
+        foreach ($this-&amp;gt;_observers as $observer) { 
+            $observer-&amp;gt;update(); 
+        } 
+        return TRUE;
+    }&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;interface Observer { // 抽象观察者角色
+    public function update(); // 更新方法
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteObserver implements Observer {
+    private $_name; 
+    public function __construct($name) { $this-&amp;gt;_name = $name; }
+    public function update() {}
+}&lt;/p&gt;
+
+&lt;p&gt;$subject = new ConcreteSubject();&lt;/p&gt;
+
+&lt;p&gt;/* 添加第一个观察者 */
+$observer1 = new ConcreteObserver(‘Mac’);
+$subject-&amp;gt;attach($observer1);
+$subject-&amp;gt;notifyObservers(); // 主题变化，通知观察者&lt;/p&gt;
+
+&lt;p&gt;/* 添加第二个观察者 */
+$observer2 = new ConcreteObserver(‘Win’);
+$subject-&amp;gt;attach($observer2);
+$subject-&amp;gt;notifyObservers();&lt;/p&gt;
+
+&lt;p&gt;$subject-&amp;gt;detach($observer1);
+$subject-&amp;gt;notifyObservers();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-71&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-72&quot;&gt;优点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;观察者和主题之间的耦合度较小。&lt;/li&gt;
+  &lt;li&gt;支持广播通信。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-73&quot;&gt;缺点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;由于观察者并不知道其它观察者的存在，它可能对改变目标的最终代价一无所知。这可能会引起意外的更新。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-74&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Observer_pattern&quot;&gt;Wikipedia: Observer pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 观察者模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/09/php-design-pattern-17-observer/&quot;&gt;PHP设计模式笔记：使用PHP实现观察者模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;prototype-pattern&quot;&gt;原型模式（Prototype pattern）&lt;/h2&gt;
+&lt;p&gt;原型模式是一种创建者模式，其特点在于通过“复制”一个已经存在的实例来返回新的实例,而不是新建实例。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-75&quot;&gt;原型模式中主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象原型(Prototype)角色：声明一个克隆自己的接口&lt;/li&gt;
+  &lt;li&gt;具体原型(Concrete Prototype)角色：实现一个克隆自己的操作&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-76&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;当一个系统应该独立于它的产品创建、构成和表示时，要使用Prototype模式&lt;/li&gt;
+  &lt;li&gt;当要实例化的类是在运行时刻指定时，例如动态加载&lt;/li&gt;
+  &lt;li&gt;为了避免创建一个与产品类层次平等的工厂类层次时；&lt;/li&gt;
+  &lt;li&gt;当一个类的实例只能有几个不同状态组合中的一种时。建立相应数目的原型并克隆它们可能比每次用合适的状态手工实例化该类更方便一些&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-77&quot;&gt;类图&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-prototype-pattern-uml.jpg&quot; alt=&quot;prototype pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-78&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php&lt;/p&gt;
+
+&lt;p&gt;interface Prototype { public function copy(); }&lt;/p&gt;
+
+&lt;p&gt;class ConcretePrototype implements Prototype{
+    private  $_name;
+    public function __construct($name) { $this-&amp;gt;_name = $name; } 
+    public function copy() { return clone $this;}
+}&lt;/p&gt;
+
+&lt;p&gt;class Demo {}&lt;/p&gt;
+
+&lt;p&gt;// client&lt;/p&gt;
+
+&lt;p&gt;$demo = new Demo();
+$object1 = new ConcretePrototype($demo);
+$object2 = $object1-&amp;gt;copy();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-79&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-80&quot;&gt;优点&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;可以在运行时刻增加和删除产品&lt;/li&gt;
+  &lt;li&gt;可以改变值以指定新对象&lt;/li&gt;
+  &lt;li&gt;可以改变结构以指定新对象&lt;/li&gt;
+  &lt;li&gt;减少子类的构造&lt;/li&gt;
+  &lt;li&gt;用类动态配置应用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-81&quot;&gt;缺点&lt;/h4&gt;
+&lt;p&gt;Prototype模式的最主要缺点就是每一个类必须配备一个克隆方法。而且这个克隆方法需要对类的功能进行通盘考虑，这对全新的类来说不是很难，但对已有的类进行改造时，不一定是件容易的事。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-82&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Prototype_pattern&quot;&gt;Wikipedia: Prototype pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 原型模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/06/php-design-pattern-8-prototype/&quot;&gt;PHP设计模式笔记：使用PHP实现原型模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;proxy-pattern&quot;&gt;代理模式（Proxy pattern）&lt;/h2&gt;
+&lt;p&gt;代理模式是一种结构型模式，它可以为其他对象提供一种代理以控制对这个对象的访问。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-83&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象主题角色(Subject)：它的作用是统一接口。此角色定义了真实主题角色和代理主题角色共用的接口，这样就可以在使用真实主题角色的地方使用代理主题角色。&lt;/li&gt;
+  &lt;li&gt;真实主题角色(RealSubject)：隐藏在代理角色后面的真实对象。&lt;/li&gt;
+  &lt;li&gt;代理主题角色(ProxySubject)：它的作用是代理真实主题，在其内部保留了对真实主题角色的引用。它与真实主题角色都继承自抽象主题角色，保持接口的统一。它可以控制对真实主题的存取，并可能负责创建和删除真实对象。代理角色并不是简单的转发，通常在将调用传递给真实对象之前或之后执行某些操作，当然你也可以只是简单的转发。 与适配器模式相比：适配器模式是为了改变对象的接口，而代理模式并不能改变所代理对象的接口。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-84&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;为一些复杂的子系统提供一组接口&lt;/li&gt;
+  &lt;li&gt;提高子系统的独立性&lt;/li&gt;
+  &lt;li&gt;在层次化结构中，可以使用门面模式定义系统的每一层的接口&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-85&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-proxy-pattern-uml.png&quot; alt=&quot;proxy pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-86&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+abstract class Subject { // 抽象主题角色
+    abstract public function action();
+}&lt;/p&gt;
+
+&lt;p&gt;class RealSubject extends Subject { // 真实主题角色
+    public function __construct() {}
+    public function action() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class ProxySubject extends Subject { // 代理主题角色
+    private $_real_subject = NULL;
+    public function __construct() {}&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function action() {
+    $this-&amp;gt;_beforeAction();
+    if (is_null($this-&amp;gt;_real_subject)) {
+        $this-&amp;gt;_real_subject = new RealSubject();
+    }
+    $this-&amp;gt;_real_subject-&amp;gt;action();
+    $this-&amp;gt;_afterAction();
+}
+private function _beforeAction() {}
+private function _afterAction() {} }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;// client
+$subject = new ProxySubject();
+$subject-&amp;gt;action();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-87&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Proxy_pattern&quot;&gt;Wikipedia: Proxy pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 代理模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2011/10/php-design-pattern-proxy-and-reflection/&quot;&gt;代理模式(Proxy)和PHP的反射功能&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;strategy-pattern&quot;&gt;策略模式（Strategy pattern）&lt;/h2&gt;
+&lt;p&gt;策略模式是一种行为型模式，它定义一系列的算法，把它们一个个封装起来，并且使它们可相互替换。策略模式可以使算法可独立于使用它的客户而变化。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-88&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象策略(Strategy）角色：定义所有支持的算法的公共接口。通常是以一个接口或抽象来实现。Context使用这个接口来调用其ConcreteStrategy定义的算法&lt;/li&gt;
+  &lt;li&gt;具体策略(ConcreteStrategy)角色：以Strategy接口实现某具体算法&lt;/li&gt;
+  &lt;li&gt;环境(Context)角色：持有一个Strategy类的引用，用一个ConcreteStrategy对象来配置&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-89&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;许多相关的类仅仅是行为有异。“策略”提供了一种用多个行为中的一个行为来配置一个类的方法&lt;/li&gt;
+  &lt;li&gt;需要使用一个算法的不同变体。&lt;/li&gt;
+  &lt;li&gt;算法使用客户不应该知道的数据。可使用策略模式以避免暴露复杂的，与算法相关的数据结构&lt;/li&gt;
+  &lt;li&gt;一个类定义了多种行为，并且 这些行为在这个类的操作中以多个形式出现。将相关的条件分支移和它们各自的Strategy类中以代替这些条件语句&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-90&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-strategy-pattern-uml.jpg&quot; alt=&quot;strategy pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-91&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+interface Strategy { // 抽象策略角色，以接口实现
+    public function algorithmInterface(); // 算法接口
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteStrategyA implements Strategy { // 具体策略角色A 
+    public function algorithmInterface() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteStrategyB implements Strategy { // 具体策略角色B 
+    public function algorithmInterface() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteStrategyC implements Strategy { // 具体策略角色C
+    public function algorithmInterface() {}
+}&lt;/p&gt;
+
+&lt;p&gt;class Context { // 环境角色
+    private $_strategy;
+    public function __construct(Strategy $strategy) {
+        $this-&amp;gt;_strategy = $strategy;
+    } 
+    public function contextInterface() {
+        $this-&amp;gt;_strategy-&amp;gt;algorithmInterface();
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;// client
+$strategyA = new ConcreteStrategyA();
+$context = new Context($strategyA);
+$context-&amp;gt;contextInterface();&lt;/p&gt;
+
+&lt;p&gt;$strategyB = new ConcreteStrategyB();
+$context = new Context($strategyB);
+$context-&amp;gt;contextInterface();&lt;/p&gt;
+
+&lt;p&gt;$strategyC = new ConcreteStrategyC();
+$context = new Context($strategyC);
+$context-&amp;gt;contextInterface();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-92&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-93&quot;&gt;优点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;策略模式提供了管理相关的算法族的办法&lt;/li&gt;
+  &lt;li&gt;策略模式提供了可以替换继承关系的办法 将算封闭在独立的Strategy类中使得你可以独立于其Context改变它&lt;/li&gt;
+  &lt;li&gt;使用策略模式可以避免使用多重条件转移语句。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-94&quot;&gt;缺点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;客户必须了解所有的策略 这是策略模式一个潜在的缺点&lt;/li&gt;
+  &lt;li&gt;Strategy和Context之间的通信开销&lt;/li&gt;
+  &lt;li&gt;策略模式会造成很多的策略类&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-95&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Strategy_pattern&quot;&gt;Wikipedia: Strategy pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 策略模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/07/php-design-pattern-12-strategy/&quot;&gt;PHP设计模式笔记：使用PHP实现策略模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;command-pattern&quot;&gt;命令模式（Command pattern）&lt;/h2&gt;
+&lt;p&gt;命令模式是一种行为型模式，它将一个请求封装为一个对象，从而使用你可用不同的请求对客户进行参数化；对请求排队或记录请求日志，以及支持可撤消的操作。命令模式把发出命令的责任和执行命令的责任分割开，委派给不同的对象。&lt;/p&gt;
+
+&lt;p&gt;请求的一方发出请求要求执行一个操作；接收的一方收到请求，并执行操作。命令模式允许请求的一方和接收的一方独立开来，使得请求的一方不必知道接收请求的一方的接口，更不必知道请求是怎么被接收，以及操作是否被执行、何时被执行，以及是怎么被执行的。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-96&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;命令（Command）角色：声明了一个给所有具体命令类的抽象接口。这是一个抽象角色。&lt;/li&gt;
+  &lt;li&gt;具体命令（ConcreteCommand）角色：定义一个接受者和行为之间的弱耦合；实现Execute()方法，负责调用接收考的相应操作。Execute()方法通常叫做执行方法。&lt;/li&gt;
+  &lt;li&gt;客户（Client）角色：创建了一个具体命令(ConcreteCommand)对象并确定其接收者。&lt;/li&gt;
+  &lt;li&gt;请求者（Invoker）角色：负责调用命令对象执行请求，相关的方法叫做行动方法。&lt;/li&gt;
+  &lt;li&gt;接收者（Receiver）角色：负责具体实施和执行一个请求。任何一个类都可以成为接收者，实施和执行请求的方法叫做行动方法。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-97&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象出待执行的动作以参数化对象。Command模式是回调机制的一个面向对象的替代品。&lt;/li&gt;
+  &lt;li&gt;在不同的时刻指定、排列和执行请求。&lt;/li&gt;
+  &lt;li&gt;支持取消操作。&lt;/li&gt;
+  &lt;li&gt;支持修改日志。&lt;/li&gt;
+  &lt;li&gt;用构建在原语操作上的高层操作构造一个系统。Command模式提供了对事务进行建模的方法。Command有一个公共的接口，使得你可以用同一种方式调用所有的事务。同时使用该模式也易于添加新事务以扩展系统。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-98&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-command-pattern-uml.jpg&quot; alt=&quot;command pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-99&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+interface Command { // 命令角色
+    public function execute(); // 执行方法
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteCommand implements Command { // 具体命令方法 
+    private $_receiver; 
+    public function __construct(Receiver $receiver) {
+        $this-&amp;gt;_receiver = $receiver;
+    }
+    public function execute() {
+        $this-&amp;gt;_receiver-&amp;gt;action();
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;class Receiver { // 接收者角色
+    private $_name;
+    public function __construct($name) {
+        $this-&amp;gt;_name = $name;
+    }
+    public function action() { }
+}&lt;/p&gt;
+
+&lt;p&gt;class Invoker { // 请求者角色
+    private $_command; 
+    public function __construct(Command $command) {
+        $this-&amp;gt;_command = $command;
+    }
+    public function action() {
+        $this-&amp;gt;_command-&amp;gt;execute();
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;$receiver = new Receiver(‘hello world’);
+$command = new ConcreteCommand($receiver);
+$invoker = new Invoker($command);
+$invoker-&amp;gt;action();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-100&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-101&quot;&gt;优点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;命令模式把请求一个操作的对象与知道怎么执行一个操作的对象分离开。&lt;/li&gt;
+  &lt;li&gt;命令类与其他任何别的类一样，可以修改和推广。&lt;/li&gt;
+  &lt;li&gt;可以把命令对象聚合在一起，合成为合成命令。&lt;/li&gt;
+  &lt;li&gt;可以很容易的加入新的命令类。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-102&quot;&gt;缺点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;可能会导致某些系统有过多的具体命令类。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-103&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Command_pattern&quot;&gt;Wikipedia: Command pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 命令模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/08/php-design-pattern-15-comman/&quot;&gt;PHP设计模式笔记：使用PHP实现命令模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;interpreter-pattern&quot;&gt;解释器模式（Interpreter pattern）&lt;/h2&gt;
+&lt;p&gt;解释器模式是一种行为型模式，它给定一个语言, 定义它的文法的一种表示，并定义一个解释器, 该解释器使用该表示来解释语言中的句子。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-104&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-interpreter-pattern-uml.jpg&quot; alt=&quot;interpreter pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-105&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+class Expression { 
+    function interpreter($str) { 
+        return $str; 
+    } 
+}&lt;/p&gt;
+
+&lt;p&gt;class ExpressionNum extends Expression { 
+    function interpreter($str) { 
+        switch($str) { 
+            case “0”: return “零”; 
+            case “1”: return “一”; 
+            case “2”: return “二”; 
+            case “3”: return “三”; 
+            case “4”: return “四”; 
+            case “5”: return “五”; 
+            case “6”: return “六”; 
+            case “7”: return “七”; 
+            case “8”: return “八”; 
+            case “9”: return “九”; 
+        } 
+    } 
+}&lt;/p&gt;
+
+&lt;p&gt;class ExpressionCharater extends Expression { 
+    function interpreter($str) { 
+        return strtoupper($str); 
+    } 
+}&lt;/p&gt;
+
+&lt;p&gt;class Interpreter { 
+    function execute($string) { 
+        $expression = null; 
+        for($i = 0;$i&amp;lt;strlen($string);$i++) { 
+            $temp = $string[$i]; 
+            switch(true) { 
+                case is_numeric($temp): $expression = new ExpressionNum(); break; 
+                default: $expression = new ExpressionCharater(); 
+            } 
+            echo $expression-&amp;gt;interpreter($temp); 
+        } 
+    } 
+}&lt;/p&gt;
+
+&lt;p&gt;//client
+$obj = new Interpreter(); 
+$obj-&amp;gt;execute(“12345abc”); 
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-106&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Strategy_pattern&quot;&gt;Wikipedia: Strategy pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.jb51.net/article/27484.htm&quot;&gt;php设计模式 Interpreter(解释器模式)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;iterator-pattern&quot;&gt;迭代器模式（Iterator pattern）&lt;/h2&gt;
+&lt;p&gt;迭代器模式是一种行为型模式，它是一种最简单也最常见的设计模式。它可以让使用者透过特定的接口巡访容器中的每一个元素而不用了解底层的实作。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-107&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在希望利用语言本身的遍历函数便利自定义结构时，例如PHP中的foreach函数&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-108&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+class sample implements Iterator {
+    private $_items ;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function __construct(&amp;amp;$data) {
+    $this-&amp;gt;_items = $data;
+}
+public function current() {
+    return current($this-&amp;gt;_items);
+}
+ 
+public function next() {
+    next($this-&amp;gt;_items);   
+}
+ 
+public function key() {
+    return key($this-&amp;gt;_items);
+}
+ 
+public function rewind() {
+    reset($this-&amp;gt;_items);
+}
+ 
+public function valid() {                                                                              
+    return ($this-&amp;gt;current() !== FALSE);
+} }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;// client
+$data = array(1, 2, 3, 4, 5);
+$sa = new sample($data);
+foreach ($sa AS $key =&amp;gt; $row) {
+    echo $key, ‘ ‘, $row, ‘&lt;br /&gt;’;
+}
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-109&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Iterator_pattern&quot;&gt;Wikipedia: Iterator pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/04/php-iterator-and-yii-cmapiterator/&quot;&gt;PHP中迭代器的简单实现及Yii框架中的迭代器实现&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;mediator-pattern&quot;&gt;中介者模式（Mediator pattern）&lt;/h2&gt;
+&lt;p&gt;中介者模式是一种行为型模式，它包装了一系列对象相互作用的方式，使得这些对象不必相互明显作用，从而使它们可以松散偶合。当某些对象之间的作用发生改变时，不会立即影响其他的一些对象之间的作用，保证这些作用可以彼此独立的变化。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-110&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;中介者(Mediator）角色：定义了对象间相互作用的接口&lt;/li&gt;
+  &lt;li&gt;具体中介者(ConcreteMediator)角色：实现了中介者定义的接口。&lt;/li&gt;
+  &lt;li&gt;具体对象(ConcreteColleague)角色：通过中介者和别的对象进行交互&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-111&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+abstract class Mediator { // 中介者角色
+    abstract public function send($message,$colleague); 
+}&lt;/p&gt;
+
+&lt;p&gt;abstract class Colleague { // 抽象对象
+    private $_mediator = null; 
+    public function __construct($mediator) { 
+        $this-&amp;gt;_mediator = $mediator; 
+    } 
+    public function send($message) { 
+        $this-&amp;gt;_mediator-&amp;gt;send($message,$this); 
+    } 
+    abstract public function notify($message); 
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteMediator extends Mediator { // 具体中介者角色
+    private $_colleague1 = null; 
+    private $_colleague2 = null; 
+    public function send($message,$colleague) { 
+        if($colleague == $this-&amp;gt;_colleague1) { 
+            $this-&amp;gt;_colleague1-&amp;gt;notify($message); 
+        } else { 
+            $this-&amp;gt;_colleague2-&amp;gt;notify($message); 
+        } 
+    }
+    public function set($colleague1,$colleague2) { 
+        $this-&amp;gt;_colleague1 = $colleague1; 
+        $this-&amp;gt;_colleague2 = $colleague2; 
+    } 
+}&lt;/p&gt;
+
+&lt;p&gt;class Colleague1 extends Colleague { // 具体对象角色
+    public function notify($message) { } 
+}&lt;/p&gt;
+
+&lt;p&gt;class Colleague2 extends Colleague { // 具体对象角色
+    public function notify($message) { } 
+}&lt;/p&gt;
+
+&lt;p&gt;// client
+$objMediator = new ConcreteMediator(); 
+$objC1 = new Colleague1($objMediator); 
+$objC2 = new Colleague2($objMediator); 
+$objMediator-&amp;gt;set($objC1,$objC2); 
+$objC1-&amp;gt;send(“to c2 from c1”); 
+$objC2-&amp;gt;send(“to c1 from c2”); 
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-112&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Mediator_pattern&quot;&gt;Wikipedia: Mediator pattern&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;memento-pattern&quot;&gt;备忘录模式（Memento pattern）&lt;/h2&gt;
+&lt;p&gt;备忘录模式是一种行为型模式，它在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样可以在以后把该对象的状态恢复到之前保存的状态。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-113&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;备忘录(Memento)角色：存储发起人(Originator)对象的内部状态，而发起人根据需要决定备忘录存储发起人的哪些内部状态。备忘录可以保护其内容不被发起人(Originator)对象之外的任何对象所读取。&lt;/li&gt;
+  &lt;li&gt;发起人(Originator)角色：创建一个含有当前的内部状态的备忘录对象，使用备忘录对象存储其内部状态&lt;/li&gt;
+  &lt;li&gt;负责人(Caretaker)角色：负责保存备忘录对象，不检查备忘录对象的内容&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-114&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;必须保存一个对象在某一个时刻的（部分）状态，这样以后需要时它才能恢复到先前的状态。&lt;/li&gt;
+  &lt;li&gt;如果一个用接口来让其它对象直接得到这些状态，将会暴露对象的实现细节并破坏对象的封装性。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-115&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-memento-pattern-uml.jpg&quot; alt=&quot;memento pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-116&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+class Originator { // 发起人(Originator)角色
+    private $_state;
+    public function __construct() {
+        $this-&amp;gt;_state = ‘’;
+    }
+    public function createMemento() { // 创建备忘录
+        return new Memento($this-&amp;gt;_state);
+    }
+    public function restoreMemento(Memento $memento) { // 将发起人恢复到备忘录对象记录的状态上
+        $this-&amp;gt;_state = $memento-&amp;gt;getState();
+    }
+    public function setState($state) { $this-&amp;gt;_state = $state; } 
+    public function getState() { return $this-&amp;gt;_state; }
+    public function showState() {}&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;class Memento { // 备忘录(Memento)角色 
+    private $_state;
+    public function __construct($state) {
+        $this-&amp;gt;setState($state);
+    }
+    public function getState() { return $this-&amp;gt;_state; } 
+    public function setState($state) { $this-&amp;gt;_state = $state;}
+}&lt;/p&gt;
+
+&lt;p&gt;class Caretaker { // 负责人(Caretaker)角色 
+    private $_memento;
+    public function getMemento() { return $this-&amp;gt;_memento; } 
+    public function setMemento(Memento $memento) { $this-&amp;gt;_memento = $memento; }
+}&lt;/p&gt;
+
+&lt;p&gt;// client
+/* 创建目标对象 */
+$org = new Originator();
+$org-&amp;gt;setState(‘open’);
+$org-&amp;gt;showState();&lt;/p&gt;
+
+&lt;p&gt;/* 创建备忘 */
+$memento = $org-&amp;gt;createMemento();&lt;/p&gt;
+
+&lt;p&gt;/* 通过Caretaker保存此备忘 */
+$caretaker = new Caretaker();
+$caretaker-&amp;gt;setMemento($memento);&lt;/p&gt;
+
+&lt;p&gt;/* 改变目标对象的状态 */
+$org-&amp;gt;setState(‘close’);
+$org-&amp;gt;showState();&lt;/p&gt;
+
+&lt;p&gt;/* 还原操作 */
+$org-&amp;gt;restoreMemento($caretaker-&amp;gt;getMemento());
+$org-&amp;gt;showState();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-117&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-118&quot;&gt;优点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;有时一些发起人对象的内部信息必须保存在发起人对象以外的地方，但是必须要由发起人对象自己读取。&lt;/li&gt;
+  &lt;li&gt;简化了发起人(Originator)类。发起人(Originator)不再需要管理和保存其内部状态的一个个版本，客户端可以自行管理它们所需要的这些状态的版本&lt;/li&gt;
+  &lt;li&gt;当发起人角色的状态改变的时候，有可能这个状态无效，这时候就可以使用暂时存储起来的备忘录将状态复原。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-119&quot;&gt;缺点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;如果发起人角色的状态需要完整地存储到备忘录对象中，那么在资源消耗上面备忘录对象会很昂贵。&lt;/li&gt;
+  &lt;li&gt;当负责人角色将一个备忘录存储起来的时候，负责人可能并不知道这个状态会占用多大的存储空间，从而无法提醒用户一个操作是否会很昂贵。&lt;/li&gt;
+  &lt;li&gt;当发起人角色的状态改变的时候，有可能这个状态无效。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-120&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Memento_pattern&quot;&gt;Wikipedia: Memento pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/10/php-design-pattern-18-memento/&quot;&gt;PHP设计模式笔记：使用PHP实现备忘录模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;visitor-pattern&quot;&gt;访问者模式（Visitor pattern）&lt;/h2&gt;
+&lt;p&gt;访问者模式是一种行为型模式，访问者表示一个作用于某对象结构中各元素的操作。它可以在不修改各元素类的前提下定义作用于这些元素的新操作，即动态的增加具体访问者角色。&lt;/p&gt;
+
+&lt;p&gt;访问者模式利用了双重分派。先将访问者传入元素对象的Accept方法中，然后元素对象再将自己传入访问者，之后访问者执行元素的相应方法。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-121&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象访问者角色(Visitor)：为该对象结构(ObjectStructure)中的每一个具体元素提供一个访问操作接口。该操作接口的名字和参数标识了 要访问的具体元素角色。这样访问者就可以通过该元素角色的特定接口直接访问它。&lt;/li&gt;
+  &lt;li&gt;具体访问者角色(ConcreteVisitor)：实现抽象访问者角色接口中针对各个具体元素角色声明的操作。&lt;/li&gt;
+  &lt;li&gt;抽象节点（Node）角色：该接口定义一个accept操作接受具体的访问者。&lt;/li&gt;
+  &lt;li&gt;具体节点（Node）角色：实现抽象节点角色中的accept操作。&lt;/li&gt;
+  &lt;li&gt;对象结构角色(ObjectStructure)：这是使用访问者模式必备的角色。它要具备以下特征：能枚举它的元素；可以提供一个高层的接口以允许该访问者访问它的元素；可以是一个复合（组合模式）或是一个集合，如一个列表或一个无序集合(在PHP中我们使用数组代替，因为PHP中的数组本来就是一个可以放置任何类型数据的集合)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-122&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;访问者模式多用在聚集类型多样的情况下。在普通的形式下必须判断每个元素是属于什么类型然后进行相应的操作，从而诞生出冗长的条件转移语句。而访问者模式则可以比较好的解决这个问题。对每个元素统一调用$element-&amp;gt;accept($vistor)即可。&lt;/li&gt;
+  &lt;li&gt;访问者模式多用于被访问的类结构比较稳定的情况下，即不会随便添加子类。访问者模式允许被访问结构添加新的方法。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-123&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-visitor-pattern-uml.jpg&quot; alt=&quot;visitor pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-124&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+interface Visitor { // 抽象访问者角色
+    public function visitConcreteElementA(ConcreteElementA $elementA);
+    public function visitConcreteElementB(concreteElementB $elementB);
+}&lt;/p&gt;
+
+&lt;p&gt;interface Element { // 抽象节点角色
+    public function accept(Visitor $visitor);
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteVisitor1 implements Visitor { // 具体的访问者1
+    public function visitConcreteElementA(ConcreteElementA $elementA) {}
+    public function visitConcreteElementB(ConcreteElementB $elementB) {}
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteVisitor2 implements Visitor { // 具体的访问者2
+    public function visitConcreteElementA(ConcreteElementA $elementA) {}
+    public function visitConcreteElementB(ConcreteElementB $elementB) {}
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteElementA implements Element { // 具体元素A
+    private $_name;
+    public function __construct($name) { $this-&amp;gt;_name = $name; } 
+    public function getName() { return $this-&amp;gt;_name; }
+    public function accept(Visitor $visitor) { // 接受访问者调用它针对该元素的新方法
+        $visitor-&amp;gt;visitConcreteElementA($this);
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteElementB implements Element { // 具体元素B
+    private $_name; 
+    public function __construct($name) { $this-&amp;gt;_name = $name;}
+    public function getName() { return $this-&amp;gt;_name; }
+    public function accept(Visitor $visitor) { // 接受访问者调用它针对该元素的新方法
+        $visitor-&amp;gt;visitConcreteElementB($this);
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;class ObjectStructure { // 对象结构 即元素的集合
+    private $_collection; 
+    public function __construct() { $this-&amp;gt;_collection = array(); } 
+    public function attach(Element $element) {
+        return array_push($this-&amp;gt;_collection, $element);
+    }
+    public function detach(Element $element) {
+        $index = array_search($element, $this-&amp;gt;_collection);
+        if ($index !== FALSE) {
+            unset($this-&amp;gt;_collection[$index]);
+        }
+        return $index;
+    }
+    public function accept(Visitor $visitor) {
+        foreach ($this-&amp;gt;_collection as $element) {
+            $element-&amp;gt;accept($visitor);
+        }
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;// client
+$elementA = new ConcreteElementA(“ElementA”);
+$elementB = new ConcreteElementB(“ElementB”);
+$elementA2 = new ConcreteElementB(“ElementA2”);
+$visitor1 = new ConcreteVisitor1();
+$visitor2 = new ConcreteVisitor2();&lt;/p&gt;
+
+&lt;p&gt;$os = new ObjectStructure();
+$os-&amp;gt;attach($elementA);
+$os-&amp;gt;attach($elementB);
+$os-&amp;gt;attach($elementA2);
+$os-&amp;gt;detach($elementA);
+$os-&amp;gt;accept($visitor1);
+$os-&amp;gt;accept($visitor2);
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-125&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-126&quot;&gt;优点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;访问者模式使得增加新的操作变得很容易。使用访问者模式可以在不用修改具体元素类的情况下增加新的操作。它主要是通过元素类的accept方法来接受一个新的visitor对象来实现的。如果一些操作依赖于一个复杂的结构对象的话，那么一般而言，增加新的操作会很复杂。而使用访问者模式，增加新的操作就意味着增加一个新的访问者类，因此，变得很容易。&lt;/li&gt;
+  &lt;li&gt;访问者模式将有关的行为集中到一个访问者对象中，而不是分散到一个个的节点类中。&lt;/li&gt;
+  &lt;li&gt;访问者模式可以跨过几个类的等级结构访问属于不同的等级结构的成员类。迭代子只能访问属于同一个类型等级结构的成员对象，而不能访问属于不同等级结构的对象。访问者模式可以做到这一点。&lt;/li&gt;
+  &lt;li&gt;积累状态。每一个单独的访问者对象都集中了相关的行为，从而也就可以在访问的过程中将执行操作的状态积累在自己内部，而不是分散到很多的节点对象中。这是有益于系统维护的优点。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-127&quot;&gt;缺点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;增加新的节点类变得很困难。每增加一个新的节点都意味着要在抽象访问者角色中增加一个新的抽象操作，并在每一个具体访问者类中增加相应的具体操作。&lt;/li&gt;
+  &lt;li&gt;破坏封装。访问者模式要求访问者对象访问并调用每一个节点对象的操作，这隐含了一个对所有节点对象的要求：它们必须暴露一些自己的操作和内部状态。不然，访问者的访问就变得没有意义。由于访问者对象自己会积累访问操作所需的状态，从而使这些状态不再存储在节点对象中，这也是破坏封装的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-128&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Visitor_pattern&quot;&gt;Wikipedia: Visitor pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 访问者模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/05/php-design-pattern-1-visitor/&quot;&gt;PHP设计模式笔记：使用PHP实现访问者模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;strategy-pattern-1&quot;&gt;策略模式（Strategy pattern）&lt;/h2&gt;
+&lt;p&gt;状态模式是一种行为型模式，它允许一个对象在其内部状态改变时改变它的行为。对象看起来似乎修改了它的类，状态模式变化的位置在于对象的状态。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-129&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象状态(State)角色：定义一个接口，用以封装环境对象的一个特定的状态所对应的行为&lt;/li&gt;
+  &lt;li&gt;具体状态（ConcreteState)角色：每一个具体状态类都实现了环境（Context）的一个状态所对应的行为&lt;/li&gt;
+  &lt;li&gt;环境(Context)角色：定义客户端所感兴趣的接口，并且保留一个具体状态类的实例。这个具体状态类的实例给出此环境对象的现有状态&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-130&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一个对象的行为取决于它的状态，并且它必须在运行时刻根据状态改变它的行为&lt;/li&gt;
+  &lt;li&gt;一个操作中含有庞大的多分支的条件语句，且这些分支依赖于该对象的状态。这个状态通常用一个或多个枚举常量表示。通常，有多个操作包含这一相同的条件结构。State模式模式将每一个条件分支放入一个独立的类中。这使得你可以要所对象自身的情况将对象的状态作为一个对象，这一对象可以不依赖于其他对象而独立变化&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-131&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-state-pattern-uml.jpg&quot; alt=&quot;state pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-132&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+interface State { // 抽象状态角色
+    public function handle(Context $context); // 方法示例
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteStateA implements State { // 具体状态角色A
+    private static $_instance = null;
+    private function __construct() {}
+    public static function getInstance() { // 静态工厂方法，返还此类的唯一实例
+        if (is_null(self::$_instance)) {
+            self::$_instance = new ConcreteStateA();
+        }
+        return self::$_instance;
+    }&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function handle(Context $context) {
+    $context-&amp;gt;setState(ConcreteStateB::getInstance());
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteStateB implements State { // 具体状态角色B
+    private static $_instance = null;
+    private function __construct() {}
+    public static function getInstance() {
+        if (is_null(self::$_instance)) {
+            self::$_instance = new ConcreteStateB();
+        }
+        return self::$_instance;
+    }&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function handle(Context $context) {
+    $context-&amp;gt;setState(ConcreteStateA::getInstance());
+} }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;class Context { // 环境角色 
+    private $_state;
+    public function __construct() { // 默认为stateA
+        $this-&amp;gt;_state = ConcreteStateA::getInstance();
+    }
+    public function setState(State $state) {
+        $this-&amp;gt;_state = $state;
+    }
+    public function request() {
+        $this-&amp;gt;_state-&amp;gt;handle($this);
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;// client
+$context = new Context();
+$context-&amp;gt;request();
+$context-&amp;gt;request();
+$context-&amp;gt;request();
+$context-&amp;gt;request();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-133&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-134&quot;&gt;优点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;它将与特定状态相关的行为局部化&lt;/li&gt;
+  &lt;li&gt;它使得状态转换显示化&lt;/li&gt;
+  &lt;li&gt;State对象可被共享&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-135&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/State_pattern&quot;&gt;Wikipedia: State pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/07/php-design-pattern-11-state/&quot;&gt;PHP设计模式笔记：使用PHP实现状态模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;abstract-factory-pattern&quot;&gt;抽象工厂模式（Abstract Factory pattern）&lt;/h2&gt;
+&lt;p&gt;抽象工厂模式是一种创建型模式，它提供了一种方式，可以将一组具有同一主题的单独的工厂封装起来。它的实质是“提供接口，创建一系列相关或独立的对象，而不指定这些对象的具体类”。&lt;/p&gt;
+
+&lt;p&gt;抽象工厂模式提供一个创建一系统相关或相互依赖对象的接口，而无需指定它们具体的类。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-136&quot;&gt;抽象工厂模式中主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象工厂(Abstract Factory)角色：它声明创建抽象产品对象的接口&lt;/li&gt;
+  &lt;li&gt;具体工厂(Concrete Factory)角色：实现创建产品对象的操作&lt;/li&gt;
+  &lt;li&gt;抽象产品(Abstract Product)角色：声明一类产品的接口&lt;/li&gt;
+  &lt;li&gt;具体产品(Concrete Product)角色：实现抽象产品角色所定义的接口&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个和工厂方法模式类似，我们不再只要一个汉堡，可能是4个汉堡2个鸡翅，我们还是对服务员说，服务员属于具体工厂，抽象产品就是麦当劳可卖的食物，具体产品是我们跟服务员要的食物。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-137&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一个系统要独立于它的产品的创建、组合和表示时。&lt;/li&gt;
+  &lt;li&gt;一个系统要由多个产品系列中的一个来配置时。&lt;/li&gt;
+  &lt;li&gt;需要强调一系列相关的产品对象的设计以便进行联合使用时。&lt;/li&gt;
+  &lt;li&gt;提供一个产品类库，而只想显示它们的接口而不是实现时。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-138&quot;&gt;类图&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-abstract-pattern-uml.png&quot; alt=&quot;abstract pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-139&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+class Button{}
+class Border{}
+class MacButton extends Button{}
+class WinButton extends Button{}
+class MacBorder extends Border{}
+class WinBorder extends Border{}&lt;/p&gt;
+
+&lt;p&gt;interface AbstractFactory {
+    public function CreateButton();
+    public function CreateBorder();
+}&lt;/p&gt;
+
+&lt;p&gt;class MacFactory implements AbstractFactory{
+    public function CreateButton(){ return new MacButton(); }
+    public function CreateBorder(){ return new MacBorder(); }
+}
+class WinFactory implements AbstractFactory{
+    public function CreateButton(){ return new WinButton(); }
+    public function CreateBorder(){ return new WinBorder(); }
+}
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;p&gt;在这里例子中，工厂类实现了一组工厂方法。如果要增加新的功能，可以增加新的接口，让新的工厂类实现这个接口即可，而无需修改现有的工厂类。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-140&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-141&quot;&gt;优点&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;分离了具体的类&lt;/li&gt;
+  &lt;li&gt;使增加或替换产品族变得容易&lt;/li&gt;
+  &lt;li&gt;有利于产品的一致性&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-142&quot;&gt;缺点&lt;/h4&gt;
+&lt;p&gt;难以支持新种类的产品。这是因为AbstractFactory接口确定了可以被创建的产品集合。支持新各类的产品就需要扩展访工厂接口，从而导致AbstractFactory类及其所有子类的改变。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-143&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 抽象工厂&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Abstract_factory_pattern&quot;&gt;Wikipedia: Abstract factory pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/05/php-design-pattern-3-abstract-factory/&quot;&gt;PHP设计模式笔记：使用PHP实现抽象工厂模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;factory-method-pattern&quot;&gt;工厂方法模式（Factory method pattern）&lt;/h2&gt;
+&lt;p&gt;工厂方法模式是一种创建型模式，这种模式使用“工厂”概念来完成对象的创建而不用具体说明这个对象。&lt;/p&gt;
+
+&lt;p&gt;在面向对象程序设计中，工厂通常是一个用来创建其他对象的对象。工厂是构造方法的抽象，用来实现不同的分配方案。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-144&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象产品(Product)角色：具体产品对象共有的父类或者接口。&lt;/li&gt;
+  &lt;li&gt;具体产品(Concrete Product)角色：实现抽象产品角色所定义的接口&lt;/li&gt;
+  &lt;li&gt;抽象工厂(Creator)角色：它声明了工厂方法，该方法返回Product对象&lt;/li&gt;
+  &lt;li&gt;具体工厂(Concrete Creator)：实现抽象工厂接口&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;工厂方法模式就像我们去麦当劳买汉堡，我们只要找到服务员，让他帮我们拿来汉堡即可。其中具体某个服务员就像具体工厂，他继承了服务员应有的服务。汉堡在到手以前属于抽象产品，而我们拿到的汉堡就属于具体产品。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-145&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;创建对象需要大量重复的代码（例如创建一个MySQL操作类，需要配置很多选项，这些都可以在工厂方法中进行）。&lt;/li&gt;
+  &lt;li&gt;创建对象需要访问某些信息，而这些信息不应该包含在复合类中。&lt;/li&gt;
+  &lt;li&gt;创建对象的生命周期必须集中管理，以保证在整个程序中具有一致的行为。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-146&quot;&gt;类图&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-factory-method-uml.png&quot; alt=&quot;factory method&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-147&quot;&gt;实例&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-148&quot;&gt;普通工厂方法&lt;/h4&gt;
+&lt;p&gt;下面的例子是工厂方法模式的应用，我们要创建两种风格的按钮，只需用不同的工厂方法获得相应按钮类即可。&lt;/p&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php&lt;/p&gt;
+
+&lt;p&gt;class Button{/* …&lt;em&gt;/}
+class WinButton extends Button{/&lt;/em&gt; …&lt;em&gt;/}
+class MacButton extends Button{/&lt;/em&gt; …*/}&lt;/p&gt;
+
+&lt;p&gt;interface ButtonFactory{
+    public function createButton($type);
+}&lt;/p&gt;
+
+&lt;p&gt;class MyButtonFactory implements ButtonFactory{
+    // 实现工厂方法
+    public function createButton($type){
+        switch($type){
+            case ‘Mac’:
+                return new MacButton();
+            case ‘Win’:
+                return new WinButton();
+        }
+    }
+}
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;p&gt;上例中的&lt;code&gt;createButton()&lt;/code&gt;方法即所谓的工厂方法，它所在的类仅仅是这个方法的载体。工厂方法的核心功能是创建类并返回，这个方法可以产生一个类，也可以产生多种类。这个方法本身的载体也并不局限，将其设置为静态方法也是可以的，这个根据自己的情况而定。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-149&quot;&gt;优缺点&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-150&quot;&gt;优点&lt;/h4&gt;
+&lt;p&gt;工厂方法模式可以允许系统在不修改工厂角色的情况下引进新产品。&lt;/p&gt;
+
+&lt;h4 id=&quot;section-151&quot;&gt;缺点&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;重构已经存在的类会破坏客户端代码。&lt;/li&gt;
+  &lt;li&gt;如果工厂方法所在类的构造函数为私有，则工厂方法无法继续扩展，或者必须实现工厂方法所在类的全部依赖方法。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-152&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Factory_method_pattern&quot;&gt;Wikipedia: Factory method pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 工厂方法模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/07/php-design-pattern-9-factory-method/&quot;&gt;PHP设计模式笔记：使用PHP实现工厂模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;template-method-pattern&quot;&gt;模板方法模式（Template method pattern）&lt;/h2&gt;
+&lt;p&gt;模板方法模式模式是一种行为型模式，它定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。Template Method 使得子类可以在不改变一个算法的结构的情况下重定义该算法的某些特定的步骤。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-153&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;h4 id=&quot;abstractclass&quot;&gt;抽象模板(AbstractClass)角色&lt;/h4&gt;
+&lt;p&gt;定义一个或多个抽象方法让子类实现。这些抽象方法叫做基本操作，它们是顶级逻辑的组成部分。&lt;/p&gt;
+
+&lt;p&gt;定义一个模板方法。这个模板方法一般是一个具体方法，它给出顶级逻辑的骨架，而逻辑的组成步骤在对应的抽象操作中，这些操作将会推迟到子类中实现。同时，顶层逻辑也可以调用具体的实现方法&lt;/p&gt;
+
+&lt;h5 id=&quot;concrteclass&quot;&gt;具体模板(ConcrteClass)角色&lt;/h5&gt;
+&lt;p&gt;实现父类的一个或多个抽象方法，作为顶层逻辑的组成而存在。&lt;/p&gt;
+
+&lt;p&gt;每个抽象模板可以有多个具体模板与之对应，而每个具体模板有其自己对抽象方法（也就是顶层逻辑的组成部分）的实现，从而使得顶层逻辑的实现各不相同。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-154&quot;&gt;适用性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一次性实现一个算法的不变的部分，并将可变的行为留给子类来实现。&lt;/li&gt;
+  &lt;li&gt;各子类中公共的行为应被提取出来并集中到一个公共父类中以避免代码重复。&lt;/li&gt;
+  &lt;li&gt;控制子类扩展。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-155&quot;&gt;类图&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tech-template-method-pattern-uml.jpg&quot; alt=&quot;template method pattern&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-156&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+abstract class AbstractClass { // 抽象模板角色
+    public function templateMethod() { // 模板方法 调用基本方法组装顶层逻辑
+        $this-&amp;gt;primitiveOperation1();
+        $this-&amp;gt;primitiveOperation2();
+    }
+    abstract protected function primitiveOperation1(); // 基本方法
+    abstract protected function primitiveOperation2();
+}&lt;/p&gt;
+
+&lt;p&gt;class ConcreteClass extends AbstractClass { // 具体模板角色
+    protected function primitiveOperation1() {}
+    protected function primitiveOperation2(){}&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;$class = new ConcreteClass();
+$class-&amp;gt;templateMethod();
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-157&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Template_method_pattern&quot;&gt;Wikipedia: Template method pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 模板方法模式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.phppan.com/2010/09/php-design-pattern-16-template-method/&quot;&gt;PHP设计模式笔记：使用PHP实现模板方法模式&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;chain-of-responsibility-pattern&quot;&gt;责任链模式（Chain of responsibility pattern）&lt;/h2&gt;
+&lt;p&gt;责任链模式是一种行为型模式，它包含了一些命令对象和一系列的处理对象。每一个处理对象决定它能处理哪些命令对象，它也知道如何将它不能处理的命令对象传递给该链中的下一个处理对象。该模式还描述了往该处理链的末尾添加新的处理对象的方法。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-158&quot;&gt;主要角色&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;抽象责任(Responsibility）角色：定义所有责任支持的公共方法。&lt;/li&gt;
+  &lt;li&gt;具体责任(Concrete Responsibility)角色：以抽象责任接口实现的具体责任&lt;/li&gt;
+  &lt;li&gt;责任链(Chain of responsibility)角色：设定责任的调用规则&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-159&quot;&gt;实例&lt;/h3&gt;
+
+&lt;p&gt;```php
+&amp;lt;?php
+abstract class Responsibility { // 抽象责任角色
+    protected $next; // 下一个责任角色&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public function setNext(Responsibility $l) {
+    $this-&amp;gt;next = $l;
+    return $this;
+}
+abstract public function operate(); // 操作方法 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;class ResponsibilityA extends Responsibility {
+    public function __construct() {}
+    public function operate(){
+        if (false == is_null($this-&amp;gt;next)) {
+            $this-&amp;gt;next-&amp;gt;operate();
+        }
+    };
+}&lt;/p&gt;
+
+&lt;p&gt;class ResponsibilityB extends Responsibility {
+    public function __construct() {}
+    public function operate(){
+        if (false == is_null($this-&amp;gt;next)) {
+            $this-&amp;gt;next-&amp;gt;operate();
+        }
+    };
+}&lt;/p&gt;
+
+&lt;p&gt;$res_a = new ResponsibilityA();
+$res_b = new ResponsibilityB();
+$res_a-&amp;gt;setNext($res_b);
+?&amp;gt;
+```&lt;/p&gt;
+
+&lt;h3 id=&quot;section-160&quot;&gt;参考&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Chain_of_responsibility_pattern&quot;&gt;Wikipedia: Chain-of-responsibility pattern&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zh.wikipedia.org/wiki/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F&quot;&gt;Wikipedia: 责任链模式&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
       </item>

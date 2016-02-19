@@ -22,6 +22,7 @@ rss_url: /pages/atom.xml
 avatar: https://raw.githubusercontent.com/931743010/931743010.github.io/master/site-avatar.png
 favicon: https://raw.githubusercontent.com/931743010/931743010.github.io/master/site-favicon.ico
 
+
 # google analytics 设置
 ga:
   id: UA-54767140-1
