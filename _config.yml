@@ -1,0 +1,32 @@
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+pygments: true
+
+kramdown:
+  input: GFM
+
+# 作者信息
+author: 
+  name: 胡俊
+  email: jia85860161@163.com
+  link: http://ioshj.com
+  github: http://github.com/liushaoxing321
+
+# 站点信息
+title: 胡俊的博客 
+description: 胡俊的博客
+url: http://ioshj.com
+rss_url: /pages/atom.xml
+
+# avatar头像及Favicon
+avatar: https://raw.githubusercontent.com/931743010/931743010.github.io/master/site-avatar.png
+favicon: https://raw.githubusercontent.com/931743010/931743010.github.io/master/site-favicon.ico
+
+# google analytics 设置
+ga:
+  id: UA-54767140-1
+  url: yansu.org
+
+# disqus 设置
+disqus:
+  shortname: hujun-zh
