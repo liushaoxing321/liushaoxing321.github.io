@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>学习Python的ABC模块</title>
+  <meta name="description" content="1.abc模块作用Python本身不提供抽象类和接口机制，要想实现抽象类，可以借助abc模块。ABC是Abstract Base Class的缩写。">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="学习Python的ABC模块">
+  <meta name="twitter:description" content="1.abc模块作用Python本身不提供抽象类和接口机制，要想实现抽象类，可以借助abc模块。ABC是Abstract Base Class的缩写。">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="学习Python的ABC模块">
+  <meta property="og:description" content="1.abc模块作用Python本身不提供抽象类和接口机制，要想实现抽象类，可以借助abc模块。ABC是Abstract Base Class的缩写。">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2013/06/learn-python-abc-module/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星'S Home" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星'S Home 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星'S Home logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星'S Home" class="blog-button">刘少星'S Home</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">人一切的痛苦本质上都是对自己无能的愤怒</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名资深的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2013-06-09 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2013-06-09</time> &#8226; <span class="post-meta__tags tags">Python</span>
+    </div>
+    <h1 class="post-title">学习Python的ABC模块</h1>
+  </header>
+
+  <section class="post">
+    <h3>1.abc模块作用</h3>
+
+<p>Python本身不提供抽象类和接口机制，要想实现抽象类，可以借助abc模块。ABC是Abstract Base Class的缩写。</p>
+
+<h3>2.模块中的类和函数</h3>
+
+<h4>abc.ABCMeta</h4>
+
+<p>这是用来生成抽象基础类的元类。由它生成的类可以被直接继承。</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">from abc import ABCMeta
+
+class MyABC:
+    __metaclass__ = ABCMeta
+
+MyABC.register(tuple)
+
+assert issubclass(tuple, MyABC)
+assert isinstance((), MyABC)
+</code></pre></figure>
+<p>上面这个例子中，首先生成了一个MyABC的抽象基础类，然后再将tuple变成它的虚拟子类。然后通过issubclass或者isinstance都可以判断出tuple是不是出于MyABC类。</p>
+
+<p>另外，也可以通过复写<code>__subclasshook__(subclass)</code>来实现相同功能，它必须是classmethod</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">class Foo(object):
+    def __getitem__(self, index):
+        ...
+    def __len__(self):
+        ...
+    def get_iterator(self):
+        return iter(self)
+
+class MyIterable:
+    __metaclass__ = ABCMeta
+
+    @abstractmethod
+    def __iter__(self):
+        while False:
+            yield None
+
+    def get_iterator(self):
+        return self.__iter__()
+
+    @classmethod
+    def __subclasshook__(cls, C):
+        if cls is MyIterable:
+            if any(&quot;__iter__&quot; in B.__dict__ for B in C.__mro__):
+                return True
+        return NotImplemented
+
+MyIterable.register(Foo)
+</code></pre></figure>
+<h4>abc.abstractmethod(function)</h4>
+
+<p>表明抽象方法的生成器</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">class C:
+    __metaclass__ = ABCMeta
+    @abstractmethod
+    def my_abstract_method(self, ...):
+        ...
+</code></pre></figure>
+<h4>abc.abstractproperty([fget[,fset[,fdel[,doc]]]])</h4>
+
+<p>表明一个抽象属性</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">class C:
+    __metaclass__ = ABCMeta
+    @abstractproperty
+    def my_abstract_property(self):
+        ...
+</code></pre></figure>
+<p>上例只是只读属性，如果是读写属性，可以如下：</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">class C:
+    __metaclass__ = ABCMeta
+    def getx(self): ...
+    def setx(self, value): ...
+    x = abstractproperty(getx, setx)
+</code></pre></figure>
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/06/learn-python-stevedore-module-in-detail/" title="link to 学习Python动态扩展包stevedore">学习Python动态扩展包stevedore</a></h2>
+       <p class="excerpt">1.stevedore作用Python导入动态代码很容易，例如通过在运行时导入扩展插件来扩展你的应用。许多应用通过__import__或importlib实现了这个功能。stevedore的功能就是管理扩展的，但是它的实现方式是借助steuptools的entry points（我的上一篇有讲entry points功能）。2.创建一个插件这里以一个格式转换的例子来学习：# stevedore/example/base.pyimport abcclass FormatterBase(obj...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-06-09 00:00:00 +0800" class="post-list__meta--date date">2013-06-09</time> &#8226; <span class="post-list__meta--tags tags">Python</span><a class="btn-border-small" href=/2013/06/learn-python-stevedore-module-in-detail/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/06/learn-python-setuptools-in-detail/" title="link to Python包管理工具setuptools详解">Python包管理工具setuptools详解</a></h2>
+       <p class="excerpt">0.什么是setuptoolssetuptools是Python distutils增强版的集合，它可以帮助我们更简单的创建和分发Python包，尤其是拥有依赖关系的。用户在使用setuptools创建的包时，并不需要已安装setuptools，只要一个启动模块即可。功能亮点：利用EasyInstall自动查找、下载、安装、升级依赖包创建Python Eggs包含包目录内的数据文件自动包含包目录内的所有的包，而不用在setup.py中列举自动包含包内和发布有关的所有相关文件，而不用创建一个...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-06-07 00:00:00 +0800" class="post-list__meta--date date">2013-06-07</time> &#8226; <span class="post-list__meta--tags tags">Python</span><a class="btn-border-small" href=/2013/06/learn-python-setuptools-in-detail/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<!-- <section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2013/06/learn-python-abc-module/";
+        this.page.identifier = "/2013/06/learn-python-abc-module/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+ -->
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-14 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

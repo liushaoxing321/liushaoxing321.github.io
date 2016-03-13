@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>概念模型、逻辑模型、物理模型的区别</title>
+  <meta name="description" content="概念模型">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="概念模型、逻辑模型、物理模型的区别">
+  <meta name="twitter:description" content="概念模型">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="概念模型、逻辑模型、物理模型的区别">
+  <meta property="og:description" content="概念模型">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2013/04/conceptual-logical-physical/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星'S Home" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星'S Home 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星'S Home logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星'S Home" class="blog-button">刘少星'S Home</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">人一切的痛苦本质上都是对自己无能的愤怒</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名资深的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2013-04-25 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2013-04-25</time> &#8226; <span class="post-meta__tags tags">Concept</span>
+    </div>
+    <h1 class="post-title">概念模型、逻辑模型、物理模型的区别</h1>
+  </header>
+
+  <section class="post">
+    <h2>概念模型</h2>
+
+<p>概念数据模型（Conceptual Data Model）：简称概念模型，主要用来描述世界的概念化结构，它使数据库的设计人员在设计的初始阶段，摆脱计算机系统及DBMS的具体技术问题，集中精力分析数据以及数据之间的联系等，与具体的数据管理系统（Database Management System，简称DBMS）无关。概念数据模型必须换成逻辑数据模型，才能在DBMS中实现。</p>
+
+<p>概念数据模型是最终用户对数据存储的看法，反映了最终用户综合性的信息需求，它以数据类的方式描述企业级的数据需求，数据类代表了在业务环境中自然聚集成的几个主要类别数据。</p>
+
+<p>概念数据模型的内容包括重要的实体及实体之间的关系。在概念数据模型中不包括实体的属性，也不用定义实体的主键。这是概念数据模型和逻辑数据模型的主要区别。</p>
+
+<p>概念数据模型的目标是统一业务概念，作为业务人员和技术人员之间沟通的桥梁，确定不同实体之间的最高层次的关系。</p>
+
+<p>在有些数据模型的设计过程中，概念数据模型是和逻辑数据模型合在一起进行设计的。</p>
+
+<h2>逻辑模型</h2>
+
+<p>逻辑数据模型（Logical Data Model）:简称数据模型，这是用户从数据库所看到的模型，是具体的DBMS所支持的数据模型，如网状数据模型(Network Data Model)、层次数据模型(Hierarchical Data Model)等等。此模型既要面向用户，又要面向系统，主要用于数据库管理系统（DBMS）的实现。</p>
+
+<p>逻辑数据模型反映的是系统分析设计人员对数据存储的观点，是对概念数据模型进一步的分解和细化。逻辑数据模型是根据业务规则确定的，关于业务对象、业务对象的数据项及业务对象之间关系的基本蓝图。</p>
+
+<p>逻辑数据模型的内容包括所有的实体和关系，确定每个实体的属性，定义每个实体的主键，指定实体的外键，需要进行范式化处理。</p>
+
+<p>逻辑数据模型的目标是尽可能详细的描述数据，但并不考虑数据在物理上如何来实现。</p>
+
+<p>逻辑数据建模不仅会影响数据库设计的方向，还间接影响最终数据库的性能和管理。如果在实现逻辑数据模型时投入得足够多，那么在物理数据模型设计时就可以有许多可供选择的方法。</p>
+
+<h2>物理模型</h2>
+
+<p>物理数据模型（Physical Data Model）:简称物理模型，是面向计算机物理表示的模型，描述了数据在储存介质上的组织结构，它不但与具体的DBMS有关，而且还与操作系统和硬件有关。每一种逻辑数据模型在实现时都有起对应的物理数据模型。DBMS为了保证其独立性与可移植性，大部分物理数据模型的实现工作又系统自动完成，而设计者只设计索引、聚集等特殊结构。</p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/04/some-concept-about-enterprise-storage/" title="link to 几种企业的存储系统">几种企业的存储系统</a></h2>
+       <p class="excerpt">几种存储系统直接连接存储(Direct Attached Storage)DAS是企业最早采用的在线型存储堆，基本原理即终端和服务器构成LAN，由服务器进行存储，终端连接外网，保证了存储的安全性。但是在多个服务器之间共享存储就显得非常复杂。网络附加存储(Network Attached Storage,NAS)NAS和DAS不同的地方是把存储服务器直接连接到网络中去，可以提供不同网络对其进行存储。参考NAS简介DAS,NAS,SAN对比储存区域网络(Storage Attachment N...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-04-25 00:00:00 +0800" class="post-list__meta--date date">2013-04-25</time> &#8226; <span class="post-list__meta--tags tags">Concept</span><a class="btn-border-small" href=/2013/04/some-concept-about-enterprise-storage/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/04/opensource-licenses/" title="link to 五中常见的开源协议整理(BSD,Apache,GPL,LGPL,MIT)">五中常见的开源协议整理(BSD,Apache,GPL,LGPL,MIT)</a></h2>
+       <p class="excerpt">简介开源软件(Open source software)对我们来说越来越不陌生，开源软件一方面让我们免费享用到了“免费的午餐”，另一方面有效的利用和学习开源软件，也能促进我们开发软件时的效率、提升软件质量。但是在使用和借鉴开源软件的时候，我们不得不关心一下它对使用者的诸多限制，比较常见的方式即协议授权(licence)，这些协议中明确说明了使用者应该遵循的原则。现在开源协议众多，通过Open Source Initiative组织批准的开源协议有50多种，本文提到的五种常见协议也在其中，而...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-04-23 00:00:00 +0800" class="post-list__meta--date date">2013-04-23</time> &#8226; <span class="post-list__meta--tags tags">Concept</span><a class="btn-border-small" href=/2013/04/opensource-licenses/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<!-- <section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2013/04/conceptual-logical-physical/";
+        this.page.identifier = "/2013/04/conceptual-logical-physical/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+ -->
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-14 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

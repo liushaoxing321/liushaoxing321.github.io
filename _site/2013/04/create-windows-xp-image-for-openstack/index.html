@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>给OpenStack创建Windows XP镜像</title>
+  <meta name="description" content="创建windows镜像">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="给OpenStack创建Windows XP镜像">
+  <meta name="twitter:description" content="创建windows镜像">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="给OpenStack创建Windows XP镜像">
+  <meta property="og:description" content="创建windows镜像">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2013/04/create-windows-xp-image-for-openstack/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星'S Home" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星'S Home 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星'S Home logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星'S Home" class="blog-button">刘少星'S Home</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">人一切的痛苦本质上都是对自己无能的愤怒</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名资深的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2013-04-26 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2013-04-26</time> &#8226; <span class="post-meta__tags tags">OpenStack</span>
+    </div>
+    <h1 class="post-title">给OpenStack创建Windows XP镜像</h1>
+  </header>
+
+  <section class="post">
+    <h2>创建windows镜像</h2>
+
+<h3>创建一个img文件</h3>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">kvm-img create -f raw windowsxp.img 10G
+</code></pre></figure>
+<h3>下载virtio驱动</h3>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">wget http://alt.fedoraproject.org/pub/alt/virtio-win/archives/virtio-win-0.1-59/virtio-win-0.1-59.iso
+wget http://www.linuxwind.org/download/virtio-win-1.1.16.vfd
+</code></pre></figure>
+<h3>启动安装程序</h3>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">sudo kvm -m 1024 -cdrom windowsxp.iso -drive file=windowsxp.img,if=virtio,boot=on -fda virtio-win-1.1.16.vfd -boot d -nographic -vnc :0
+</code></pre></figure>
+<h3>接入继续安装步骤</h3>
+
+<p>我是在ubuntu下完成的，安装一个vncview即可</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">vncview localhost:5900
+</code></pre></figure>
+<h3>装完以后别急，因为木有网卡驱动，使用下面方式</h3>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">sudo kvm -m 1024 -cdrom virtio-win-0.1-59.iso -drive file=windowsxp.img,if=virtio,boot=on -net nic,model=virtio -boot d -nographic -net user -usb -usbdevice tablet -vnc :0
+</code></pre></figure>
+<p>进入虚拟机以后，安装网卡驱动，然后驱动从CD-ROM中搜索即可</p>
+
+<h3>有定制需求的时候，可以再次打开，命令如下</h3>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">sudo kvm -m 1024 -drive file=windowsxp.img,if=virtio,boot=on -net nic,model=virtio -boot d -nographic -vnc :0
+</code></pre></figure>
+<h2>上传windows镜像</h2>
+
+<p>openstack的命令以<a href="http://docs.openstack.org/trunk/openstack-compute/admin/content/creating-a-windows-image.html">最新文档</a>为标准，网上博客难免有过时的</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">glance image-create --name=&quot;My WinServer&quot; --is-public=true --container-format=ovf --disk-format=raw &lt; windowsserver.img
+</code></pre></figure>
+<h2>远程桌面连接</h2>
+
+<h3>开启xp远程桌面</h3>
+
+<ul>
+<li>先关闭防火墙，在控制面板里头关</li>
+<li>在控制面板里头创建一个新用户，一定要设密码。</li>
+<li>计算机-》属性-》远程-》远程桌面-》允许用户远程连接</li>
+<li>检查一下服务开了没有：Remote Desktop Help Session Manager和Terminal Services</li>
+</ul>
+
+<h3>在openstack中打开端口（TCP 3389）</h3>
+
+<p>另外几个常用端口</p>
+
+<ul>
+<li>TCP 22 (ssh)</li>
+<li>ICMP -1 (ping)</li>
+<li>TCP 3306 (mysql)</li>
+<li>TCP 3389 (远程桌面)</li>
+</ul>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/05/deploy-a-ceilometer-horizon-project/" title="link to 部署一个ceilometer-horizon项目">部署一个ceilometer-horizon项目</a></h2>
+       <p class="excerpt">下载代码原来的代码好像安装的时候没有把文件全拷进去，用我修改过的吧git clone https://github.com/suyan/ceilometer-horizon.git    下面是他原来的代码git clone https://github.com/yuanotes/ceilometer-horizon.git安装必须的包他用了导出pdf的python库，所以先得装一下easy_install svglibeasy_install reportlab./setup.py in...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-05-01 00:00:00 +0800" class="post-list__meta--date date">2013-05-01</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/05/deploy-a-ceilometer-horizon-project/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/04/some-concept-about-enterprise-storage/" title="link to 几种企业的存储系统">几种企业的存储系统</a></h2>
+       <p class="excerpt">几种存储系统直接连接存储(Direct Attached Storage)DAS是企业最早采用的在线型存储堆，基本原理即终端和服务器构成LAN，由服务器进行存储，终端连接外网，保证了存储的安全性。但是在多个服务器之间共享存储就显得非常复杂。网络附加存储(Network Attached Storage,NAS)NAS和DAS不同的地方是把存储服务器直接连接到网络中去，可以提供不同网络对其进行存储。参考NAS简介DAS,NAS,SAN对比储存区域网络(Storage Attachment N...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-04-25 00:00:00 +0800" class="post-list__meta--date date">2013-04-25</time> &#8226; <span class="post-list__meta--tags tags">Concept</span><a class="btn-border-small" href=/2013/04/some-concept-about-enterprise-storage/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<!-- <section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2013/04/create-windows-xp-image-for-openstack/";
+        this.page.identifier = "/2013/04/create-windows-xp-image-for-openstack/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+ -->
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-14 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

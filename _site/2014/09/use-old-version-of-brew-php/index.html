@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>回退Mac上用Brew安装的PHP版本</title>
+  <meta name="description" content="昨天随手一点brew upadte &amp; brew upgrade后phpunit出现了各种F，细查下来原来是 php 5.5.17 的一个bug fix 引起的。为了暂时正常使用phpunit，只能回退php的版本。">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="回退Mac上用Brew安装的PHP版本">
+  <meta name="twitter:description" content="昨天随手一点brew upadte &amp; brew upgrade后phpunit出现了各种F，细查下来原来是 php 5.5.17 的一个bug fix 引起的。为了暂时正常使用phpunit，只能回退php的版本。">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="回退Mac上用Brew安装的PHP版本">
+  <meta property="og:description" content="昨天随手一点brew upadte &amp; brew upgrade后phpunit出现了各种F，细查下来原来是 php 5.5.17 的一个bug fix 引起的。为了暂时正常使用phpunit，只能回退php的版本。">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2014/09/use-old-version-of-brew-php/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星'S Home" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星'S Home 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星'S Home logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星'S Home" class="blog-button">刘少星'S Home</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">人一切的痛苦本质上都是对自己无能的愤怒</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名资深的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2014-09-26 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2014-09-26</time> &#8226; <span class="post-meta__tags tags">PHPMac</span>
+    </div>
+    <h1 class="post-title">回退Mac上用Brew安装的PHP版本</h1>
+  </header>
+
+  <section class="post">
+    <blockquote>
+<p>昨天随手一点<code>brew upadte &amp; brew upgrade</code>后phpunit出现了各种F，细查下来原来是 php 5.5.17 的一个<a href="https://bugs.php.net/bug.php?id=67839">bug fix</a> 引起的。为了暂时正常使用phpunit，只能回退php的版本。</p>
+</blockquote>
+
+<h2>版本切换方式</h2>
+
+<p>通过brew安装的php可以通过<code>brew link</code>和<code>brew unlink</code>来切换不同版本。</p>
+
+<p>例如</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">brew list
+brew unlink php56
+brew link php55
+</code></pre></figure>
+<p>大版本可以用<code>brew list</code>来查，如果是小版本的话只能去<code>/usr/local/Cellar/php55</code>看了。这个时候使用<code>php-version</code>可以更方便一点。</p>
+
+<h2>安装<code>php-version</code></h2>
+
+<p><a href="https://github.com/wilmoore/php-version">php-version</a>是一个帮助管理从brew安装的php版本切换的工具。</p>
+
+<p>安装非常简单</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">brew install php-version
+</code></pre></figure>
+<p>然后执行</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">source $(brew --prefix php-version)/php-version.sh &amp;&amp; php-version 5
+</code></pre></figure>
+<h2>使用<code>php-version</code></h2>
+
+<p>直接执行</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">php-version
+</code></pre></figure>
+<p>就可以看到现有的版本，比如我自己的</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">$ php-version
+  5.5.15
+* 5.5.16
+  5.5.17
+</code></pre></figure>
+<p>然后使用以下命令切换即可</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">php-version 5.5.15
+</code></pre></figure>
+<p>再看php的版本，已经切换好了。</p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2014/12/ioc-and-facade-in-laravel/" title="link to Laravel 核心：控制反转（Inversion of Control）和门面模式（Facade）">Laravel 核心：控制反转（Inversion of Control）和门面模式（Facade）</a></h2>
+       <p class="excerpt">这两个概念对于 Laravel 的使用者来说应该并不陌生，尤其是当你希望扩展或者替换 Laravel 核心库的时候，理解和合理使用它们可以极大提升 Laravel 的战斗力。这里以创建一个自己的 ServiceProvider 为例理解 Inversion of Control 和 Facade 在 Laravel 中的应用。控制反转（Inversion of Control）什么是 IoC控制反转（Inversion of Control，缩写为IoC），是面向对象编程中的一种设计原则，...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2014-12-06 00:00:00 +0800" class="post-list__meta--date date">2014-12-06</time> &#8226; <span class="post-list__meta--tags tags">PHPLaravel</span><a class="btn-border-small" href=/2014/12/ioc-and-facade-in-laravel/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2014/05/set-environment-variables-of-server-for-php/" title="link to 为PHP设置服务器(Apache/Nginx)环境变量">为PHP设置服务器(Apache/Nginx)环境变量</a></h2>
+       <p class="excerpt">设置环境变量常见的地方为区分开发环境/生产环境，或者定义一些数据库的帐号密码设置Apache环境变量指令设置当前环境变量为DEVSetEnv RUNTIME_ENVIROMENT DEV数据库帐号密码SetEnv MYSQL_USERNAME rootSetEnv MYSQL_PASSWORD root配置文件格式&lt;VirtualHost *:80&gt;    ServerAdmin admin@admin.com    DocumentRoot &quot;/var/www/&q...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2014-05-04 00:00:00 +0800" class="post-list__meta--date date">2014-05-04</time> &#8226; <span class="post-list__meta--tags tags">PHPNginxApache</span><a class="btn-border-small" href=/2014/05/set-environment-variables-of-server-for-php/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<!-- <section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2014/09/use-old-version-of-brew-php/";
+        this.page.identifier = "/2014/09/use-old-version-of-brew-php/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+ -->
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-14 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

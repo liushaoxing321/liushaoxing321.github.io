@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>OpenStack Ceilometer项目简介</title>
+  <meta name="description" content="Ceilometer项目创建时最初的目的是实现一个能为计费系统采集数据的框架。在G版的开发中，社区已经更新了他们的目标，新目标是希望Ceilometer成为OpenStack里数据采集（监控数据、计费数据）的唯一基础设施，采集到的数据提供给监控、计费、面板等项目使用。">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="OpenStack Ceilometer项目简介">
+  <meta name="twitter:description" content="Ceilometer项目创建时最初的目的是实现一个能为计费系统采集数据的框架。在G版的开发中，社区已经更新了他们的目标，新目标是希望Ceilometer成为OpenStack里数据采集（监控数据、计费数据）的唯一基础设施，采集到的数据提供给监控、计费、面板等项目使用。">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="OpenStack Ceilometer项目简介">
+  <meta property="og:description" content="Ceilometer项目创建时最初的目的是实现一个能为计费系统采集数据的框架。在G版的开发中，社区已经更新了他们的目标，新目标是希望Ceilometer成为OpenStack里数据采集（监控数据、计费数据）的唯一基础设施，采集到的数据提供给监控、计费、面板等项目使用。">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2013/03/introduction-of-ceilometer/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星'S Home" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星'S Home 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星'S Home logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星'S Home" class="blog-button">刘少星'S Home</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">人一切的痛苦本质上都是对自己无能的愤怒</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名资深的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2013-03-21 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2013-03-21</time> &#8226; <span class="post-meta__tags tags">OpenStack</span>
+    </div>
+    <h1 class="post-title">OpenStack Ceilometer项目简介</h1>
+  </header>
+
+  <section class="post">
+    <p>Ceilometer项目创建时最初的目的是实现一个能为计费系统采集数据的框架。在G版的开发中，社区已经更新了他们的目标，新目标是希望Ceilometer成为OpenStack里数据采集（监控数据、计费数据）的唯一基础设施，采集到的数据提供给监控、计费、面板等项目使用。</p>
+
+<h3>Project Goal</h3>
+
+<p>For Grizzly, the new objective is The project aims to become the infrastructure to collect measurements within OpenStack so that no two agents would need to be written to collect the same data. It’s primary targets are monitoring and metering, but the framework should be easily expandable to collect for other needs. To that effect, Ceilometer should be able to share collected data with a variety of consumers.</p>
+
+<p>In the 0.1 (folsom) release its goal was just to deliver a unique point of contact for billing systems to aquire all meters they need to establish customer billing, across all current and futureOpenStack core components.</p>
+
+<p><strong>Wiki地址：</strong> <a href="https://wiki.openstack.org/wiki/Ceilometer">https://wiki.openstack.org/wiki/Ceilometer</a>
+<strong>代码地址：</strong> <a href="https://github.com/openstack/ceilometer">https://github.com/openstack/ceilometer</a>
+<strong>文档地址：</strong> <a href="http://docs.openstack.org/developer/ceilometer/">http://docs.openstack.org/developer/ceilometer/</a></p>
+
+<h3>社区现状</h3>
+
+<p>目前Ceilometer项目有11000+ lines代码，16位贡献者，最近的活跃贡献者有7位。社区的Roadmap如下：</p>
+
+<p>v1 delivered with Folsom with all functions required to collect base metering info and provide standard API access
+v2 delivered with G as an incubated project with (subject to variation)
+End-User API access to own metering information
+Integration of information summary as an Horizon plugin
+New agents for other OpenStack components (Quantum Engines? Heat? etc…)
+Multi publisher to handle other usage for data collection
+Individual frequency per meter
+Move to core for H</p>
+
+<h3>Ceilometer架构介绍</h3>
+
+<p><img src="http://7u2ho6.com1.z0.glb.clouddn.com/tech-ceilometer-architecture.png" alt="Ceilometer架构介绍"></p>
+
+<h3>Ceilometer项目主要由Agent，Collector，DataStore，API和消息队列组成。</h3>
+
+<h4>Agent</h4>
+
+<p>Agent的主要职责是周期性的从它管理的Plugin中轮询，触发查询，Plugin中有具体获取数据的逻辑。Ceilometer中的Agent分为Central Agent和Compute Agent。
+Central Agent负责管理除了Compute（Nova）之外所有的Plugin，例如Swift，Cinder的Plugin。这些Plugin通过RPC调用相关服务的API并获取数据，然后将数据publish到Message Queue。Central Agent作为一个中心的数据采集调度器，之需要部署一个即可。
+Compute Agent负责Compute节点的数据采集，在每一个Compute节点都需要部署一个Compute Agent。它一方主要负责周期性的采集Compute相关的数据并发布到MQ。
+目前所规划的监控指标：<a href="http://docs.openstack.org/developer/ceilometer/measurements.html">http://docs.openstack.org/developer/ceilometer/measurements.html</a></p>
+
+<h4>Plugin</h4>
+
+<p>Ceilometer实现的Plugin框架依赖setuptools的Dynamic Discovery of Services and Plugins实现。这是Ceilometer能进行扩展的基础。Ceilometer中有四种类型的Plugin：Poller，Publisher，Notification和Transformer。</p>
+
+<p>Poller主要负责被Agent调用去查询数据，返回Counter类型的结果给Agent框架；</p>
+
+<ul>
+<li>Notification负责在MQ中监听相关topic的消息（虚拟机创建等），并把他转换成Counter类型的结果给Agent框架。</li>
+<li>Transformer负责转换Counter（目前在代码中还没有发现具体用例）</li>
+<li>Publisher负责将Agent框架中Counter类型的结果转换成消息（包括签名），并将消息发送到MQ；</li>
+<li>Agent的Pipeline定义了这些插件之间的数据流。Agent的Plugin框架就向一个流水线，每个Plugin就像流水线上的工人。</li>
+</ul>
+
+<h4>Collector</h4>
+
+<p>Collector负责监听消息队列，将Publisher发布的消息（Meter Message）存储到DataStore。</p>
+
+<h4>DataStore</h4>
+
+<p>由MongoDB实现。</p>
+
+<h4>API</h4>
+
+<p>负责为其它项目提供数据，例如计费、面板等。</p>
+
+<p><a href="http://www.cnblogs.com/alexyang8/archive/2013/02/18/2915981.html">原文地址</a></p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/03/vnc-vs-rdp/" title="link to VNC和远程桌面的区别">VNC和远程桌面的区别</a></h2>
+       <p class="excerpt">我们可以通过VNC(Virtual Network Computing)和远程桌面来连接到远程的计算机上，但是两者是有一定的区别的。VNCVNC使用的是RFB协议来做屏幕分享和远程操作的软件，由著名的AT&amp;T欧洲研究实验室开发。使用时需要客户端软件和服务器软件配合使用。远程桌面远程桌面使用RDP(Remote Desktop Protocol)远程桌面协议，大部分Windows都默认支持此协议，可以远程接入操作桌面。RFB和RDP区别RFB是在服务器端将窗口在显存中画好之后将图像传...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-03-21 00:00:00 +0800" class="post-list__meta--date date">2013-03-21</time> &#8226; <span class="post-list__meta--tags tags">Virtualization</span><a class="btn-border-small" href=/2013/03/vnc-vs-rdp/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/03/debug-and-modify-openstack-horizon/" title="link to 调试和修改OpenStack中的Horizon部分">调试和修改OpenStack中的Horizon部分</a></h2>
+       <p class="excerpt">进入调试模式Horizon在python的django框架上进行开发，所以可以利用django的manage.py来进行调试。方式：关闭apache进入Horizon目录执行命令manage.py runserver 0.0.0.0:80这样修改的代码立刻就可以实现，不用每次都重启apache了查看变量方式再没有使用调试模式时，可能需要使用import logginglogging.info(&#39;xxx&#39;)来打日志查看一些变量或者输出，这样显然是比较低效的。推荐的做法是开启调...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-03-20 00:00:00 +0800" class="post-list__meta--date date">2013-03-20</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/03/debug-and-modify-openstack-horizon/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<!-- <section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2013/03/introduction-of-ceilometer/";
+        this.page.identifier = "/2013/03/introduction-of-ceilometer/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+ -->
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-14 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

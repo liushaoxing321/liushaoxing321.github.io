@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>在虚拟机单机部署OpenStack Grizzly</title>
+  <meta name="description" content="安装过程安装Ubuntu我手头有的是Ubuntu Server 12.04 64位版，就直接用了，默认安装即可，配置的时候很简单，如下">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="在虚拟机单机部署OpenStack Grizzly">
+  <meta name="twitter:description" content="安装过程安装Ubuntu我手头有的是Ubuntu Server 12.04 64位版，就直接用了，默认安装即可，配置的时候很简单，如下">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="在虚拟机单机部署OpenStack Grizzly">
+  <meta property="og:description" content="安装过程安装Ubuntu我手头有的是Ubuntu Server 12.04 64位版，就直接用了，默认安装即可，配置的时候很简单，如下">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2013/05/deploy-openstack-grizzly-in-virtual-machine/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星'S Home" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星'S Home 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星'S Home logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星'S Home" class="blog-button">刘少星'S Home</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">人一切的痛苦本质上都是对自己无能的愤怒</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名资深的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2013-05-16 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2013-05-16</time> &#8226; <span class="post-meta__tags tags">OpenStack</span>
+    </div>
+    <h1 class="post-title">在虚拟机单机部署OpenStack Grizzly</h1>
+  </header>
+
+  <section class="post">
+    <h2>安装过程</h2>
+
+<h3>安装Ubuntu</h3>
+
+<p>我手头有的是Ubuntu Server 12.04 64位版，就直接用了，默认安装即可，配置的时候很简单，如下</p>
+
+<ul>
+<li>内存:1G</li>
+<li>硬盘:20G</li>
+<li>处理器:2</li>
+<li>网络:NAT</li>
+</ul>
+
+<p>装好以后登陆，执行以下命令</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">sudo passwd root                   #设置root密码
+su                                 #以root登陆
+apt-get update                     #更新源
+apt-get install git                #安装git
+</code></pre></figure>
+<h3>利用devstack安装配置OpenStack</h3>
+
+<p>参考<a href="http://devstack.org">devstack官网</a></p>
+
+<h4>下载devstack</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">git clone https://github.com/openstack-dev/devstack.git
+</code></pre></figure>
+<h4>配置devstack</h4>
+
+<p>进入devstack文件夹，创建一个localrc文件</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text"># 基本配置
+FLOATING_RANGE=192.168.0.224/27
+FIXED_RANGE=10.0.0.0/24
+NETWORK_GATEWAY=10.0.0.1
+FIXED_NETWORK_SIZE=256
+FLAT_INTERFACE=eth0
+
+ADMIN_PASSWORD=123qwe
+MYSQL_PASSWORD=123qwe
+RABBIT_PASSWORD=123qwe
+SERVICE_PASSWORD=123qwe
+SERVICE_TOKEN=123qwe
+# 启用ceilometer
+enable_service ceilometer-acompute
+enable_service ceilometer-acentral
+enable_service ceilometer-collector
+enable_service ceilometer-api
+# 启用quantum
+disable_service n-net
+enable_service q-svc
+enable_service q-agt
+enable_service q-dhcp
+enable_service q-l3
+enable_service q-meta
+enable_service quantum
+# 启用swift
+enable_service swift
+SWIFT_HASH=66a3d6b56c1f479c8b4e70ab5c2000f5
+SWIFT_REPLICAS=1
+SWIFT_DATA_DIR=$DEST/data
+# 启用负载均衡
+enable_service sysstat
+enable_service q-lbaas
+# 日志文件
+LOGFILE=$DEST/logs/stack.sh.log
+VERBOSE=True
+LOG_COLOR=False
+SCREEN_LOGDIR=$DEST/logs/screen
+</code></pre></figure>
+<p>如果使用32位的ubuntu，所以下载镜像的时候也得是32位的，修改方法，备份一下stackrc文件，然后修改原来的文件中所有镜像名&quot;x86_64&quot;位&quot;i386&quot;，否则装完不能运行</p>
+
+<p>如果想选择固定版本号，可以类似</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">GLANCE_BRANCH=stable/essex
+HORIZON_BRANCH=stable/essex
+KEYSTONE_BRANCH=stable/essex
+NOVA_BRANCH=stable/essex
+QUANTUM_BRANCH=stable/essex
+SWIFT_BRANCH=1.4.8
+</code></pre></figure>
+<h4>运行devstack</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">./stack.sh
+</code></pre></figure>
+<p>安装过程中会创建一个stack账户，这个账户安装最后好像会有一些问题，所以可以在它创建完成后手动切换过去</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">sudo passwd stack
+su stack
+</code></pre></figure>
+<p>如果之后无法执行<code>nova list</code>等命令，可以使用下面命令来导入环境变量</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">export SERVICE_TOKEN=123qwe
+export OS_TENANT_NAME=demo
+export OS_USERNAME=demo
+export OS_PASSWORD=123qwe
+export OS_AUTH_URL=http://localhost:5000/v2.0/
+export SERVICE_ENDPOINT=http://localhost:35357/v2.0
+</code></pre></figure>
+<h4>使用OpenStack创建虚拟机</h4>
+
+<p>安装完成后创建虚拟机一切都正常，如果想要分配floating_ip，在安全组部分开放tcp和icmp端口，方法可以参考<a href="http://docs.openstack.org/trunk/openstack-compute/admin/content/enabling-ping-and-ssh-on-vms.html">这里</a></p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/05/what-is-wsgi/" title="link to WSGI学习">WSGI学习</a></h2>
+       <p class="excerpt">WSGI(Web Server Gateway Interface)WSGI是WEB服务网关接口的缩写，是为Python语言定义的Web服务器和Web应用程序之间一种简单而通用的接口。它没有具体的实现，更像是一个标准协议，具体可以去PEP333了解。简单说来，它是一个连接用户应用和Web服务器的桥梁，有点类似Apache的CGI。简单例子下面是来自PEP333的一个简单例子def simple_app(environ, start_response):    &quot;&quot;&qu...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-05-19 00:00:00 +0800" class="post-list__meta--date date">2013-05-19</time> &#8226; <span class="post-list__meta--tags tags">Python</span><a class="btn-border-small" href=/2013/05/what-is-wsgi/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/05/learn-how-to-use-distutils/" title="link to 学习使用python打包工具distutils">学习使用python打包工具distutils</a></h2>
+       <p class="excerpt">安装和了解distutilspython中自带了distutils，直接用使用步骤写一个安装脚本(setup.py)(可选)写一个安装配置文件创建一个源码分布(可选)创建一个或多个编译过的二进制分布一个简单的例子from distutils.core import setupsetup(name=&#39;test&#39;,      version=&#39;1.0&#39;,      py_modules=[&#39;test&#39;],      )常见的python术语mod...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-05-15 00:00:00 +0800" class="post-list__meta--date date">2013-05-15</time> &#8226; <span class="post-list__meta--tags tags">Python</span><a class="btn-border-small" href=/2013/05/learn-how-to-use-distutils/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<!-- <section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2013/05/deploy-openstack-grizzly-in-virtual-machine/";
+        this.page.identifier = "/2013/05/deploy-openstack-grizzly-in-virtual-machine/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+ -->
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-14 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>
