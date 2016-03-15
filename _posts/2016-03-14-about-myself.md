@@ -130,4 +130,4 @@ description: 个人简历
 
 >####其它
 
-1. 平时自己也会封装一些库或者写一下Demo在[GitHub](http://www.github.com/liushaoxing321)上共享。  2. 会有写[博客](http://liushaoxing321.github.io)的习惯。用markdown语法写博客。 3. 对Html、PHP有一些简单的了解。 >###结尾再次感谢您查看我的简历，同时也期待能有一个和您`面谈`的机会。 联系方式:15620962855, [点击这里](http://pan.baidu.com/s/1sk73L5z)下载百度网盘PDF版简历.密码:fn5u
+1. 平时自己也会封装一些库或者写一下Demo在[GitHub](http://www.github.com/liushaoxing321)上共享。  2. 会有写[博客](http://liushaoxing321.github.io)的习惯。用markdown语法写博客。 3. 对Html、PHP有一些简单的了解。 >###结尾再次感谢您查看我的简历，同时也期待能有一个和您`面谈`的机会。 联系方式:15620962855, [点击这里](http://pan.baidu.com/s/1dEstmet)下载百度网盘PDF版简历.密码:3d98
