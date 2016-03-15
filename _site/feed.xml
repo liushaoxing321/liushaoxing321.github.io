@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>刘少星&#39;S Home</title>
-    <description>我叫刘少星(一名北漂3年的iOS开发工程师)</description>
+    <description>我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</description>
     <link>http://liushaoxing.github.io/</link>
     <atom:link href="http://liushaoxing.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 15 Mar 2016 09:24:38 +0800</pubDate>
-    <lastBuildDate>Tue, 15 Mar 2016 09:24:38 +0800</lastBuildDate>
+    <pubDate>Tue, 15 Mar 2016 09:54:06 +0800</pubDate>
+    <lastBuildDate>Tue, 15 Mar 2016 09:54:06 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -31,7 +31,7 @@
 
 &lt;p&gt;&lt;a href=&quot;&quot;&gt;企讯恒通(北京)科技有限公司&lt;/a&gt;&lt;br&gt;
     ·iOS开发工程师(&lt;a href=&quot;&quot;&gt;兼iOS开发部组长&lt;/a&gt;) &amp;#160; &amp;#160; &amp;#160; &amp;#160;&amp;#160; &amp;#160; &amp;#160; &amp;#160;&amp;#160; &amp;#160;&amp;#160; &amp;#160; &amp;#160; &amp;#160;&amp;#160; &amp;#160; &amp;#160; &amp;#160;&amp;#160; &amp;#160;&amp;#160; &amp;#160; &amp;#160; &amp;#160;&amp;#160; &amp;#160; &amp;#160; &amp;#160;&amp;#160; &amp;#160;&amp;#160; &amp;#160; &amp;#160; &amp;#160;&amp;#160; &amp;#160; &amp;#160; &amp;#160;&amp;#160;             2014.06 - 2016.03&lt;br&gt;
-     &amp;#160; &amp;#160; &amp;#160;企讯恒通(北京)科技有限公司是一家&lt;code&gt;外包&lt;/code&gt;公司。也叫典范APP。主要负责给客户做金融、医疗、社交、健身等APP. 规模在20-99人，石家庄有分公司.在职期间主要负责&lt;code&gt;接口文档额撰写&lt;/code&gt;、&lt;code&gt;跟技术总监讨论技术方案&lt;/code&gt;、&lt;code&gt;管理其他小组成员以及对他们的技术指导&lt;/code&gt;、&lt;code&gt;各个项目代码的管理&lt;/code&gt;等工作.(现已离职，可随时到岗)   &lt;/p&gt;
+     &amp;#160; &amp;#160; &amp;#160;企讯恒通(北京)科技有限公司是一家&lt;code&gt;外包&lt;/code&gt;公司。也叫典范APP。主要负责给客户做金融、医疗、社交、健身等APP. 规模在20-99人，石家庄有分公司.在职期间主要负责&lt;code&gt;接口文档额撰写&lt;/code&gt;、&lt;code&gt;跟技术总监讨论技术方案&lt;/code&gt;、&lt;code&gt;管理其他小组成员以及对他们的技术指导&lt;/code&gt;、&lt;code&gt;各个项目代码的管理&lt;/code&gt;等工作.(&lt;a href=&quot;&quot;&gt;现已离职，可随时到岗&lt;/a&gt;)   &lt;/p&gt;
 
 &lt;p&gt;&amp;#160;&amp;#160;&amp;#160;&lt;br&gt;
 &lt;a href=&quot;&quot;&gt;正坤(北京)信息技术有限公司&lt;/a&gt;&lt;br&gt;
@@ -47,9 +47,9 @@
 &lt;h4&gt;项目经验(11)&lt;/h4&gt;
 &lt;/blockquote&gt;
 
-&lt;h3&gt;悦己SELF(曾登APPStore过女性报刊类排行榜)&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;https://itunes.apple.com/gh/app/yue-ji-daily/id515573336?mt=8&quot;&gt;悦己SELF&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;《悦己SELF》是一款以轻阅读为主的单身女性生活时尚类APP,让你享有时尚、美容、生活的最新资讯的同时,还会贴心送出每天的&amp;quot;心情密语&amp;quot;.不为他人,只为成为更好的自己.    &lt;/p&gt;
+&lt;p&gt;《悦己SELF》&lt;a href=&quot;&quot;&gt;登过APPStore排行榜&lt;/a&gt;，点击查看&lt;a href=&quot;https://raw.githubusercontent.com/liushaoxing321/liushaoxing321.github.io/master/assets/images/IMG_0358.PNG&quot;&gt;图1&lt;/a&gt;、&lt;a href=&quot;https://raw.githubusercontent.com/liushaoxing321/liushaoxing321.github.io/master/assets/images/IMG_0850.PNG&quot;&gt;图2&lt;/a&gt;。《悦己SELF是一款以轻阅读为主的单身女性生活时尚类APP,让你享有时尚、美容、生活的最新资讯的同时,还会贴心送出每天的&amp;quot;心情密语&amp;quot;.不为他人,只为成为更好的自己.    &lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;类型QQ的抽屉侧滑框架,添加了各种自定义动画。通过截图的方式实现TableView的开门效果。手机的&lt;code&gt;摇一摇&lt;/code&gt;功能,&lt;code&gt;果冻吸入&lt;/code&gt;效果的实现。以及自定义评论的动效。&lt;br&gt;&lt;/li&gt;
@@ -68,7 +68,7 @@
 
 &lt;hr&gt;
 
-&lt;h3&gt;随洗车&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;&quot;&gt;随洗车&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;《随洗车》是一款洗车软件,通过LBS定位,为客户提供技师上门洗车服务,无需排队.做到真正便捷的O2O汽车服务,在快节奏的生活中为您节约最宝贵的时间。&lt;/p&gt;
 
@@ -84,7 +84,7 @@
 
 &lt;hr&gt;
 
-&lt;h3&gt;君奕(客户端、商户端)&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;&quot;&gt;君奕&lt;/a&gt;(客户端、商户端)&lt;/h3&gt;
 
 &lt;p&gt;&amp;#160; &amp;#160; &amp;#160;    《君奕定制》是一款移动端购买定制寸衫为主的应用。可以挑选购买君奕寸衫以及从面料开始自己设计一款寸衫;预约君奕定制顾客免费上门量体;预约合作洗衣店免费上门取送衣服。给用户带来生活上的一些快捷改变。&lt;br&gt;
    &amp;#160; &amp;#160; &amp;#160;   《君奕商户》是一款通过&amp;quot;君奕定制&amp;quot;跟洗衣店合作让用户获取洗衣币的手机端应用,上传信息的洗衣店将显示在安装了&amp;quot;君奕定制&amp;quot;应用的客户移动设备上。通过该应用可以接受推送通知客户洗衣需求等。&lt;/p&gt;
@@ -101,7 +101,7 @@
 
 &lt;hr&gt;
 
-&lt;h3&gt;知行家&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;&quot;&gt;知行家&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&amp;#160; &amp;#160; &amp;#160;   《知行家》是一款将旅行与自我相结合的导师。跟着知行家旅行机构的知行家门,一起在路上,探索世界、品读人生。&lt;br&gt;
 1. 通过&lt;a href=&quot;http://www.easemob.com/&quot;&gt;环信&lt;/a&gt;实现了APP内的单聊、群聊。(自定制群资料界面、单聊界面)&lt;br&gt;
@@ -114,7 +114,7 @@
 
 &lt;hr&gt;
 
-&lt;h3&gt;云创网盘&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;&quot;&gt;云创网盘&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&amp;#160; &amp;#160; &amp;#160;   《云创网盘》是一款提供给企业内部资料管理的APP。APP分为管理员、员工等账户。管理员可以对资料进行统一的发放。管理员可以根据账号分配查看权、下载权、编辑权。每个账号都可以上传、下载文件。 &lt;/p&gt;
 
@@ -133,7 +133,7 @@
 
 &lt;hr&gt;
 
-&lt;h3&gt;百分百云商城&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;&quot;&gt;百分百云商城&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&amp;#160; &amp;#160; &amp;#160;   《百分百云商城》是一款商城购物的APP.用户可以根据目前所在城市找到附件的店铺挑选自己的心爱之物,可以加入购物车结算、收藏、足迹。除了商品的购买之外，还具有服务(上门洗车、住店住宿、旅游等)方面的交易。旨在给用户的生活带来便利。&lt;br&gt;
  1. 通过&lt;code&gt;百度地图SDK&lt;/code&gt;实现程序在前后台的定位。运用到了&lt;code&gt;地理编码&lt;/code&gt;、&lt;code&gt;反地址编码技术&lt;/code&gt;。根据定位结果获取当前所在城市的分区,从而刷选出附近的店铺、宝贝、服务。也实现了用户当前位置到服务地点的地图&lt;code&gt;路线导航&lt;/code&gt;功能。&lt;br&gt;
@@ -149,7 +149,7 @@
 
 &lt;hr&gt;
 
-&lt;h3&gt;智慧家庭(&lt;code&gt;ipa项目&lt;/code&gt;)&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;&quot;&gt;智慧家庭&lt;/a&gt;(&lt;code&gt;ipa项目&lt;/code&gt;)&lt;/h3&gt;
 
 &lt;p&gt;&amp;#160; &amp;#160; &amp;#160;   《智慧家庭》是一款智能家居的ipa端的APP.用户只要购买了智慧家庭的设备,就可以通过ipa端的APP进行房间内所有灯、插座进行控制。也可以对电视TV、空调、音响等设备进行控制。极大的改变了人们的生活方式。 &lt;/p&gt;
 
@@ -164,7 +164,7 @@
 
 &lt;hr&gt;
 
-&lt;h3&gt;快乐成长&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;&quot;&gt;快乐成长&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&amp;#160; &amp;#160; &amp;#160;   《快乐成长》是一款通过设定独立的事件,当孩子完成任务时,可以累积不同的奖励.通过完成任务的努力过程，引导孩子建立正确良好的生活习惯,让他们更好的成长。 &lt;/p&gt;
 
@@ -180,7 +180,24 @@
 
 &lt;hr&gt;
 
-&lt;h3&gt;虚恋&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/zhi-you-hui/id1018199471?mt=8&quot;&gt;智友汇&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&amp;#160; &amp;#160; &amp;#160;    《智友汇》是一款新型视频化商务社交应用软件。APP内设计了视频名片、视频直播、视频会议等功能。APP内可以通过聊天增加用户之间的关系。  &lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;通过环信实现了APP内的单聊、群聊、客服功能.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;通过AddressBook导入手机内的联系人到自己的服务器,查看是否是智友汇好友。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;通过三方网动公司的三方库实现在线视频流会议、名片扫描功能。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;通过VLC直播技术实现视频流的直播。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;实现了自己的朋友圈功能,可收藏、可评论。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;通过AFNetWorking进行用户录制的视频的上传。&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;通过JPush实现APP的远程推送。(环信聊天用的环信官方的推送)&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;利用shareSDK实现了微信、微博、QQ、短信等平台的分享。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt;&lt;a href=&quot;https://itunes.apple.com/cn/app/xu-lian/id933729466?mt=8&quot;&gt;虚恋&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&amp;#160; &amp;#160; &amp;#160;   《虚恋》是一款即时情感陪护社交应用。在现实生活中，或许你不太擅长和异性交友聊天；或许你不太愿意与身边朋友倾诉孤单；这里是“虚拟温柔乡”，让我们来谈一场奋不顾身的恋爱吧！ &lt;/p&gt;
 
@@ -197,7 +214,7 @@
 
 &lt;hr&gt;
 
-&lt;h3&gt;明星世界&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/ming-xing-shi-jie/id717023922?ls=1&amp;amp;mt=8&quot;&gt;明星世界&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&amp;#160; &amp;#160; &amp;#160;   《明星世界》第一媒体文化互动平台。帮助有才艺的你实现明星梦。致力成为移动互联网时代的“明星工厂”。为每一个追逐“明星梦”的人或团体搭建展示自我、实现梦想的舞台。 &lt;/p&gt;
 
