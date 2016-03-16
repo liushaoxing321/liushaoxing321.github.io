@@ -36,7 +36,7 @@ description: 个人简历
 >####项目经验(11)
  
 ###[悦己SELF](https://itunes.apple.com/gh/app/yue-ji-daily/id515573336?mt=8)
-   《悦己SELF》[登过APPStore排行榜]()，点击查看[图1](https://raw.githubusercontent.com/liushaoxing321/liushaoxing321.github.io/master/assets/images/IMG_0358.PNG)、[图2](https://raw.githubusercontent.com/liushaoxing321/liushaoxing321.github.io/master/assets/images/IMG_0850.PNG)。《悦己SELF是一款以轻阅读为主的单身女性生活时尚类APP,让你享有时尚、美容、生活的最新资讯的同时,还会贴心送出每天的"心情密语".不为他人,只为成为更好的自己.    
+   《悦己SELF》[登过APPStore排行榜]()，点击查看[图1](https://raw.githubusercontent.com/liushaoxing321/liushaoxing321.github.io/master/assets/images/IMG_0358.PNG)、[图2](https://raw.githubusercontent.com/liushaoxing321/liushaoxing321.github.io/master/assets/images/IMG_0850.PNG)。《悦己SELF》是一款以轻阅读为主的单身女性生活时尚类APP,让你享有时尚、美容、生活的最新资讯的同时,还会贴心送出每天的"心情密语".不为他人,只为成为更好的自己.    
 
 1. 类型QQ的抽屉侧滑框架,添加了各种自定义动画。通过截图的方式实现TableView的开门效果。手机的`摇一摇`功能,`果冻吸入`效果的实现。以及自定义评论的动效。  
 2. `高斯模糊`的熟练使用,由于APP内高斯模糊效果较多,在做高斯模糊效果的同时还要兼顾手机的`内存`紧张。  
