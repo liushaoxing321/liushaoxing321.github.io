@@ -148,13 +148,6 @@
   <ol class="post-list">
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2013/05/deploy-a-ceilometer-horizon-project/" title="访问 部署一个ceilometer-horizon项目">部署一个ceilometer-horizon项目</a></h2>
-      <p class="excerpt">下载代码原来的代码好像安装的时候没有把文件全拷进去，用我修改过的吧git clone https://github.com/suyan/ceilometer-horizon.git    下面是他原来的代码git clone https://github.com/yuanotes/ceilometer-horizon.git安装必须的包他用了导出pdf的python库，所以先得装一下easy_install svglibeasy_install reportlab./setup.py in...&hellip;</p>
-      <div class="post-list__meta"><time datetime="2013-05-01 00:00:00 +0800" class="post-list__meta--date date">2013-05-01</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/05/deploy-a-ceilometer-horizon-project/>继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li>
       <h2 class="post-list__post-title post-title"><a href="/2013/04/create-windows-xp-image-for-openstack/" title="访问 给OpenStack创建Windows XP镜像">给OpenStack创建Windows XP镜像</a></h2>
       <p class="excerpt">创建windows镜像创建一个img文件kvm-img create -f raw windowsxp.img 10G下载virtio驱动wget http://alt.fedoraproject.org/pub/alt/virtio-win/archives/virtio-win-0.1-59/virtio-win-0.1-59.isowget http://www.linuxwind.org/download/virtio-win-1.1.16.vfd启动安装程序sudo kvm -m...&hellip;</p>
       <div class="post-list__meta"><time datetime="2013-04-26 00:00:00 +0800" class="post-list__meta--date date">2013-04-26</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/04/create-windows-xp-image-for-openstack/>继续阅读</a></div>
@@ -217,6 +210,13 @@
       <hr class="post-list__divider" />
     </li>
     
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2013/01/introduction-of-kanyun-worker/" title="访问 kanyun worker原理">kanyun worker原理</a></h2>
+      <p class="excerpt">信息获取主要是有几个plugin函数，依次调用，并把结果发给server获得主机信息plugin_local_cpu()使用命令 sleep %d;top -n 1 -b|grep Cpu|awk &#39;{print $2}&#39; 来检测计算节点（非虚拟机）cpu占用率plugin_traffic_accounting_info()获得流量信息，测试不好用获得宿主机信息plugin_agent_info(){    import libvirt     conn = libvirt...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2013-01-30 00:00:00 +0800" class="post-list__meta--date date">2013-01-30</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/01/introduction-of-kanyun-worker/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
   </ol>
 
   <hr class="post-list__divider " />
@@ -237,7 +237,7 @@
             <!-- <section class="footer">
     <footer>
     	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
-        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-18 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-09-05 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
         <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
     </footer>
 </section>

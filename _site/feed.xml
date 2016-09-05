@@ -5,44 +5,9 @@
     <description>我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</description>
     <link>http://liushaoxing.github.io/</link>
     <atom:link href="http://liushaoxing.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 Mar 2016 22:58:55 +0800</pubDate>
-    <lastBuildDate>Fri, 18 Mar 2016 22:58:55 +0800</lastBuildDate>
+    <pubDate>Mon, 05 Sep 2016 10:32:23 +0800</pubDate>
+    <lastBuildDate>Mon, 05 Sep 2016 10:32:23 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
-    
-      <item>
-        <title>iOS开发工程师个人简历</title>
-        <description>&lt;blockquote&gt;
-&lt;h4&gt;前言&lt;/h4&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&amp;#160; &amp;#160; &amp;#160; &amp;#160;欢迎您来到我的个人&lt;a href=&quot;http://liushaoxing.github.io&quot;&gt;博客&lt;/a&gt;,&lt;del&gt;因为智联等一些招聘网站简历的排版有很多局限性,所以用自己的博客发了一篇个人简历。同时感谢您抽出宝贵时间来查看我的简历,很期待能有跟您一次&lt;code&gt;面谈&lt;/code&gt;的机会.&lt;/del&gt; 因为&lt;a href=&quot;&quot;&gt;2016.03.18&lt;/a&gt;号一家中意的公司给了我offer。所以我这边把个人简历内容删除了。再次感谢您的到来。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;h4&gt;&lt;del&gt;基本信息&lt;/del&gt;&lt;/h4&gt;
-
-&lt;h4&gt;&lt;del&gt;工作经历&lt;/del&gt;&lt;/h4&gt;
-
-&lt;h4&gt;&lt;del&gt;教育经历&lt;/del&gt;&lt;/h4&gt;
-
-&lt;h4&gt;&lt;del&gt;项目经验(11)&lt;/del&gt;&lt;/h4&gt;
-
-&lt;h4&gt;&lt;del&gt;专业技能&lt;/del&gt;&lt;/h4&gt;
-
-&lt;h4&gt;&lt;del&gt;其它&lt;/del&gt;&lt;/h4&gt;
-
-&lt;h3&gt;&lt;del&gt;结尾&lt;/del&gt;&lt;/h3&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Mon, 14 Mar 2016 00:00:00 +0800</pubDate>
-        <link>http://liushaoxing.github.io/2016/03/about-myself/</link>
-        <guid isPermaLink="true">http://liushaoxing.github.io/2016/03/about-myself/</guid>
-        
-        <category>iOS</category>
-        
-        
-        <category>技术</category>
-        
-      </item>
     
       <item>
         <title>Autolayout</title>
@@ -2151,6 +2116,68 @@ void max_heapify(vector&amp;lt;int&amp;gt; &amp;amp;nums, int beg, int end)
         <guid isPermaLink="true">http://liushaoxing.github.io/2015/09/sort-algorithms/</guid>
         
         <category>算法</category>
+        
+        
+        <category>技术</category>
+        
+      </item>
+    
+      <item>
+        <title>Laravel 关联模型由于名称一致性导致的问题</title>
+        <description>&lt;h2&gt;1. 定义关联模型&lt;/h2&gt;
+
+&lt;p&gt;在Laravel里面，我们可以通过定义以下Model来完成关联查询。&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;class MyPost extends Eloquent {
+    public function myPostInfo () {
+        return $this-&amp;gt;hasOne(&amp;#39;MyPostInfo&amp;#39;);
+    }
+}
+
+class MyPostInfo extends Eloquent {}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h2&gt;2. 使用关联模型&lt;/h2&gt;
+
+&lt;p&gt;这里&lt;code&gt;myPostInfo()&lt;/code&gt;用的是Camel命名规则，但是我们在读取某一个PostInfo的时候可以用Snake规则。如下面代码都是可行的：&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;$post = MyPost::find(1);
+$post_info = $post-&amp;gt;myPostInfo; // example 1
+$post_info = $post-&amp;gt;my_post_info; // example 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Laravel允许上述两种方法，但是没有合理的处理使用两种命名造成的冲突。&lt;/p&gt;
+
+&lt;h2&gt;3. 缓存失效&lt;/h2&gt;
+
+&lt;p&gt;如果我们同时使用了上述两个例子，就会使其中一个缓存失效。在Model的relations变量中，缓存了已经读取过的关联Model，但是当我们用不同规则的名字去读取的时候，却会使得前一个缓存失效。例如&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;$post_info = $post-&amp;gt;myPostInfo; 
+// $post-&amp;gt;relations = [‘myPostInfo’ =&amp;gt; ..];
+
+$post_info = $post-&amp;gt;my_post_info;
+// $post-&amp;gt;relations = [‘myPostInfo’ =&amp;gt; …, ‘my_post_info’ =&amp;gt; …];
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;所以如果不希望缓存失效，得在项目中只使用一种命名方法去读取关系模型。Laravel推荐的是Camel Case.&lt;/p&gt;
+
+&lt;h2&gt;4. toArray() 方法失效&lt;/h2&gt;
+
+&lt;p&gt;如果同时使用了两者，另外一个问题就是导致&lt;code&gt;Model::toArray()&lt;/code&gt;失效。因为&lt;code&gt;toArray()&lt;/code&gt;方法首先去&lt;code&gt;relations&lt;/code&gt;中查找Snake Case命名的关联模型，没有的话才去看Camel Case的。&lt;/p&gt;
+
+&lt;p&gt;所以如果用到了&lt;code&gt;toArray()&lt;/code&gt;方法来转换Model，切忌同时使用两者。&lt;/p&gt;
+
+&lt;h2&gt;5. 容易犯错的位置&lt;/h2&gt;
+
+&lt;p&gt;最容易犯错的代码是这样的：&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;MyPost::with(‘myPostInfo’)-&amp;gt;get();
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;在使用With去eagerLoad关联模型时，必须使用和定义方法同名的key去读取，那么这样读取出来的方法只能是Camel Case的key。其他地方就只能用&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;$my_post-&amp;gt;myPostInfo;
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;来保证不出问题。&lt;/p&gt;
+</description>
+        <pubDate>Thu, 08 Jan 2015 00:00:00 +0800</pubDate>
+        <link>http://liushaoxing.github.io/2015/01/conflict-between-camel-and-snake-in-laravel/</link>
+        <guid isPermaLink="true">http://liushaoxing.github.io/2015/01/conflict-between-camel-and-snake-in-laravel/</guid>
+        
+        <category>PHP</category>
+        
+        <category>Laravel</category>
         
         
         <category>技术</category>

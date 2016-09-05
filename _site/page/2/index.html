@@ -148,13 +148,6 @@
   <ol class="post-list">
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/01/conflict-between-camel-and-snake-in-laravel/" title="访问 Laravel 关联模型由于名称一致性导致的问题">Laravel 关联模型由于名称一致性导致的问题</a></h2>
-      <p class="excerpt">1. 定义关联模型在Laravel里面，我们可以通过定义以下Model来完成关联查询。class MyPost extends Eloquent {    public function myPostInfo () {        return $this-&gt;hasOne(&#39;MyPostInfo&#39;);    }}class MyPostInfo extends Eloquent {}2. 使用关联模型这里myPostInfo()用的是Camel命名规则，但是我们在读...&hellip;</p>
-      <div class="post-list__meta"><time datetime="2015-01-08 00:00:00 +0800" class="post-list__meta--date date">2015-01-08</time> &#8226; <span class="post-list__meta--tags tags">PHPLaravel</span><a class="btn-border-small" href=/2015/01/conflict-between-camel-and-snake-in-laravel/>继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-    
-    <li>
       <h2 class="post-list__post-title post-title"><a href="/2014/12/ioc-and-facade-in-laravel/" title="访问 Laravel 核心：控制反转（Inversion of Control）和门面模式（Facade）">Laravel 核心：控制反转（Inversion of Control）和门面模式（Facade）</a></h2>
       <p class="excerpt">这两个概念对于 Laravel 的使用者来说应该并不陌生，尤其是当你希望扩展或者替换 Laravel 核心库的时候，理解和合理使用它们可以极大提升 Laravel 的战斗力。这里以创建一个自己的 ServiceProvider 为例理解 Inversion of Control 和 Facade 在 Laravel 中的应用。控制反转（Inversion of Control）什么是 IoC控制反转（Inversion of Control，缩写为IoC），是面向对象编程中的一种设计原则，...&hellip;</p>
       <div class="post-list__meta"><time datetime="2014-12-06 00:00:00 +0800" class="post-list__meta--date date">2014-12-06</time> &#8226; <span class="post-list__meta--tags tags">PHPLaravel</span><a class="btn-border-small" href=/2014/12/ioc-and-facade-in-laravel/>继续阅读</a></div>
@@ -217,6 +210,13 @@
       <hr class="post-list__divider" />
     </li>
     
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2014/03/use-other-libraries-in-laravel/" title="访问 在Laravel中使用自己的类库三种方式">在Laravel中使用自己的类库三种方式</a></h2>
+      <p class="excerpt">虽然Composer使得我们可以重用很多现有的类库（例如packagist.org中的），但是我们仍然可能用到一些不兼容composer的包或者类库。另外在某一项目中，我们也可能会创建某一类库，而且可能并没有制作成为composer package 的打算。这个时候我们可以通过以下方式来使用自己的特有类库。增加可直接实例化的类有些需要直接在项目中使用的类，可以通过以下方式增加到Laravel中创建类库文件app/libraries/class/myClass.php写入文件内容&lt;?p...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2014-03-20 00:00:00 +0800" class="post-list__meta--date date">2014-03-20</time> &#8226; <span class="post-list__meta--tags tags">LaravelPHP</span><a class="btn-border-small" href=/2014/03/use-other-libraries-in-laravel/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
   </ol>
 
   <hr class="post-list__divider " />
@@ -237,7 +237,7 @@
             <!-- <section class="footer">
     <footer>
     	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
-        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-18 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-09-05 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
         <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
     </footer>
 </section>
