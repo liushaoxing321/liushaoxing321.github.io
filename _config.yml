@@ -1,0 +1,52 @@
+# Basic
+title: 刘少星
+subtitle: 
+welcome_message:  欢迎来到我的博客
+description: 我叫刘少星(一名在帝都漂了三年的iOS开发工程师)
+creator: <a href="http://onev.cat">@onevcat</a>
+
+url: "http://liushaoxing.github.io"
+
+permalink: /:year/:month/:title/
+
+# Format
+highlighter: plain
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", tables]
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: red
+
+# The blog button should not be removed.
+blog_button:
+    title: Blog
+    description: Visit blog
+
+# Navigation buttons in the front page.
+nav:
+    #- {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
+    # - {title: Another Button, description: A button, url: 'http://example.com'}
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page/:num/"
+
+# Comment
+comment:
+    disqus: vno-jekyll
+    # duoshuo: 
+    
+# Social
+social:
+    weibo: liushaoxing321@163.com
+    github: https://www.github.com/liushaoxing321
+    twitter: liu_shaoxing@163.com
+    gplus: 107108267983477358170
+    mail: liu_shaoxing@163.com
+
+# Google Analytics
+ga:
+    # id: your_ga_id
+    # host: your_host

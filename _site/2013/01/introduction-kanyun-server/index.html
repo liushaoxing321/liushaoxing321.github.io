@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>kanyun server服务</title>
+  <meta name="description" content="数据接收和存储">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="kanyun server服务">
+  <meta name="twitter:description" content="数据接收和存储">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="kanyun server服务">
+  <meta property="og:description" content="数据接收和存储">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2013/01/introduction-kanyun-server/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星" class="blog-button">刘少星</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2013-01-30 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2013-01-30</time> &#8226; <span class="post-meta__tags tags">OpenStack</span>
+    </div>
+    <h1 class="post-title">kanyun server服务</h1>
+  </header>
+
+  <section class="post">
+    <h2>数据接收和存储</h2>
+
+<p>数据接收使用</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">msg_type, report = socket.recv_multipart()
+</code></pre></figure>
+<p>获得数据类型和内容，然后再使用</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">plugins[msg_type](app=app, db=db, data=data)
+</code></pre></figure>
+<p>调用相应的函数，处理数据</p>
+
+<p>从MYSQL数据库中获得相应实例的uuid，作为cassandra的key，即每一row存储一个虚拟机数据</p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/01/introduction-of-kanyun-worker/" title="link to kanyun worker原理">kanyun worker原理</a></h2>
+       <p class="excerpt">信息获取主要是有几个plugin函数，依次调用，并把结果发给server获得主机信息plugin_local_cpu()使用命令 sleep %d;top -n 1 -b|grep Cpu|awk &#39;{print $2}&#39; 来检测计算节点（非虚拟机）cpu占用率plugin_traffic_accounting_info()获得流量信息，测试不好用获得宿主机信息plugin_agent_info(){    import libvirt     conn = libvirt...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-01-30 00:00:00 +0800" class="post-list__meta--date date">2013-01-30</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/01/introduction-of-kanyun-worker/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/01/deploy-kanyun/" title="link to 在OpenStack中部署kanyun">在OpenStack中部署kanyun</a></h2>
+       <p class="excerpt">kanyun的部署1 全部节点配置1.1 安装zmq1.2 安装kanyun2 控制节点配置2.1 安装配置cassandra2.2 启动和配置kanyun3 计算节点配置3.1 启动和配置kanyun1 全部节点1.1 安装zmq安装zerozmq(2.2.0)yum install libtool autoconf automakeyum install uuid-develyum install libuuid-develwget http://download.zeromq.org...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-01-30 00:00:00 +0800" class="post-list__meta--date date">2013-01-30</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/01/deploy-kanyun/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2013/01/introduction-kanyun-server/";
+        this.page.identifier = "/2013/01/introduction-kanyun-server/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <!-- <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-18 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+ -->
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

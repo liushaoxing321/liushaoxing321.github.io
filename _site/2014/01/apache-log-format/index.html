@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Apache 日志文件格式及简单处理</title>
+  <meta name="description" content="Apache对于所有经手的访问日志，都会记录在access_log中，对这个文件分析，可以了解很多服务器情况。例如访问来源，访问资源等">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Apache 日志文件格式及简单处理">
+  <meta name="twitter:description" content="Apache对于所有经手的访问日志，都会记录在access_log中，对这个文件分析，可以了解很多服务器情况。例如访问来源，访问资源等">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Apache 日志文件格式及简单处理">
+  <meta property="og:description" content="Apache对于所有经手的访问日志，都会记录在access_log中，对这个文件分析，可以了解很多服务器情况。例如访问来源，访问资源等">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2014/01/apache-log-format/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星" class="blog-button">刘少星</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2014-01-24 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2014-01-24</time> &#8226; <span class="post-meta__tags tags">Apache</span>
+    </div>
+    <h1 class="post-title">Apache 日志文件格式及简单处理</h1>
+  </header>
+
+  <section class="post">
+    <blockquote>
+<p>Apache对于所有经手的访问日志，都会记录在access_log中，对这个文件分析，可以了解很多服务器情况。例如访问来源，访问资源等</p>
+</blockquote>
+
+<h2>日志格式</h2>
+
+<p>根据<a href="http://httpd.apache.org/docs/mod/mod_log_config.html">Apache文档</a>，可以看到我们可以通过设置<code>LogFormat</code>来设置Apache记录的日志格式。简单的几种设置格式如下：</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">1. Common Log Format (CLF)
+&quot;%h %l %u %t \&quot;%r\&quot; %&gt;s %b&quot;
+2. Common Log Format with Virtual Host
+&quot;%v %h %l %u %t \&quot;%r\&quot; %&gt;s %b&quot;
+3. NCSA extended/combined log format
+&quot;%h %l %u %t \&quot;%r\&quot; %&gt;s %b \&quot;%{Referer}i\&quot; \&quot;%{User-agent}i\&quot;&quot;
+4. Referer log format
+&quot;%{Referer}i -&gt; %U&quot;
+5. Agent (Browser) log format
+&quot;%{User-agent}i&quot;
+</code></pre></figure>
+<p>这些格式都代表什么意思呢？下面是一个参考表</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">%%  百分号(Apache2.0.44或更高的版本)
+%a  远端IP地址
+%A  本机IP地址
+%B  除HTTP头以外传送的字节数
+%b  以CLF格式显示的除HTTP头以外传送的字节数，也就是当没有字节传送时显示’-‘而不是0。
+%{Foobar}C  在请求中传送给服务端的cookieFoobar的内容。
+%D  服务器处理本请求所用时间，以微为单位。
+%{FOOBAR}e  环境变量FOOBAR的值
+%f  文件名
+%h  远端主机
+%H  请求使用的协议
+%{Foobar}i  发送到服务器的请求头Foobar:的内容。
+%l  远端登录名(由identd而来，如果支持的话)，除非IdentityCheck设为”On“，否则将得到一个”-”。
+%m  请求的方法
+%{Foobar}n  来自另一个模块的注解Foobar的内容。
+%{Foobar}o  应答头Foobar:的内容。
+%p  服务器服务于该请求的标准端口。
+%P  为本请求提供服务的子进程的PID。
+%{format}P  服务于该请求的PID或TID(线程ID)，format的取值范围为：pid和tid(2.0.46及以后版本)以及hextid(需要APR1.2.0及以上版本)
+%q  查询字符串(若存在则由一个”?“引导，否则返回空串)
+%r  请求的第一行
+%s  状态。对于内部重定向的请求，这个状态指的是原始请求的状态，
+    —%&gt;s则指的是最后请求的状态。
+%t  时间，用普通日志时间格式(标准英语格式)
+%{format}t  时间，用strftime(3)指定的格式表示的时间。(默认情况下按本地化格式)
+%T  处理完请求所花时间，以秒为单位。
+%u  远程用户名(根据验证信息而来；如果返回status(%s)为401，可能是假的)
+%U  请求的URL路径，不包含查询字符串。
+%v  对该请求提供服务的标准ServerName。
+%V  根据UseCanonicalName指令设定的服务器名称。
+%X  请求完成时的连接状态：
+    X=  连接在应答完成前中断。
+    +=  应答传送完后继续保持连接。
+    -=  应答传送完后关闭连接。
+(在1.3以后的版本中，这个指令是%c，但这样就和过去的SSL语法：%{var}c冲突了)
+%I  接收的字节数，包括请求头的数据，并且不能为零。要使用这个指令你必须启用mod_logio模块。
+%O  发送的字节数，包括请求头的数据，并且不能为零。要使用这个指令你必须启用mod_logio模块。
+</code></pre></figure>
+<p>这么多看着就头疼，拿个例子来说明一下，比如</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">&quot;%h %l %u %t \&quot;%r\&quot; %&gt;s %b&quot;
+</code></pre></figure>
+<p>这是最常见的日志记录格式，一般也是系统默认的，对应记录下来的日志为：</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">61.135.219.2 - - [01/Jan/2014:00:02:02 +0800] &quot;GET /feed/ HTTP/1.0&quot; 200 12306
+</code></pre></figure>
+<p>分解说明一下：</p>
+
+<ol>
+<li>61.135.219.2  访问来源IP</li>
+<li>&#39;-&#39;  远端登录名(由identd而来，如果支持的话)</li>
+<li>&#39;-&#39;  远程用户名</li>
+<li>[01/Jan/2014:00:02:02 +0800] 请求时间，格式为[day/month/year:hour:minute:second zone]</li>
+<li>&quot;GET /feed/ HTTP/1.0&quot; 请求内容，格式为&quot;%m %U%q %H&quot;，即&quot;请求方法/访问路径/协议&quot;</li>
+<li>200 状态码</li>
+<li>12306 返回数据大小</li>
+</ol>
+
+<h2>简单处理</h2>
+
+<p>平常不太复杂的日志文件分析和处理直接可以用Shell脚本搞定，下面是几个常用脚本</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">1.查看apache的进程数
+ps -aux | grep httpd | wc -l
+
+2.分析日志查看当天的ip连接数
+cat default-access_log | grep &quot;10/Dec/2010&quot; | awk &#39;{print $2}&#39; | sort | uniq -c | sort -nr
+
+3.查看指定的ip在当天究竟访问了什么url
+cat default-access_log | grep &quot;10/Dec/2010&quot; | grep &quot;218.19.140.242&quot; | awk &#39;{print $7}&#39; | sort | uniq -c | sort -nr
+
+4.查看当天访问排行前10的url
+cat default-access_log | grep &quot;10/Dec/2010&quot; | awk &#39;{print $7}&#39; | sort | uniq -c | sort -nr | head -n 10
+
+5.看到指定的ip究竟干了什么
+cat default-access_log | grep 218.19.140.242 | awk &#39;{print $1&quot;\t&quot;$8}&#39; | sort | uniq -c | sort -nr | less
+
+6.查看访问次数最多的几个分钟(找到热点)
+awk &#39;{print $4}&#39; default-access_log |cut -c 14-18|sort|uniq -c|sort -nr|head
+</code></pre></figure>
+<p>另外可以对日志进行简单的处理，只保留自己需要的行和列，这个处理我用python写了。例如SAE拿下来的日志</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">yansublog.sinaapp.com 61.135.219.2 930269 99 [01/Jan/2014:00:02:02 +0800] yansublog 636 1 &quot;GET /feed/ HTTP/1.0&quot; 304 - &quot;-&quot; &quot;Mozilla/5.0 (compatible;YoudaoFeedFetcher/1.0;http://www.youdao.com/help/reader/faq/topic006/;2 subscribers;)&quot; 61.135.219.2.1388505722221452 yq22
+</code></pre></figure>
+<p>挺多数据，但是其中有不知道干啥用的，为了分析方便，把不知道用处的删掉</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">import re
+
+f_input = open(&#39;access_log&#39;, &#39;r&#39;)
+f_output = open(&#39;access_simple&#39;, &#39;w&#39;)
+
+for line in f_input:
+    log = re.findall(r&#39;.* (.*) .* .* (\[.*\]) .* .* .* (\&quot;.*\&quot;) (.*) (.*) (\&quot;.*\&quot;) (\&quot;.*\&quot;) .* .*&#39;, line)   
+    log = list(log[0])
+    log[1:1] = &#39;-&#39;
+    log[1:1] = &#39;-&#39;
+    f_output.write(&#39; &#39;.join(log)+&#39;\n&#39;)
+
+f_input.close()
+f_output.close()
+</code></pre></figure>
+<p>如果想要对日志进一步分析，也可以安装使用<a href="http://awstats.sourceforge.net/">awstats</a></p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2014/01/how-to-use-php-socket/" title="link to PHP Socket的使用">PHP Socket的使用</a></h2>
+       <p class="excerpt">最近在做的项目有一项需要耗时任务在后台运行的功能，虽然PHP并不是非常适合做常驻后台的守护进程，但是由于项目主要代码都是基于PHP实现，如果运行在后台的守护进程改换别的语言会非常不方便。所以不可避免会涉及到Web端和Daemon部分的通信，Socket是一个不错的方式。Socket是什么socket的英文原义是“孔”或“插座”。作为BSD UNIX的进程通信机制，取后一种意思。通常也称作&quot;套接字&quot;，用于描述IP地址和端口，是一个通信链的句柄。在Internet上的主机一...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2014-01-25 00:00:00 +0800" class="post-list__meta--date date">2014-01-25</time> &#8226; <span class="post-list__meta--tags tags">PHP</span><a class="btn-border-small" href=/2014/01/how-to-use-php-socket/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2014/01/python-script-of-sae-log-download/" title="link to Python脚本--下载合并SAE日志">Python脚本--下载合并SAE日志</a></h2>
+       <p class="excerpt">Python脚本--下载合并SAE日志由于一些原因，需要SAE上站点的日志文件，从SAE上只能按天下载，下载下来手动处理比较蛋疼，尤其是数量很大的时候。还好SAE提供了API可以批量获得日志文件下载地址，刚刚写了python脚本自动下载和合并这些文件调用API获得下载地址文档位置在这里设置自己的应用和下载参数请求中需要设置的变量如下api_url = &#39;http://dloadcenter.sae.sina.com.cn/interapi.php?&#39;appname = &#...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2014-01-17 00:00:00 +0800" class="post-list__meta--date date">2014-01-17</time> &#8226; <span class="post-list__meta--tags tags">Python</span><a class="btn-border-small" href=/2014/01/python-script-of-sae-log-download/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2014/01/apache-log-format/";
+        this.page.identifier = "/2014/01/apache-log-format/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <!-- <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-18 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+ -->
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

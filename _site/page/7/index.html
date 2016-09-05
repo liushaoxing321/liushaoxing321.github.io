@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>刘少星</title>
+  <meta name="description" content="我叫刘少星(一名在帝都漂了三年的iOS开发工程师)">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="刘少星">
+  <meta name="twitter:description" content="我叫刘少星(一名在帝都漂了三年的iOS开发工程师)">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="刘少星">
+  <meta property="og:description" content="我叫刘少星(一名在帝都漂了三年的iOS开发工程师)">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/page/7/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover " style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星" class="blog-button">刘少星</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <div class="main-post-list hidden">
+
+  <ol class="post-list">
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2013/01/introduction-of-kanyun-worker/" title="访问 kanyun worker原理">kanyun worker原理</a></h2>
+      <p class="excerpt">信息获取主要是有几个plugin函数，依次调用，并把结果发给server获得主机信息plugin_local_cpu()使用命令 sleep %d;top -n 1 -b|grep Cpu|awk &#39;{print $2}&#39; 来检测计算节点（非虚拟机）cpu占用率plugin_traffic_accounting_info()获得流量信息，测试不好用获得宿主机信息plugin_agent_info(){    import libvirt     conn = libvirt...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2013-01-30 00:00:00 +0800" class="post-list__meta--date date">2013-01-30</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/01/introduction-of-kanyun-worker/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2013/01/introduction-kanyun-server/" title="访问 kanyun server服务">kanyun server服务</a></h2>
+      <p class="excerpt">数据接收和存储数据接收使用msg_type, report = socket.recv_multipart()获得数据类型和内容，然后再使用plugins[msg_type](app=app, db=db, data=data)调用相应的函数，处理数据从MYSQL数据库中获得相应实例的uuid，作为cassandra的key，即每一row存储一个虚拟机数据&hellip;</p>
+      <div class="post-list__meta"><time datetime="2013-01-30 00:00:00 +0800" class="post-list__meta--date date">2013-01-30</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/01/introduction-kanyun-server/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2013/01/deploy-kanyun/" title="访问 在OpenStack中部署kanyun">在OpenStack中部署kanyun</a></h2>
+      <p class="excerpt">kanyun的部署1 全部节点配置1.1 安装zmq1.2 安装kanyun2 控制节点配置2.1 安装配置cassandra2.2 启动和配置kanyun3 计算节点配置3.1 启动和配置kanyun1 全部节点1.1 安装zmq安装zerozmq(2.2.0)yum install libtool autoconf automakeyum install uuid-develyum install libuuid-develwget http://download.zeromq.org...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2013-01-30 00:00:00 +0800" class="post-list__meta--date date">2013-01-30</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/01/deploy-kanyun/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2013/01/command-of-kanyun/" title="访问 kanyun的api-client命令">kanyun的api-client命令</a></h2>
+      <p class="excerpt">uuid:虚拟机的唯一标识，如08e89e41-d2c2-4c5d-ba2a-c0d180942270column_family(metric): &#39;cpu&#39;,&#39;vmnetwork&#39;,&#39;mem_max&#39;,&#39;mem_free&#39;,&#39;nic_incoming&#39;,&#39;nic_outgoing&#39;,&#39;blk_read&#39;,&#39;blk_write&#39;super_column_famil...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2013-01-30 00:00:00 +0800" class="post-list__meta--date date">2013-01-30</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/01/command-of-kanyun/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2012/12/python-development-of-sae/" title="访问 sae下的python开发部署和一个简单例子">sae下的python开发部署和一个简单例子</a></h2>
+      <p class="excerpt">以前开发php时，一直在使用sae的平台和服务，非常的喜欢。现在在整openstack，所以改用python做一些东西，为了不来回切换两个语言，我决定学习学习django，方便做一些自己的东西。关于sae下python的使用，sae官方文档写的非常全面，我这里只是记录自己的一个学习过程搭建本地开发环境安装djangoeasy_install django下载安装本地开发环境git clone https://github.com/SAEPython/saepythondevguide.gi...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2012-12-31 00:00:00 +0800" class="post-list__meta--date date">2012-12-31</time> &#8226; <span class="post-list__meta--tags tags">Python</span><a class="btn-border-small" href=/2012/12/python-development-of-sae/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2012/11/openstack-nova-internal/" title="访问 OpenStack Nova内部机制【译】">OpenStack Nova内部机制【译】</a></h2>
+      <p class="excerpt">本文经原作者同意后进行转载和翻译，原文链接本人正在学习Openstack源码，为了自己学习和他人学习方便，故可能将一些国外优秀博客翻译转载。本人看英语文章基本顺利，但是翻译却不太在行，也希望通过这个方式提升一下英语水平，如果您发现我翻译后的文章问题太严重，尽管指出，谢谢！另外也希望志同道合的朋友一起探讨有关Openstack的问题!作为 核心开发者 ，我已经为 Openstack 的 Nova 项目工作了18个月多。开始的时候这个项目很小，所以你可以很容易的从代码库找到你想要的东西。你的代...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2012-11-08 00:00:00 +0800" class="post-list__meta--date date">2012-11-08</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2012/11/openstack-nova-internal/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2012/09/php-variable-variables/" title="访问 PHP可变变量">PHP可变变量</a></h2>
+      <p class="excerpt">什么叫可变变量不知道大家在使用php的时候是否遇到这样一种情况，即想将一个变量的内容作为另一个变量的名称。在php中，这个需求可以通过可变变量（Variable variables）来实现。可变变量的一般形式为：$var=“foo”;$$var=1;在这里， 其实等同于向将var展开，然后再以它的值作为真正的变量名$foo=1;可变变量妙用类的动态实例化$var=“foo”;$a=new $foo;循环定义变量for($i=0;$i&lt;10;$i++){${aa.$i}=“a”;}动态...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2012-09-27 00:00:00 +0800" class="post-list__meta--date date">2012-09-27</time> &#8226; <span class="post-list__meta--tags tags">PHP</span><a class="btn-border-small" href=/2012/09/php-variable-variables/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2012/09/open-widown-in-javascript/" title="访问 JS中防止浏览器屏蔽window.open">JS中防止浏览器屏蔽window.open</a></h2>
+      <p class="excerpt">有的时候我们需要一些弹出窗来作为临时信息显示，在js代码中直接使用window.open(url,“_blank”,option);即可实现跳转，而且还可以传递一些参数。但是有个问题是，很多浏览器不支持代码触发上述代码，这个问题在平常使用中显得很不方便，尤其是我们经常用ajax返回值来触发一个新页面。为了防止被屏蔽，可以有两种方式解决。1、在用户点击事件中增加监听程序&lt;button onclick=“test()”&gt;点击&lt;/button&gt;&lt;script typ...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2012-09-27 00:00:00 +0800" class="post-list__meta--date date">2012-09-27</time> &#8226; <span class="post-list__meta--tags tags">JavaScript</span><a class="btn-border-small" href=/2012/09/open-widown-in-javascript/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2012/09/php-session-security/" title="访问 PHP操作Session的原理及提升安全性时的一个问题">PHP操作Session的原理及提升安全性时的一个问题</a></h2>
+      <p class="excerpt">Session和Cookie基本介绍相同点：两者都是保存用户的临时信息，以方便用户和网站之间的交互不同点：Session保存在服务器端，只有服务器端才可查看和修改。服务器端通过客户端在cookie中携带的session_id来获得保存在服务器端的用户数据。Cookie保存在客户端，服务端和客户端都可以对其进行修改。Session的工作原理首先测试如下一段代码&lt;?phpsession_start();//开启sessionecho ‘Session id:’.session_id()....&hellip;</p>
+      <div class="post-list__meta"><time datetime="2012-09-19 00:00:00 +0800" class="post-list__meta--date date">2012-09-19</time> &#8226; <span class="post-list__meta--tags tags">PHP</span><a class="btn-border-small" href=/2012/09/php-session-security/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+  </ol>
+
+  <hr class="post-list__divider " />
+
+<nav class="pagination" role="navigation">
+    
+        <a class="newer-posts pagination__newer btn btn-small btn-tertiary" href="/page/6/#blog">&larr; 最近</a>
+    
+    <span class="pagination__page-number">7 / 7</span>
+    
+</nav>
+
+
+</div>
+
+            <!-- <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-18 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+ -->
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

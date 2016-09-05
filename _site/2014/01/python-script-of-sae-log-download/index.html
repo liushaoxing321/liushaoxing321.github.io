@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Python脚本--下载合并SAE日志</title>
+  <meta name="description" content="Python脚本--下载合并SAE日志">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Python脚本--下载合并SAE日志">
+  <meta name="twitter:description" content="Python脚本--下载合并SAE日志">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Python脚本--下载合并SAE日志">
+  <meta property="og:description" content="Python脚本--下载合并SAE日志">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2014/01/python-script-of-sae-log-download/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星" class="blog-button">刘少星</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2014-01-17 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2014-01-17</time> &#8226; <span class="post-meta__tags tags">Python</span>
+    </div>
+    <h1 class="post-title">Python脚本--下载合并SAE日志</h1>
+  </header>
+
+  <section class="post">
+    <h1>Python脚本--下载合并SAE日志</h1>
+
+<blockquote>
+<p>由于一些原因，需要SAE上站点的日志文件，从SAE上只能按天下载，下载下来手动处理比较蛋疼，尤其是数量很大的时候。还好SAE提供了API可以批量获得日志文件下载地址，刚刚写了python脚本自动下载和合并这些文件</p>
+</blockquote>
+
+<h2>调用API获得下载地址</h2>
+
+<p>文档位置在<a href="http://sae.sina.com.cn/?m=devcenter&amp;catId=281">这里</a></p>
+
+<h3>设置自己的应用和下载参数</h3>
+
+<p>请求中需要设置的变量如下</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">api_url = &#39;http://dloadcenter.sae.sina.com.cn/interapi.php?&#39;
+appname = &#39;xxxxx&#39;
+from_date = &#39;20140101&#39;
+to_date = &#39;20140116&#39;
+url_type = &#39;http&#39; # http|taskqueue|cron|mail|rdc
+url_type2 = &#39;access&#39; # only when type=http  access|debug|error|warning|notice|resources
+secret_key = &#39;xxxxx&#39;
+</code></pre></figure>
+<h3>生成请求地址</h3>
+
+<p>请求地址生成方式可以看一下官网的要求：</p>
+
+<ol>
+<li>将参数排序</li>
+<li>生成请求字符串，去掉<code>&amp;</code></li>
+<li>附加access_key</li>
+<li>请求字符串求md5，形成sign</li>
+<li>把sign增加到请求字符串中</li>
+</ol>
+
+<p>具体实现代码如下</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">params = dict()
+params[&#39;act&#39;] = &#39;log&#39;
+params[&#39;appname&#39;] = appname
+params[&#39;from&#39;] = from_date
+params[&#39;to&#39;] = to_date
+params[&#39;type&#39;] = url_type
+
+if url_type == &#39;http&#39;:
+    params[&#39;type2&#39;] = url_type2
+
+params = collections.OrderedDict(sorted(params.items()))
+
+request = &#39;&#39;
+for k,v in params.iteritems():
+    request += k+&#39;=&#39;+v+&#39;&amp;&#39;
+
+sign = request.replace(&#39;&amp;&#39;,&#39;&#39;)
+sign += secret_key
+
+md5 = hashlib.md5()
+md5.update(sign)
+sign = md5.hexdigest()
+
+request = api_url + request + &#39;sign=&#39; + sign
+
+if response[&#39;errno&#39;] != 0:
+    print &#39;[!] &#39;+response[&#39;errmsg&#39;]
+    exit()
+
+print &#39;[#] request success&#39;
+</code></pre></figure>
+<h2>下载日志文件</h2>
+
+<p>SAE将每天的日志文件都打包成tar.gz的格式，下载保存下来即可，文件名以<code>日期.tar.gz</code>命名</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">log_files = list()
+
+for down_url in response[&#39;data&#39;]:    
+    file_name = re.compile(r&#39;\d{4}-\d{2}-\d{2}&#39;).findall(down_url)[0] + &#39;.tar.gz&#39;
+    log_files.append(file_name)
+    data = urllib2.urlopen(down_url).read()
+    with open(file_name, &quot;wb&quot;) as file:
+        file.write(data)
+
+print &#39;[#] you got %d log files&#39; % len(log_files)
+</code></pre></figure>
+<h2>合并文件</h2>
+
+<p>合并文件方式用trafile库解压缩每个文件，然后把文件内容附加到access_log下就可以了</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text"># compress these files to access_log
+access_log = open(&#39;access_log&#39;,&#39;w&#39;);
+
+for log_file in log_files:
+    tar = tarfile.open(log_file)
+    log_name = tar.getnames()[0]
+    tar.extract(log_name)
+    # save to access_log
+    data = open(log_name).read()
+    access_log.write(data)
+    os.remove(log_name)
+
+print &#39;[#] all file has writen to access_log&#39;
+</code></pre></figure>
+<h2>代码下载地址</h2>
+
+<p><a href="https://github.com/suyan/Scripts/blob/master/Python/sae-log-download.py">github</a></p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2014/01/apache-log-format/" title="link to Apache 日志文件格式及简单处理">Apache 日志文件格式及简单处理</a></h2>
+       <p class="excerpt">Apache对于所有经手的访问日志，都会记录在access_log中，对这个文件分析，可以了解很多服务器情况。例如访问来源，访问资源等日志格式根据Apache文档，可以看到我们可以通过设置LogFormat来设置Apache记录的日志格式。简单的几种设置格式如下：1. Common Log Format (CLF)&quot;%h %l %u %t \&quot;%r\&quot; %&gt;s %b&quot;2. Common Log Format with Virtual Host&...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2014-01-24 00:00:00 +0800" class="post-list__meta--date date">2014-01-24</time> &#8226; <span class="post-list__meta--tags tags">Apache</span><a class="btn-border-small" href=/2014/01/apache-log-format/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2014/01/php-namespace-and-autoload/" title="link to PHP命名空间及自动加载">PHP命名空间及自动加载</a></h2>
+       <p class="excerpt">命名空间什么是命名空间呢？命名空间（英语：Namespace）表示标识符（identifier）的可见范围。一个标识符可在多个命名空间中定义，它在不同命名空间中的含义是互不相干的。这样，在一个新的命名空间中可定义任何标识符，它们不会与任何已有的标识符发生冲突，因为已有的定义都处于其它命名空间中。简单说来命名空间是为了解决不同库在同一个环境下使用时出现的命名冲突。例如我自己有一个函数名叫A，但是系统已经有一个A函数了，那就会出现冲突。PHP中的命名空间PHP从5.3版本开始引入了命名空间，之...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2014-01-16 00:00:00 +0800" class="post-list__meta--date date">2014-01-16</time> &#8226; <span class="post-list__meta--tags tags">PHP</span><a class="btn-border-small" href=/2014/01/php-namespace-and-autoload/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2014/01/python-script-of-sae-log-download/";
+        this.page.identifier = "/2014/01/python-script-of-sae-log-download/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <!-- <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-18 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+ -->
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

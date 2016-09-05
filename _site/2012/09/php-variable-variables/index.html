@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>PHP可变变量</title>
+  <meta name="description" content="什么叫可变变量">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PHP可变变量">
+  <meta name="twitter:description" content="什么叫可变变量">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="PHP可变变量">
+  <meta property="og:description" content="什么叫可变变量">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2012/09/php-variable-variables/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星" class="blog-button">刘少星</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2012-09-27 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2012-09-27</time> &#8226; <span class="post-meta__tags tags">PHP</span>
+    </div>
+    <h1 class="post-title">PHP可变变量</h1>
+  </header>
+
+  <section class="post">
+    <h3>什么叫可变变量</h3>
+
+<p>不知道大家在使用php的时候是否遇到这样一种情况，即想将一个变量的内容作为另一个变量的名称。在php中，这个需求可以通过可变变量（Variable variables）来实现。</p>
+
+<p>可变变量的一般形式为：</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$var=“foo”;
+$$var=1;
+</code></pre></figure>
+<p>在这里， 其实等同于向将var展开，然后再以它的值作为真正的变量名</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$foo=1;
+</code></pre></figure>
+<h3>可变变量妙用</h3>
+
+<h4>类的动态实例化</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$var=“foo”;
+$a=new $foo;
+</code></pre></figure>
+<h4>循环定义变量</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">for($i=0;$i&lt;10;$i++){
+${aa.$i}=“a”;
+}
+</code></pre></figure>
+<h4>动态调用方法</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">class test_class{
+  var $func=‘display_UK’;
+  function display_UK(){
+    echo “Hello”;
+  }
+  function display_FR(){
+    echo “Bonjour”;
+  }
+  function display(){
+    $this-&gt;{$this-&gt;func}();
+  }
+}
+</code></pre></figure>
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2012/11/openstack-nova-internal/" title="link to OpenStack Nova内部机制【译】">OpenStack Nova内部机制【译】</a></h2>
+       <p class="excerpt">本文经原作者同意后进行转载和翻译，原文链接本人正在学习Openstack源码，为了自己学习和他人学习方便，故可能将一些国外优秀博客翻译转载。本人看英语文章基本顺利，但是翻译却不太在行，也希望通过这个方式提升一下英语水平，如果您发现我翻译后的文章问题太严重，尽管指出，谢谢！另外也希望志同道合的朋友一起探讨有关Openstack的问题!作为 核心开发者 ，我已经为 Openstack 的 Nova 项目工作了18个月多。开始的时候这个项目很小，所以你可以很容易的从代码库找到你想要的东西。你的代...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2012-11-08 00:00:00 +0800" class="post-list__meta--date date">2012-11-08</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2012/11/openstack-nova-internal/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2012/09/open-widown-in-javascript/" title="link to JS中防止浏览器屏蔽window.open">JS中防止浏览器屏蔽window.open</a></h2>
+       <p class="excerpt">有的时候我们需要一些弹出窗来作为临时信息显示，在js代码中直接使用window.open(url,“_blank”,option);即可实现跳转，而且还可以传递一些参数。但是有个问题是，很多浏览器不支持代码触发上述代码，这个问题在平常使用中显得很不方便，尤其是我们经常用ajax返回值来触发一个新页面。为了防止被屏蔽，可以有两种方式解决。1、在用户点击事件中增加监听程序&lt;button onclick=“test()”&gt;点击&lt;/button&gt;&lt;script typ...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2012-09-27 00:00:00 +0800" class="post-list__meta--date date">2012-09-27</time> &#8226; <span class="post-list__meta--tags tags">JavaScript</span><a class="btn-border-small" href=/2012/09/open-widown-in-javascript/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2012/09/php-variable-variables/";
+        this.page.identifier = "/2012/09/php-variable-variables/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <!-- <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-18 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+ -->
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

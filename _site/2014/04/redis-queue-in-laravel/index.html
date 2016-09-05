@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>Laravel中使用Redis作为队列系统的工作流程</title>
+  <meta name="description" content="利用Redis可以很方便的实现一个任务队列，但是在Laravel中，Redis的队列总会出现一个任务多次执行的问题。究其原因是它写死了reserved的时长，也就是如果1分钟后任务没有执行完成，那么这个任务就会被重新放回队列。下面是队列的简单使用和执行原理。">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Laravel中使用Redis作为队列系统的工作流程">
+  <meta name="twitter:description" content="利用Redis可以很方便的实现一个任务队列，但是在Laravel中，Redis的队列总会出现一个任务多次执行的问题。究其原因是它写死了reserved的时长，也就是如果1分钟后任务没有执行完成，那么这个任务就会被重新放回队列。下面是队列的简单使用和执行原理。">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Laravel中使用Redis作为队列系统的工作流程">
+  <meta property="og:description" content="利用Redis可以很方便的实现一个任务队列，但是在Laravel中，Redis的队列总会出现一个任务多次执行的问题。究其原因是它写死了reserved的时长，也就是如果1分钟后任务没有执行完成，那么这个任务就会被重新放回队列。下面是队列的简单使用和执行原理。">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2014/04/redis-queue-in-laravel/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星" class="blog-button">刘少星</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2014-04-11 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2014-04-11</time> &#8226; <span class="post-meta__tags tags">Laravel</span>
+    </div>
+    <h1 class="post-title">Laravel中使用Redis作为队列系统的工作流程</h1>
+  </header>
+
+  <section class="post">
+    <blockquote>
+<p>利用Redis可以很方便的实现一个任务队列，但是在Laravel中，Redis的队列总会出现一个任务多次执行的问题。究其原因是它写死了reserved的时长，也就是如果1分钟后任务没有执行完成，那么这个任务就会被重新放回队列。下面是队列的简单使用和执行原理。</p>
+</blockquote>
+
+<h2>设置</h2>
+
+<p>设置队列使用Redis非常容易，在<code>app/config/queue.php</code>中配置</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">...
+&#39;default&#39; =&gt; &#39;redis&#39;,
+...
+&#39;connections&#39; =&gt; array(
+    ...
+    &#39;redis&#39; =&gt; array(
+        &#39;driver&#39; =&gt; &#39;redis&#39;,
+        &#39;queue&#39;  =&gt; &#39;waa&#39;,
+    ),
+),
+</code></pre></figure>
+<p>即可。</p>
+
+<h2>使用</h2>
+
+<p>使用时不需要多配置，只要写好Queue类和其fire方法，在需要的位置出队即可。具体方法可以看<a href="http://laravel.com/docs/queues#basic-usage">这里</a>。</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">class SendEmail {
+
+    public function fire($job, $data)
+    {
+        //
+        $job-&gt;delete();
+    }
+
+}
+
+Queue::push(&#39;SendEmail@send&#39;, array(&#39;message&#39; =&gt; $message));
+</code></pre></figure>
+<h2>流程</h2>
+
+<p>Laravel利用artisan命令来执行出队操作，然后进行任务的执行。方法调用如下：</p>
+
+<ol>
+<li>artisan queue:work</li>
+<li>WorkerCommand:fire()</li>
+<li>Worker:pop()</li>
+<li>Worker:getNextJob()</li>
+<li>RedisQueue:pop()</li>
+<li>Worker:process()</li>
+</ol>
+
+<p>我遇到的问题就在这里，在<code>RedisQueue:pop()</code>方法中，有这样一句：</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">$this-&gt;redis-&gt;zadd($queue.&#39;:reserved&#39;, $this-&gt;getTime() + 60, $job);
+</code></pre></figure>
+<p>这里将当前执行的任务放到另外一个reserved队列中，超时时间是60s。也就是说，如果60s后这个任务没有被删除掉，则任务会重新被放入队列中来。因此，在实际的使用过程中，任务很可能被多次执行。解决的办法是</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">class SendEmail {
+
+    public function fire($job, $data)
+    {
+        $job-&gt;delete();
+        // job 
+    }
+
+}
+</code></pre></figure>
+<p>即先删除这个任务，再开始执行任务。</p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2014/04/insert-large-number-of-data-in-mysql/" title="link to MySQL大量数据插入各种方法性能分析与比较">MySQL大量数据插入各种方法性能分析与比较</a></h2>
+       <p class="excerpt">不管是日常业务数据处理中，还是数据库的导入导出，都可能遇到需要处理大量数据的插入。插入的方式和数据库引擎都会对插入速度造成影响，这篇文章旨在从理论和实践上对各种方法进行分析和比较，方便以后应用中插入方法的选择。插入分析MySQL中插入一个记录需要的时间由下列因素组成，其中的数字表示大约比例：连接：（3）发送查询给服务器：（2）分析查询：（2）插入记录：（1x记录大小）插入索引：（1x索引）关闭：（1）如果我们每插入一条都执行一个SQL语句，那么我们需要执行除了连接和关闭之外的所有步骤N次，...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2014-04-16 00:00:00 +0800" class="post-list__meta--date date">2014-04-16</time> &#8226; <span class="post-list__meta--tags tags">MySQL</span><a class="btn-border-small" href=/2014/04/insert-large-number-of-data-in-mysql/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2014/03/managing-your-larrvel-queue-by-supervisor/" title="link to 使用Supervisor来管理你的Laravel队列">使用Supervisor来管理你的Laravel队列</a></h2>
+       <p class="excerpt">Laravel官网教程中，并没有提到用它来写CLI应用，即守护进程或者可执行脚本。但是它却提供了更加便捷的队列(Queue)功能。Laravel队列我们在开发应用过程中难免会遇到处理耗时任务的需求，这些任务如果直接在用户的请求中处理，必然会导致页面显示被阻塞。虽然利用fastcgi的一些特性可以先输出页面，后台任务继续执行，但是这样远远不如将任务交给异步队列来处理方便。配置和启动Laravel队列功能为我们提供了一个便捷的方式去处理这些异步任务，配置一个队列只需要以下几步：配置app/co...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2014-03-22 00:00:00 +0800" class="post-list__meta--date date">2014-03-22</time> &#8226; <span class="post-list__meta--tags tags">LaravelPHP</span><a class="btn-border-small" href=/2014/03/managing-your-larrvel-queue-by-supervisor/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2014/04/redis-queue-in-laravel/";
+        this.page.identifier = "/2014/04/redis-queue-in-laravel/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <!-- <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-18 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+ -->
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

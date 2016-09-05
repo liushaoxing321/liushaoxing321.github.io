@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>在OpenStack中部署kanyun</title>
+  <meta name="description" content="kanyun的部署">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="在OpenStack中部署kanyun">
+  <meta name="twitter:description" content="kanyun的部署">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="在OpenStack中部署kanyun">
+  <meta property="og:description" content="kanyun的部署">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2013/01/deploy-kanyun/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星" class="blog-button">刘少星</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2013-01-30 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2013-01-30</time> &#8226; <span class="post-meta__tags tags">OpenStack</span>
+    </div>
+    <h1 class="post-title">在OpenStack中部署kanyun</h1>
+  </header>
+
+  <section class="post">
+    <h1>kanyun的部署</h1>
+
+<ul>
+<li><a href="#all">1 全部节点配置</a>
+
+<ul>
+<li><a href="#all-zmq">1.1 安装zmq</a></li>
+<li><a href="#all-kanyun">1.2 安装kanyun</a></li>
+</ul></li>
+<li><a href="#controller">2 控制节点配置</a>
+
+<ul>
+<li><a href="#controller-cassandra">2.1 安装配置cassandra</a></li>
+<li><a href="#controller-kanyun">2.2 启动和配置kanyun</a></li>
+</ul></li>
+<li><a href="#compute">3 计算节点配置</a>
+
+<ul>
+<li><a href="#compute-kanyun">3.1 启动和配置kanyun</a></li>
+</ul></li>
+</ul>
+
+<h2 id="all">1 全部节点</h2>
+
+<h3 id="all-zmq">1.1 安装zmq</h3>
+
+<h4>安装zerozmq(2.2.0)</h4>
+
+<ol>
+<li>yum install libtool autoconf automake</li>
+<li>yum install uuid-devel</li>
+<li>yum install libuuid-devel</li>
+<li>wget <a href="http://download.zeromq.org/zeromq-2.2.0.tar.gz">http://download.zeromq.org/zeromq-2.2.0.tar.gz</a></li>
+<li>tar zxvf zeromq-2.2.0.tar.gz &amp; cd zeromq-2.2.0 &amp; ./configure &amp; make install</li>
+<li>ldconfig</li>
+</ol>
+
+<h4>安装pyzmq</h4>
+
+<ol>
+<li>easy_install &quot;pyzmq==2.2.0&quot;</li>
+<li>如果出现缺少libzmq.so.1的情况，可能是链接库没有正确配置。</li>
+<li>sudo /sbin/ldconfig -v | grep libzmq查看是否有所需链接</li>
+<li>如果没有libzmq.so.1 -&gt; libzmq.so.1.0.1，则修改/etc/ld.so.conf，在末尾增加/usr/local/lib，然后ldconfig -v | grep libzmq即可</li>
+<li>如果出现缺少Python.h，则使用yum install python-devel来安装</li>
+</ol>
+
+<h3 id="all-kanyun">1.2 安装kanyun</h3>
+
+<h4>下载代码</h4>
+
+<p>kanyun原来的代码有bug，而且不能在python2.6环境下使用，下面是我改过的</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">cd /opt
+git clone https://github.com/suyan/kanyun.git
+</code></pre></figure>
+<p>修改内容：</p>
+
+<ul>
+<li>兼容python2.6和2.7（python2.6需要安装OrderedDict）</li>
+<li>修改获取内存信息方式和计算cpu使用率方式</li>
+<li>修复一些bug</li>
+</ul>
+
+<h4>安装</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">python /opt/kanyun/setup.py install
+</code></pre></figure>
+<h4>创建日志目录</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">mkdir /var/log/kanyun
+</code></pre></figure>
+<h4>安装OrderedDict(python2.6)</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">easy_install OrderedDict
+</code></pre></figure>
+<h2 id="controller">2 控制节点</h2>
+
+<h3 id="controller-cassandra">2.1 安装配置cassandra</h3>
+
+<h4>下载Cassandra</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">cd /opt
+wget http://mirror.bit.edu.cn/apache/cassandra/0.8.10/apache-cassandra-0.8.10-bin.tar.gz
+</code></pre></figure>
+<h4>解压</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">tar zxvf apache-cassandra-0.8.10-bin.tar.gz
+</code></pre></figure>
+<h4>运行</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">/opt/apache-cassandra-0.8.10/bin/cassandra
+</code></pre></figure>
+<h4>创建数据库</h4>
+
+<p>通过命令打开数据库</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">/opt/apache-cassandra-0.8.10/bin/cassandra-cli -h 127.0.0.1
+</code></pre></figure>
+<p>并执行下面命令</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">CREATE keyspace DATA;
+USE DATA;
+
+CREATE COLUMN family vmnetwork WITH column_type=&#39;Super&#39; AND comparator=&#39;AsciiType&#39; AND subcomparator=&#39;IntegerType&#39; AND default_validation_class=&#39;AsciiType&#39;;
+CREATE COLUMN family cpu WITH column_type=&#39;Super&#39; AND comparator=&#39;AsciiType&#39; AND subcomparator=&#39;IntegerType&#39; AND default_validation_class=&#39;AsciiType&#39;;
+CREATE COLUMN family mem_max WITH column_type=&#39;Super&#39; AND comparator=&#39;AsciiType&#39; AND subcomparator=&#39;IntegerType&#39; AND default_validation_class=&#39;AsciiType&#39;;
+CREATE COLUMN family mem_free WITH column_type=&#39;Super&#39; AND comparator=&#39;AsciiType&#39; AND subcomparator=&#39;IntegerType&#39; AND default_validation_class=&#39;AsciiType&#39;;
+CREATE COLUMN family nic_incoming WITH column_type=&#39;Super&#39; AND comparator=&#39;AsciiType&#39; AND subcomparator=&#39;IntegerType&#39; AND default_validation_class=&#39;AsciiType&#39;;
+CREATE COLUMN family nic_outgoing WITH column_type=&#39;Super&#39; AND comparator=&#39;AsciiType&#39; AND subcomparator=&#39;IntegerType&#39; AND default_validation_class=&#39;AsciiType&#39;;
+CREATE COLUMN family blk_read WITH column_type=&#39;Super&#39; AND comparator=&#39;AsciiType&#39; AND subcomparator=&#39;IntegerType&#39; AND default_validation_class=&#39;AsciiType&#39;;
+CREATE COLUMN family blk_write WITH column_type=&#39;Super&#39; AND comparator=&#39;AsciiType&#39; AND subcomparator=&#39;IntegerType&#39; AND default_validation_class=&#39;AsciiType&#39;;
+
+assume vmnetwork KEYS AS ascii;
+assume cpu KEYS AS ascii;
+assume mem_max KEYS AS ascii;
+assume nic_incoming KEYS AS ascii;
+assume nic_outgoing KEYS AS ascii;
+assume blk_read KEYS AS ascii;
+assume blk_write KEYS AS ascii;
+assume mem_free KEYS AS ascii;       
+</code></pre></figure>
+<h4>安装pycassa支持</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">easy_install pycassa
+</code></pre></figure>
+<p>如果出现<em>The required version of distribute is not available</em></p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">easy_install -U distribute
+</code></pre></figure>
+<h3 id="controller-kanyun">2.2 启动和配置kanyun</h3>
+
+<h4>配置/etc/kanyun.conf</h4>
+
+<ul>
+<li>文件中host需要填写计算节点的ip</li>
+<li>sql_connection填写nova.conf中connection值</li>
+</ul>
+
+<p>配置文件</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">[kanyun]
+log: /var/log/kanyun/kanyun.log
+[DEFAULT]
+sql_connection: mysql://nova:novamysqlpassword@controller/nova
+[server]
+host: 172.19.9.1 
+port: 5551
+db_host: 127.0.0.1
+log: /var/log/kanyun/kanyun-server.log
+[api]
+api_host: 172.19.9.1
+api_port: 5552
+db_host: 127.0.0.1
+log: /var/log/kanyun/kanyun-api.log
+[client]
+api_host: 172.19.9.1
+api_port: 5552
+log: /var/log/kanyun/kanyun-client.log 
+</code></pre></figure>
+<h4>启动服务</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">python /opt/kanyun/bin/kanyun-server &amp;
+python /opt/kanyun/bin/kanyun-api &amp;
+</code></pre></figure>
+<h2 id="compute">3 计算节点</h2>
+
+<h3 id="compute-kanyun">3.1 启动和配置kanyun</h3>
+
+<h4>配置/etc/kanyun.conf</h4>
+
+<ul>
+<li>文件中api_host需要填写计算节点的ip</li>
+<li>sql_connection填写nova.conf中connection值</li>
+<li>id根据节点编号自己设置</li>
+</ul>
+
+<p>配置文件</p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">[kanyun]
+log: /var/log/kanyun/kanyun.log
+[DEFAULT]
+sql_connection: mysql://nova:novamysqlpassword@controller/nova
+[worker]
+id: worker1
+worker_timeout: 60
+dataserver_host: 172.19.9.1
+dataserver_port: 5551
+log: /var/log/kanyun/kanyun-worker.log
+[client]
+api_host: 172.19.9.1
+api_port: 5552
+log: /var/log/kanyun/kanyun-client.log
+</code></pre></figure>
+<h4>启动服务</h4>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">python /opt/kanyun/bin/kanyun-worker &amp;
+</code></pre></figure>
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/01/introduction-kanyun-server/" title="link to kanyun server服务">kanyun server服务</a></h2>
+       <p class="excerpt">数据接收和存储数据接收使用msg_type, report = socket.recv_multipart()获得数据类型和内容，然后再使用plugins[msg_type](app=app, db=db, data=data)调用相应的函数，处理数据从MYSQL数据库中获得相应实例的uuid，作为cassandra的key，即每一row存储一个虚拟机数据&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-01-30 00:00:00 +0800" class="post-list__meta--date date">2013-01-30</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/01/introduction-kanyun-server/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2013/01/command-of-kanyun/" title="link to kanyun的api-client命令">kanyun的api-client命令</a></h2>
+       <p class="excerpt">uuid:虚拟机的唯一标识，如08e89e41-d2c2-4c5d-ba2a-c0d180942270column_family(metric): &#39;cpu&#39;,&#39;vmnetwork&#39;,&#39;mem_max&#39;,&#39;mem_free&#39;,&#39;nic_incoming&#39;,&#39;nic_outgoing&#39;,&#39;blk_read&#39;,&#39;blk_write&#39;super_column_famil...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2013-01-30 00:00:00 +0800" class="post-list__meta--date date">2013-01-30</time> &#8226; <span class="post-list__meta--tags tags">OpenStack</span><a class="btn-border-small" href=/2013/01/command-of-kanyun/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2013/01/deploy-kanyun/";
+        this.page.identifier = "/2013/01/deploy-kanyun/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <!-- <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-18 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+ -->
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

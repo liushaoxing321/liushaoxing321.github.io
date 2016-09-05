@@ -1,0 +1,2161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>刘少星</title>
+    <description>我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</description>
+    <link>http://liushaoxing.github.io/</link>
+    <atom:link href="http://liushaoxing.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 18 Mar 2016 22:58:55 +0800</pubDate>
+    <lastBuildDate>Fri, 18 Mar 2016 22:58:55 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>iOS开发工程师个人简历</title>
+        <description>&lt;blockquote&gt;
+&lt;h4&gt;前言&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;#160; &amp;#160; &amp;#160; &amp;#160;欢迎您来到我的个人&lt;a href=&quot;http://liushaoxing.github.io&quot;&gt;博客&lt;/a&gt;,&lt;del&gt;因为智联等一些招聘网站简历的排版有很多局限性,所以用自己的博客发了一篇个人简历。同时感谢您抽出宝贵时间来查看我的简历,很期待能有跟您一次&lt;code&gt;面谈&lt;/code&gt;的机会.&lt;/del&gt; 因为&lt;a href=&quot;&quot;&gt;2016.03.18&lt;/a&gt;号一家中意的公司给了我offer。所以我这边把个人简历内容删除了。再次感谢您的到来。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;h4&gt;&lt;del&gt;基本信息&lt;/del&gt;&lt;/h4&gt;
+
+&lt;h4&gt;&lt;del&gt;工作经历&lt;/del&gt;&lt;/h4&gt;
+
+&lt;h4&gt;&lt;del&gt;教育经历&lt;/del&gt;&lt;/h4&gt;
+
+&lt;h4&gt;&lt;del&gt;项目经验(11)&lt;/del&gt;&lt;/h4&gt;
+
+&lt;h4&gt;&lt;del&gt;专业技能&lt;/del&gt;&lt;/h4&gt;
+
+&lt;h4&gt;&lt;del&gt;其它&lt;/del&gt;&lt;/h4&gt;
+
+&lt;h3&gt;&lt;del&gt;结尾&lt;/del&gt;&lt;/h3&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 14 Mar 2016 00:00:00 +0800</pubDate>
+        <link>http://liushaoxing.github.io/2016/03/about-myself/</link>
+        <guid isPermaLink="true">http://liushaoxing.github.io/2016/03/about-myself/</guid>
+        
+        <category>iOS</category>
+        
+        
+        <category>技术</category>
+        
+      </item>
+    
+      <item>
+        <title>Autolayout</title>
+        <description>&lt;h1&gt;Autolayout 基础&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;Archives&lt;/code&gt; &lt;code&gt;iOS&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;如果您觉得我的博客对您有帮助，请通过关注我的新浪微博 &lt;a href=&quot;http://weibo.com/1736763114/profile?rightmod=1&amp;amp;wvr=6&amp;amp;mod=personinfo&quot;&gt;MicroCai&lt;/a&gt; 支持我，谢谢！&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;这两天自学的时候，复习了下 autolayout。本来想来写一篇文章记录下学习内容，搜了一下写的人真不少，也写得挺不错的。照理我就不用写了，但心里总有那么一点点遗憾，这么流行的东西，我博客里怎么能没有呢？既然如此，那就多写点基础内容。&lt;/p&gt;
+
+&lt;p&gt;警告：博主为博文贴了十几张图片，查克拉耗尽，生命垂危，关注 &lt;a href=&quot;http://weibo.com/1736763114/profile?rightmod=1&amp;amp;wvr=6&amp;amp;mod=personinfo&quot;&gt;MicroCai&lt;/a&gt; 或者送香吻一个就能唤醒博主，好人一生平安。&lt;/p&gt;
+
+&lt;div class=&quot;toc&quot;&gt;
+
+&lt;div class=&quot;toc&quot;&gt;
+
+*   [Autolayout 基础](#autolayout-基础)
+    *   [Interface Builder 介绍](#interface-builder-介绍)
+        *   [Align（对齐）](#align对齐)
+        *   [Pin：设置相对大小和位置](#pin设置相对大小和位置)
+        *   [Resolve Auto Layout Issues：解决 autolayout 问题](#resolve-auto-layout-issues解决-autolayout-问题)
+        *   [Resizing Behavior](#resizing-behavior)
+        *   [SizeClass](#sizeclass)
+            *   [重写布局](#重写布局)
+            *   [使用 Xcode 6 预览](#使用-xcode-6-预览)
+    *   [VFL（Visual Format Language）](#vflvisual-format-language)
+    *   [Autolayout 常见问题](#autolayout-常见问题)
+    *   [Masonry：替代 Autolayout](#masonry替代-autolayout)
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h2&gt;Interface Builder 介绍&lt;/h2&gt;
+
+&lt;p&gt;在 storyboard 界面的右下角，有这么一排图标&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;鼠标放上去停留一小段时间，就会告诉你它们的作用，从左至右依次是：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  Align：用来设置对齐相关的约束；&lt;/li&gt;
+&lt;li&gt;  Pin：设置相对大小和位置；&lt;/li&gt;
+&lt;li&gt;  Resolve Auto Layout Issues：解决 autolayout 问题；&lt;/li&gt;
+&lt;li&gt;  Resizing Behavior：设置重置大小会如何影响其他对象；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Align（对齐）&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_2.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;下面这些是两个视图层次中同一级的 View 的对齐。&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Leading Edges：头对齐
+Trailing Edges：尾对齐
+Top Edges：顶部对齐
+Bottom Edges：底部对齐
+
+Horizontal Centers：水平中心对齐
+Vertical Centers：垂直中心对齐
+BaseLines：基准线（默认 View 底部位置）水平对齐，用来对齐有文字的控件，如 UILabel、UIButton 等
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;下面这些是 SuperView 和 SubView 的对齐，SuperView 是 SubView 的 Container&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Horizontal Center in Container：View 的水平中心和容器的水平中心的相对距离
+Vertical Center in Container：View 的垂直中心和容器的垂直中心的相对距离
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;在对齐数值的白色输入框内，点击右侧下拉框可以选择“Use Current Canvas Value”，意思是使用当前 Xib/Storyboard 内的差值。&lt;/p&gt;
+
+&lt;p&gt;最后一个 Update Frames 表示如何更新 frame，有三个选项，默认为 None 不更新&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;None：不更新 frame
+Items of New Constraints：更新新添加的 frame
+All Frames in Container：更新容器内所有的 frame
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h3&gt;Pin：设置相对大小和位置&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_3.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;最上面有四个矩形框和四条虚线，原来用过 auto resizing 的童鞋应该会比较眼熟。矩形框里的数字表示当前的 View 到最近的 View （注意：不是 SuperView）边缘的距离。&lt;/p&gt;
+
+&lt;p&gt;在矩形框下面有一行灰色字的可选项“Constrain to margins”，意思是在设置上述约束是相对于 margins 设置的，而 margin 默认距离是 16。如和上边缘距离 306，加上 16，所以 View 的顶部和它上边最近的 View 的距离是 312。&lt;/p&gt;
+
+&lt;p&gt;其他的选项&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Width：设置宽度
+Height：设置高度
+
+Equal Widths：设置两个同级 View 的宽度关系
+Equal Heights：设置两个同级 View 的高度关系
+Aspect Ratio：设置 View 自身宽高比例
+
+Align：和前面所讲的 **Align** 一致。那为什么 **Align** 还会出现在这边呢？估计和 **Pin** 有关系，故而也放到这边。
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h3&gt;Resolve Auto Layout Issues：解决 autolayout 问题&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_4.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;可以选择要处理的 Views：当前选中的 Views 或 Controller 内所有的 Views&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Update Frames：更新 frame 
+Update Constraints：更新约束
+Add Missing Constraints：添加遗漏的约束
+Reset to Suggested Constraints：重置约束
+Clear Constraints：清除约束
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h3&gt;Resizing Behavior&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_5.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;设置重置大小会如何影响其他对象，有两个选项（默认已勾选）&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Sublings and Ancestors：影响同级兄弟 Views 和祖先 Views
+Descendants：影响后代 Views
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;（这个地方我也没弄明白，我查了文档和一些博客，都只是做了简单文字说明，然后自己试了下勾选和未勾选的情况，还是找不到有什么区别，所以也没明白具体是如何影响。）&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3&gt;SizeClass&lt;/h3&gt;
+
+&lt;p&gt;SizeClass 中文意思可以理解为尺寸等级，就是在 autolayout 的基础上，加上屏幕尺寸类型的定义。SizeClass 的宽高有三种类型：Compact（紧凑）、Any（任意）、Regular（普通）&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;不同设备屏幕的宽高类型&lt;/em&gt;&lt;br&gt;
+&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_6.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;当你具体选择尺寸时， IB 会显示出当前选择的屏幕尺寸的相关信息，如宽高类型，屏幕尺寸类型，这个尺寸适用于哪些设备等。&lt;/p&gt;
+
+&lt;h4&gt;重写布局&lt;/h4&gt;
+
+&lt;p&gt;如果你设置的某种类型屏幕的约束布局，在其他类型屏幕下出现不符合意图的布局时，可以重写布局，即重新设置该屏幕类型下的布局。&lt;/p&gt;
+
+&lt;p&gt;如图的 UIView 设置了 wAny|hAny 上下左右四个约束&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_7.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;点击这个 UIView，查看 Attribute Inspector 有个 install 选项被勾选上了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_8.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Installed/UnInstalled 表示的意思是当前布局是否被安装在什么类型的屏幕上。Installed/UnInstalled 前面如果没有东西，表示布局是安装在 wAny|hAny 类型的屏幕上。现在如果我们要单独设置某种类型屏幕的布局可以点击加号，选择屏幕类型&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_9.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;将新的屏幕类型的勾选取消掉，则当前布局在该类型下不起作用，此时就可以切换类型，重新设置所有约束。&lt;/p&gt;
+
+&lt;p&gt;若只想修改一条约束，也可以点击 Size Inspector&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_10.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;选择 Constraints —— All 显示所有约束，双击任意一条约束，会出现一个和之前类似的界面&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_11.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Installed 前面也有个加号，估计你也该猜到了，这里的修改和之前也是类似的。&lt;/p&gt;
+
+&lt;p&gt;如果 Xcode 的 Inspector 一些选项前面有加号，就表明它可以被重写，比如刚刚这幅图中，Installed&lt;br&gt;
+选项上方的 Constant 前面也有加号，说明它也是可以被重写的。类似的还有 UILabel 的 font，&lt;strong&gt;但是&lt;/strong&gt;：与重写布局不同，在不同的 size class 中改变文字的属性始终会影响基础布局中的文字。它不能像布局一样，在不同的size class中设置不同的属性值。我们通过下面的方法来解决这一问题。 &lt;a href=&quot;http://www.devtalking.com/articles/adaptive-layout-2/&quot;&gt;参考：Swift自适应布局（Adaptive Layout）教程（二）&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h4&gt;使用 Xcode 6 预览&lt;/h4&gt;
+
+&lt;p&gt;在屏幕类型多了这么多之后，做不同类型的屏幕适配也是需要花不少功夫。如果每次适配一种类型屏幕后，都要运行后才能查看效果，效率简直太低下了。Xcode 6 提供了 preview 预览功能，针对这个问题可以节省不少时间。&lt;/p&gt;
+
+&lt;p&gt;点击 Xcode Tool Bar 的 Assistant Editor 按钮，显示另一个窗口&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_12.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;选择 Preview 展示预览界面&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_13.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;如果想在预览中同时显示不同类型的屏幕，可以在预览界面的左下角点击加号，选择更多设备&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_14.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;如果想要查看横屏/竖屏，点击设备下方的旋转按钮即可&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://blogofzuoyebuluo.qiniudn.com/image_note73867_15.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;h2&gt;VFL（Visual Format Language）&lt;/h2&gt;
+
+&lt;p&gt;不得不说，VFL 的语法比手写 Constraints 的量少了很多，也有象形文字的感觉，但是和普通的 Swift 语法风格比起来实在不搭调。这个内容直接看 &lt;a href=&quot;https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage/VisualFormatLanguage.html&quot;&gt;官方文档&lt;/a&gt; 吧，都用图表示出来，说明的挺清楚的。&lt;/p&gt;
+
+&lt;h2&gt;Autolayout 常见问题&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;设置了 autolayout 之后，在代码中还能用 self.someView.frame 修改 frame 吗？&lt;/em&gt;&lt;br&gt;
+不能&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;为什么有些控件只设置 x、y 值约束，也不会出错？&lt;/em&gt;&lt;br&gt;
+UIKit 的一些控件如 UILabel、UIImageView 等有自适应特性，会根据内容自适应尺寸，所以不需要再约束其宽高。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;同样的约束用在 UIScrollView 和 UIImageViwe 上，为什么会出现错误？&lt;/em&gt;&lt;br&gt;
+参考 &lt;a href=&quot;http://nonomori.farbox.com/post/scrollview-yu-autolayout&quot;&gt;Nonomori 的文章：ScrollView 与 Autolayout&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Masonry：替代 Autolayout&lt;/h2&gt;
+
+&lt;p&gt;Masonry 是目前为止公认的 autolayout 最好的替代方案，语法简洁、直观，不会出现各种意外之外的布局。根据网上了解到的一些情况，Masonry 在大型项目中的效果比 autolayout 好很多。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 16 Feb 2016 14:32:24 +0800</pubDate>
+        <link>http://liushaoxing.github.io/2016/02/hello-world-vno/</link>
+        <guid isPermaLink="true">http://liushaoxing.github.io/2016/02/hello-world-vno/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>NSRunLoop</title>
+        <description>&lt;h1&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;做了一年多的IOS开发，对IOS和Objective-C深层次的了解还十分有限，大多还停留在会用API的级别，这是件挺可悲的事情。想学好一门语言还是需要深层次的了解它，这样才能在使用的时候得心应手，出现各种怪异的问题时不至于不知所措。废话少说，进入今天的正题。&lt;/p&gt;
+
+&lt;p&gt;不知道大家有没有想过这个问题，一个应用开始运行以后放在那里，如果不对它进行任何操作，这个应用就像静止了一样，不会自发的有任何动作发生，但是如果我们点击界面上的一个按钮，这个时候就会有对应的按钮响应事件发生。给我们的感觉就像应用一直处于随时待命的状态，在没人操作的时候它一直在休息，在让它干活的时候，它就能立刻响应。其实，这就是run loop的功劳。&lt;/p&gt;
+
+&lt;p&gt;本篇文章很有参考价值，因此转载到本博客中，希望好文章对大家都有所帮助！&lt;/p&gt;
+
+&lt;h1&gt;一、线程与run loop&lt;/h1&gt;
+
+&lt;h2&gt;1.1 线程任务的类型&lt;/h2&gt;
+
+&lt;p&gt;再来说说线程。有些线程执行的任务是一条直线，起点到终点；而另一些线程要干的活则是一个圆，不断循环，直到通过某种方式将它终止。直线线程如简单的Hello World，运行打印完,它的生命周期便结束了，像昙花一现那样；圆类型的如操作系统，一直运行直到你关机。在IOS中，圆型的线程就是通过run loop不停的循环实现的。&lt;/p&gt;
+
+&lt;h2&gt;1.2 线程与run loop的关系&lt;/h2&gt;
+
+&lt;p&gt;Run loop，正如其名，loop表示某种循环，和run放在一起就表示一直在运行着的循环。实际上，run loop和线程是紧密相连的，可以这样说run loop是为了线程而生，没有线程，它就没有存在的必要。Run loops是线程的基础架构部分，Cocoa和CoreFundation都提供了run loop对象方便配置和管理线程的run loop（以下都已Cocoa为例）。每个线程，包括程序的主线程（main thread）都有与之相应的run loop对象。&lt;/p&gt;
+
+&lt;h3&gt;1.2.1 主线程的run loop默认是启动的。&lt;/h3&gt;
+
+&lt;p&gt;iOS的应用程序里面，程序启动后会有一个如下的main()函数：&lt;/p&gt;
+
+&lt;div id=&quot;crayon-56e5af776a8ec046726454&quot; class=&quot;crayon-syntax crayon-theme-familiar-copy crayon-font-consolas crayon-os-mac print-yes notranslate&quot; data-settings=&quot; minimize scroll-always disable-anim&quot; style=&quot; margin-top: 12px; margin-bottom: 12px; margin-right: 24px; font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-main&quot; style=&quot;&quot;&gt;
+
+&lt;table class=&quot;crayon-table&quot;&gt;
+
+&lt;tbody&gt;
+
+&lt;tr class=&quot;crayon-row&quot;&gt;
+
+&lt;td class=&quot;crayon-nums &quot; data-settings=&quot;show&quot;&gt;
+
+&lt;div class=&quot;crayon-nums-content&quot; style=&quot;font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a8ec046726454-1&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a8ec046726454-2&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a8ec046726454-3&quot;&gt;3&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a8ec046726454-4&quot;&gt;4&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a8ec046726454-5&quot;&gt;5&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a8ec046726454-6&quot;&gt;6&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a8ec046726454-7&quot;&gt;7&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td class=&quot;crayon-code&quot;&gt;&lt;/p&gt;
+
+&lt;div class=&quot;crayon-pre&quot; style=&quot;font-size: 15px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;&quot;&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a8ec046726454-2&quot;&gt;&lt;span class=&quot;crayon-t&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-e&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;*argv&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;{&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a8ec046726454-3&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;autoreleasepool&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;{&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a8ec046726454-4&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;crayon-st&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;UIApplicationMain&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;NSStringFromClass&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-e&quot;&gt;appDelegate&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a8ec046726454-5&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;  &lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;}&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a8ec046726454-6&quot;&gt;&lt;span class=&quot;crayon-sy&quot;&gt;}&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tr&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tbody&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;重点是UIApplicationMain()函数，这个方法会为main thread设置一个NSRunLoop对象，这就解释了本文开始说的为什么我们的应用可以在无人操作的时候休息，需要让它干活的时候又能立马响应。&lt;/p&gt;
+
+&lt;div&gt;&lt;script type=&quot;text/javascript&quot;&gt;var cpro_id = &quot;u2513605&quot;;&lt;/script&gt;&lt;/div&gt;
+
+&lt;h3&gt;1.2.2 对其它线程来说，run loop默认是没有启动的&lt;/h3&gt;
+
+&lt;p&gt;对其它线程来说，run loop默认是没有启动的，如果你需要更多的线程交互则可以手动配置和启动，如果线程只是去执行一个长时间的已确定的任务则不需要。&lt;/p&gt;
+
+&lt;h3&gt;1.2.3 获取线程的run loop&lt;/h3&gt;
+
+&lt;p&gt;在任何一个Cocoa程序的线程中，都可以通过：&lt;/p&gt;
+
+&lt;div id=&quot;crayon-56e5af776a8fa822219774&quot; class=&quot;crayon-syntax crayon-theme-familiar-copy crayon-font-consolas crayon-os-mac print-yes notranslate&quot; data-settings=&quot; minimize scroll-always disable-anim&quot; style=&quot; margin-top: 12px; margin-bottom: 12px; margin-right: 24px; font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-main&quot; style=&quot;&quot;&gt;
+
+&lt;table class=&quot;crayon-table&quot;&gt;
+
+&lt;tbody&gt;
+
+&lt;tr class=&quot;crayon-row&quot;&gt;
+
+&lt;td class=&quot;crayon-nums &quot; data-settings=&quot;show&quot;&gt;
+
+&lt;div class=&quot;crayon-nums-content&quot; style=&quot;font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a8fa822219774-1&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a8fa822219774-2&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a8fa822219774-3&quot;&gt;3&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td class=&quot;crayon-code&quot;&gt;&lt;/p&gt;
+
+&lt;div class=&quot;crayon-pre&quot; style=&quot;font-size: 15px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;&quot;&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a8fa822219774-2&quot;&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSRunLoop&lt;/span&gt;&lt;span class=&quot;crayon-h&quot;&gt;  &lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;*runloop&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSRunLoopcurrentRunLoop&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tr&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tbody&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;来获取到当前线程的run loop。&lt;/p&gt;
+
+&lt;h2&gt;1.3 关于run loop的几点说明&lt;/h2&gt;
+
+&lt;h3&gt;1.3.1 Cocoa中的NSRunLoop类并不是线程安全的&lt;/h3&gt;
+
+&lt;p&gt;我们不能再一个线程中去操作另外一个线程的run loop对象，那很可能会造成意想不到的后果。不过幸运的是CoreFundation中的不透明类CFRunLoopRef是线程安全的，而且两种类型的run loop完全可以混合使用。Cocoa中的NSRunLoop类可以通过实例方法：&lt;/p&gt;
+
+&lt;div id=&quot;crayon-56e5af776a900837648371&quot; class=&quot;crayon-syntax crayon-theme-familiar-copy crayon-font-consolas crayon-os-mac print-yes notranslate&quot; data-settings=&quot; minimize scroll-always disable-anim&quot; style=&quot; margin-top: 12px; margin-bottom: 12px; margin-right: 24px; font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-main&quot; style=&quot;&quot;&gt;
+
+&lt;table class=&quot;crayon-table&quot;&gt;
+
+&lt;tbody&gt;
+
+&lt;tr class=&quot;crayon-row&quot;&gt;
+
+&lt;td class=&quot;crayon-nums &quot; data-settings=&quot;show&quot;&gt;
+
+&lt;div class=&quot;crayon-nums-content&quot; style=&quot;font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a900837648371-1&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a900837648371-2&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a900837648371-3&quot;&gt;3&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td class=&quot;crayon-code&quot;&gt;&lt;/p&gt;
+
+&lt;div class=&quot;crayon-pre&quot; style=&quot;font-size: 15px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;&quot;&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a900837648371-2&quot;&gt;&lt;span class=&quot;crayon-o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopRef&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;getCFRunLoop&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tr&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tbody&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;获取对应的CFRunLoopRef类，来达到线程安全的目的。&lt;/p&gt;
+
+&lt;h3&gt;1.3.2 Run loop的管理并不完全是自动的。&lt;/h3&gt;
+
+&lt;p&gt;我们仍必须设计线程代码以在适当的时候启动run loop并正确响应输入事件，当然前提是线程中需要用到run loop。而且，我们还需要使用while/for语句来驱动run loop能够循环运行，下面的代码就成功驱动了一个run loop：&lt;/p&gt;
+
+&lt;div id=&quot;crayon-56e5af776a905374496234&quot; class=&quot;crayon-syntax crayon-theme-familiar-copy crayon-font-consolas crayon-os-mac print-yes notranslate&quot; data-settings=&quot; minimize scroll-always disable-anim&quot; style=&quot; margin-top: 12px; margin-bottom: 12px; margin-right: 24px; font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-main&quot; style=&quot;&quot;&gt;
+
+&lt;table class=&quot;crayon-table&quot;&gt;
+
+&lt;tbody&gt;
+
+&lt;tr class=&quot;crayon-row&quot;&gt;
+
+&lt;td class=&quot;crayon-nums &quot; data-settings=&quot;show&quot;&gt;
+
+&lt;div class=&quot;crayon-nums-content&quot; style=&quot;font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a905374496234-1&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a905374496234-2&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a905374496234-3&quot;&gt;3&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a905374496234-4&quot;&gt;4&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a905374496234-5&quot;&gt;5&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a905374496234-6&quot;&gt;6&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a905374496234-7&quot;&gt;7&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td class=&quot;crayon-code&quot;&gt;&lt;/p&gt;
+
+&lt;div class=&quot;crayon-pre&quot; style=&quot;font-size: 15px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;&quot;&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a905374496234-2&quot;&gt;&lt;span class=&quot;crayon-t&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;isRunning&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;NO&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a905374496234-4&quot;&gt;&lt;span class=&quot;crayon-st&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;crayon-h&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;{&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a905374496234-5&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;isRunning&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSRunLoopcurrentRunLoop&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;crayon-e &quot;&gt;runMode&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;:NSDefaultRunLoopModebeforeDate&lt;/span&gt;&lt;span class=&quot;crayon-o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSDatedistantFuture&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a905374496234-6&quot;&gt;&lt;span class=&quot;crayon-sy&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-st&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;isRunning&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tr&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tbody&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3&gt;1.3.3 Run loop同时也负责autorelease pool的创建和释放&lt;/h3&gt;
+
+&lt;p&gt;在使用手动的内存管理方式的项目中，会经常用到很多自动释放的对象，如果这些对象不能够被即时释放掉，会造成内存占用量急剧增大。Run loop就为我们做了这样的工作，每当一个运行循环结束的时候，它都会释放一次autorelease pool，同时pool中的所有自动释放类型变量都会被释放掉。&lt;/p&gt;
+
+&lt;h3&gt;1.3.4 Run loop的优点&lt;/h3&gt;
+
+&lt;p&gt;一个run loop就是一个事件处理循环，用来不停的监听和处理输入事件并将其分配到对应的目标上进行处理。如果仅仅是想实现这个功能，你可能会想一个简单的while循环不就可以实现了吗，用得着费老大劲来做个那么复杂的机制？显然，苹果的架构设计师不是吃干饭的，你想到的他们早就想过了。&lt;/p&gt;
+
+&lt;p&gt;首先，NSRunLoop是一种更加高明的消息处理模式，他就高明在对消息处理过程进行了更好的抽象和封装，这样才能是的你不用处理一些很琐碎很低层次的具体消息的处理，在NSRunLoop中每一个消息就被打包在input source或者是timer source（见后文）中了。&lt;/p&gt;
+
+&lt;p&gt;其次，也是很重要的一点，使用run loop可以使你的线程在有工作的时候工作，没有工作的时候休眠，这可以大大节省系统资源。&lt;/p&gt;
+
+&lt;h1&gt;二、Run loop相关知识点&lt;/h1&gt;
+
+&lt;h2&gt;2.1输入事件来源&lt;/h2&gt;
+
+&lt;p&gt;Run loop接收输入事件来自两种不同的来源：输入源（input source）和定时源（timer source）。两种源都使用程序的某一特定的处理例程来处理到达的事件。图-1显示了run loop的概念结构以及各种源。&lt;/p&gt;
+
+&lt;p&gt;需要说明的是，当你创建输入源，你需要将其分配给run loop中的一个或多个模式（什么是模式，下文将会讲到）。模式只会在特定事件影响监听的源。大多数情况下，run loop运行在默认模式下，但是你也可以使其运行在自定义模式。若某一源在当前模式下不被监听，那么任何其生成的消息只在run loop运行在其关联的模式下才会被传递。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.henishuo.com/wp-content/uploads/2016/02/20130703215237531.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;图-1 Runloop的结构和输入源类型&lt;/p&gt;
+
+&lt;h3&gt;2.1.1输入源（input source）&lt;/h3&gt;
+
+&lt;p&gt;传递异步事件，通常消息来自于其他线程或程序。输入源传递异步消息给相应的处理例程，并调用runUntilDate:方法来退出(在线程里面相关的NSRunLoop对象调用)。&lt;/p&gt;
+
+&lt;h4&gt;2.1.1.1基于端口的输入源&lt;/h4&gt;
+
+&lt;p&gt;基于端口的输入源由内核自动发送。&lt;/p&gt;
+
+&lt;p&gt;Cocoa和Core Foundation内置支持使用端口相关的对象和函数来创建的基于端口的源。例如，在Cocoa里面你从来不需要直接创建输入源。你只要简单的创建端口对象，并使用NSPort的方法把该端口添加到run loop。端口对象会自己处理创建和配置输入源。&lt;/p&gt;
+
+&lt;p&gt;在Core Foundation，你必须人工创建端口和它的run loop源。我们可以使用端口相关的函数（CFMachPortRef，CFMessagePortRef，CFSocketRef）来创建合适的对象。下面的例子展示了如何创建一个基于端口的输入源，将其添加到run loop并启动：&lt;/p&gt;
+
+&lt;div id=&quot;crayon-56e5af776a90d431605583&quot; class=&quot;crayon-syntax crayon-theme-familiar-copy crayon-font-consolas crayon-os-mac print-yes notranslate&quot; data-settings=&quot; minimize scroll-always disable-anim&quot; style=&quot; margin-top: 12px; margin-bottom: 12px; margin-right: 24px; font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-main&quot; style=&quot;&quot;&gt;
+
+&lt;table class=&quot;crayon-table&quot;&gt;
+
+&lt;tbody&gt;
+
+&lt;tr class=&quot;crayon-row&quot;&gt;
+
+&lt;td class=&quot;crayon-nums &quot; data-settings=&quot;show&quot;&gt;
+
+&lt;div class=&quot;crayon-nums-content&quot; style=&quot;font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-1&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-2&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-3&quot;&gt;3&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-4&quot;&gt;4&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-5&quot;&gt;5&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-6&quot;&gt;6&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-7&quot;&gt;7&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-8&quot;&gt;8&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-9&quot;&gt;9&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-10&quot;&gt;10&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-11&quot;&gt;11&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-12&quot;&gt;12&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-13&quot;&gt;13&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-14&quot;&gt;14&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-15&quot;&gt;15&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-16&quot;&gt;16&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-17&quot;&gt;17&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-18&quot;&gt;18&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a90d431605583-19&quot;&gt;19&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td class=&quot;crayon-code&quot;&gt;&lt;/p&gt;
+
+&lt;div class=&quot;crayon-pre&quot; style=&quot;font-size: 15px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;&quot;&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a90d431605583-2&quot;&gt;&lt;span class=&quot;crayon-e&quot;&gt;voidcreatePortSource&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;{&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a90d431605583-3&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFMessagePortRef&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;port&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;CFMessagePortCreateLocal&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;kCFAllocatorDefault&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFSTR&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-s&quot;&gt;&quot;com.someport&quot;&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;myCallbackFunc&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a90d431605583-5&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopSourceRef&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;CFMessagePortCreateRunLoopSource&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;kCFAllocatorDefault&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-cn&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a90d431605583-7&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopAddSource&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopGetCurrent&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;kCFRunLoopCommonModes&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a90d431605583-9&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-st&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;pageStillLoading&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;{&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a90d431605583-10&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSAutoreleasePool&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;*pool&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSAutoreleasePoolalloc&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;crayon-e &quot;&gt;init&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a90d431605583-11&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopRun&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a90d431605583-12&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-e&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;crayon-r&quot;&gt;release&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a90d431605583-13&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;}&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a90d431605583-15&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopRemoveSource&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopGetCurrent&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;kCFRunLoopDefaultMode&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a90d431605583-17&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRelease&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a90d431605583-18&quot;&gt;&lt;span class=&quot;crayon-sy&quot;&gt;}&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tr&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tbody&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h4&gt;2.1.1.2自定义输入源&lt;/h4&gt;
+
+&lt;p&gt;自定义的输入源需要人工从其他线程发送。&lt;/p&gt;
+
+&lt;p&gt;为了创建自定义输入源，必须使用Core Foundation里面的CFRunLoopSourceRef类型相关的函数来创建。你可以使用回调函数来配置自定义输入源。Core Fundation会在配置源的不同地方调用回调函数，处理输入事件，在源从run loop移除的时候清理它。&lt;/p&gt;
+
+&lt;p&gt;除了定义在事件到达时自定义输入源的行为，你也必须定义消息传递机制。源的这部分运行在单独的线程里面，并负责在数据等待处理的时候传递数据给源并通知它处理数据。消息传递机制的定义取决于你，但最好不要过于复杂。创建并启动自定义输入源的示例如下：&lt;/p&gt;
+
+&lt;div id=&quot;crayon-56e5af776a913994535262&quot; class=&quot;crayon-syntax crayon-theme-familiar-copy crayon-font-consolas crayon-os-mac print-yes notranslate&quot; data-settings=&quot; minimize scroll-always disable-anim&quot; style=&quot; margin-top: 12px; margin-bottom: 12px; margin-right: 24px; font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-main&quot; style=&quot;&quot;&gt;
+
+&lt;table class=&quot;crayon-table&quot;&gt;
+
+&lt;tbody&gt;
+
+&lt;tr class=&quot;crayon-row&quot;&gt;
+
+&lt;td class=&quot;crayon-nums &quot; data-settings=&quot;show&quot;&gt;
+
+&lt;div class=&quot;crayon-nums-content&quot; style=&quot;font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a913994535262-1&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a913994535262-2&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a913994535262-3&quot;&gt;3&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a913994535262-4&quot;&gt;4&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a913994535262-5&quot;&gt;5&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a913994535262-6&quot;&gt;6&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a913994535262-7&quot;&gt;7&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a913994535262-8&quot;&gt;8&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a913994535262-9&quot;&gt;9&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a913994535262-10&quot;&gt;10&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a913994535262-11&quot;&gt;11&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a913994535262-12&quot;&gt;12&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a913994535262-13&quot;&gt;13&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a913994535262-14&quot;&gt;14&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a913994535262-15&quot;&gt;15&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a913994535262-16&quot;&gt;16&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a913994535262-17&quot;&gt;17&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a913994535262-18&quot;&gt;18&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a913994535262-19&quot;&gt;19&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td class=&quot;crayon-code&quot;&gt;&lt;/p&gt;
+
+&lt;div class=&quot;crayon-pre&quot; style=&quot;font-size: 15px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;&quot;&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a913994535262-2&quot;&gt;&lt;span class=&quot;crayon-e&quot;&gt;voidcreateCustomSource&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;{&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a913994535262-3&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopSourceContext&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;crayon-cn&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a913994535262-5&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopSourceRef&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopSourceCreate&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;kCFAllocatorDefault&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-cn&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;&amp;&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a913994535262-7&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopAddSource&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopGetCurrent&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;kCFRunLoopDefaultMode&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a913994535262-9&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-st&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;pageStillLoading&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;{&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a913994535262-10&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSAutoreleasePool&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;*pool&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSAutoreleasePoolalloc&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;crayon-e &quot;&gt;init&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a913994535262-11&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopRun&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a913994535262-12&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-e&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;crayon-r&quot;&gt;release&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a913994535262-13&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;}&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a913994535262-15&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopRemoveSource&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopGetCurrent&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;kCFRunLoopDefaultMode&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a913994535262-17&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRelease&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a913994535262-18&quot;&gt;&lt;span class=&quot;crayon-sy&quot;&gt;}&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tr&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tbody&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h4&gt;2.1.1.3 Cocoa上的Selector源&lt;/h4&gt;
+
+&lt;p&gt;除了基于端口的源，Cocoa定义了自定义输入源，允许你在任何线程执行selector方法。和基于端口的源一样，执行selector请求会在目标线程上序列化，减缓许多在线程上允许多个方法容易引起的同步问题。不像基于端口的源，一个selector执行完后会自动从run loop里面移除。&lt;/p&gt;
+
+&lt;p&gt;当在其他线程上面执行selector时，目标线程须有一个活动的run loop。对于你创建的线程，这意味着线程在你显式的启动run loop之前是不会执行selector方法的，而是一直处于休眠状态。&lt;/p&gt;
+
+&lt;p&gt;NSObject类提供了类似如下的selector方法：&lt;/p&gt;
+
+&lt;div id=&quot;crayon-56e5af776a919501908720&quot; class=&quot;crayon-syntax crayon-theme-familiar-copy crayon-font-consolas crayon-os-mac print-yes notranslate&quot; data-settings=&quot; minimize scroll-always disable-anim&quot; style=&quot; margin-top: 12px; margin-bottom: 12px; margin-right: 24px; font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-main&quot; style=&quot;&quot;&gt;
+
+&lt;table class=&quot;crayon-table&quot;&gt;
+
+&lt;tbody&gt;
+
+&lt;tr class=&quot;crayon-row&quot;&gt;
+
+&lt;td class=&quot;crayon-nums &quot; data-settings=&quot;show&quot;&gt;
+
+&lt;div class=&quot;crayon-nums-content&quot; style=&quot;font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a919501908720-1&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a919501908720-2&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a919501908720-3&quot;&gt;3&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td class=&quot;crayon-code&quot;&gt;&lt;/p&gt;
+
+&lt;div class=&quot;crayon-pre&quot; style=&quot;font-size: 15px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;&quot;&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a919501908720-2&quot;&gt;&lt;span class=&quot;crayon-o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-e &quot;&gt;performSelectorOnMainThread&lt;/span&gt;&lt;span class=&quot;crayon-o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;SEL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;aSelector&lt;/span&gt; &lt;span class=&quot;crayon-e &quot;&gt;withObject&lt;/span&gt;&lt;span class=&quot;crayon-o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-e &quot;&gt;argwaitUntilDone&lt;/span&gt;&lt;span class=&quot;crayon-o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;BOOL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;wait&lt;/span&gt; &lt;span class=&quot;crayon-e &quot;&gt;modes&lt;/span&gt;&lt;span class=&quot;crayon-o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t &quot;&gt;*&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tr&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tbody&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h3&gt;2.1.2 定时源（timer source）&lt;/h3&gt;
+
+&lt;p&gt;定时源在预设的时间点同步方式传递消息，这些消息都会发生在特定时间或者重复的时间间隔。定时源则直接传递消息给处理例程，不会立即退出run loop。&lt;/p&gt;
+
+&lt;p&gt;需要注意的是，尽管定时器可以产生基于时间的通知，但它并不是实时机制。和输入源一样，定时器也和你的run loop的特定模式相关。如果定时器所在的模式当前未被run loop监视，那么定时器将不会开始直到run loop运行在相应的模式下。类似的，如果定时器在run loop处理某一事件期间开始，定时器会一直等待直到下次run loop开始相应的处理程序。如果run loop不再运行，那定时器也将永远不启动。&lt;/p&gt;
+
+&lt;p&gt;创建定时器源有两种方法，&lt;/p&gt;
+
+&lt;p&gt;方法一：&lt;/p&gt;
+
+&lt;div id=&quot;crayon-56e5af776a91e847963456&quot; class=&quot;crayon-syntax crayon-theme-familiar-copy crayon-font-consolas crayon-os-mac print-yes notranslate&quot; data-settings=&quot; minimize scroll-always disable-anim&quot; style=&quot; margin-top: 12px; margin-bottom: 12px; margin-right: 24px; font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-main&quot; style=&quot;&quot;&gt;
+
+&lt;table class=&quot;crayon-table&quot;&gt;
+
+&lt;tbody&gt;
+
+&lt;tr class=&quot;crayon-row&quot;&gt;
+
+&lt;td class=&quot;crayon-nums &quot; data-settings=&quot;show&quot;&gt;
+
+&lt;div class=&quot;crayon-nums-content&quot; style=&quot;font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a91e847963456-1&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a91e847963456-2&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a91e847963456-3&quot;&gt;3&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a91e847963456-4&quot;&gt;4&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a91e847963456-5&quot;&gt;5&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a91e847963456-6&quot;&gt;6&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a91e847963456-7&quot;&gt;7&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a91e847963456-8&quot;&gt;8&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a91e847963456-9&quot;&gt;9&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td class=&quot;crayon-code&quot;&gt;&lt;/p&gt;
+
+&lt;div class=&quot;crayon-pre&quot; style=&quot;font-size: 15px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;&quot;&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a91e847963456-2&quot;&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSTimer&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;*timer&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSTimer&lt;/span&gt; &lt;span class=&quot;crayon-e &quot;&gt;scheduledTimerWithTimeInterval&lt;/span&gt;&lt;span class=&quot;crayon-o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;crayon-cn&quot;&gt;4.0&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a91e847963456-3&quot;&gt;&lt;span class=&quot;crayon-e &quot;&gt;                                                  target&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;:self&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a91e847963456-4&quot;&gt;&lt;span class=&quot;crayon-e &quot;&gt;                                                selector&lt;/span&gt;&lt;span class=&quot;crayon-o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;crayon-st&quot;&gt;@selector&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-e &quot;&gt;backgroundThreadFire&lt;/span&gt;&lt;span class=&quot;crayon-o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a91e847963456-5&quot;&gt;&lt;span class=&quot;crayon-e &quot;&gt;                                                userInfo&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;:nil&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a91e847963456-6&quot;&gt;&lt;span class=&quot;crayon-e &quot;&gt;                                                 repeats&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;:YES&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a91e847963456-8&quot;&gt;&lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSRunLoop&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;currentRunLoop&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;crayon-e &quot;&gt;addTimer&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;:timerforMode&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;:NSDefaultRunLoopMode&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tr&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tbody&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;方法二：&lt;/p&gt;
+
+&lt;div id=&quot;crayon-56e5af776a922331614314&quot; class=&quot;crayon-syntax crayon-theme-familiar-copy crayon-font-consolas crayon-os-mac print-yes notranslate&quot; data-settings=&quot; minimize scroll-always disable-anim&quot; style=&quot; margin-top: 12px; margin-bottom: 12px; margin-right: 24px; font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-main&quot; style=&quot;&quot;&gt;
+
+&lt;table class=&quot;crayon-table&quot;&gt;
+
+&lt;tbody&gt;
+
+&lt;tr class=&quot;crayon-row&quot;&gt;
+
+&lt;td class=&quot;crayon-nums &quot; data-settings=&quot;show&quot;&gt;
+
+&lt;div class=&quot;crayon-nums-content&quot; style=&quot;font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a922331614314-1&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a922331614314-2&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a922331614314-3&quot;&gt;3&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a922331614314-4&quot;&gt;4&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a922331614314-5&quot;&gt;5&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a922331614314-6&quot;&gt;6&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a922331614314-7&quot;&gt;7&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td class=&quot;crayon-code&quot;&gt;&lt;/p&gt;
+
+&lt;div class=&quot;crayon-pre&quot; style=&quot;font-size: 15px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;&quot;&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a922331614314-2&quot;&gt;&lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSTimer&lt;/span&gt; &lt;span class=&quot;crayon-e &quot;&gt;scheduledTimerWithTimeInterval&lt;/span&gt;&lt;span class=&quot;crayon-o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;crayon-cn&quot;&gt;10&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a922331614314-3&quot;&gt;&lt;span class=&quot;crayon-e &quot;&gt;                                 target&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;:self&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a922331614314-4&quot;&gt;&lt;span class=&quot;crayon-e &quot;&gt;                               selector&lt;/span&gt;&lt;span class=&quot;crayon-o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;crayon-st&quot;&gt;@selector&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-e &quot;&gt;backgroundThreadFire&lt;/span&gt;&lt;span class=&quot;crayon-o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a922331614314-5&quot;&gt;&lt;span class=&quot;crayon-e &quot;&gt;                               userInfo&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;:nil&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a922331614314-6&quot;&gt;&lt;span class=&quot;crayon-e &quot;&gt;                                repeats&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;:YES&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tr&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tbody&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h2&gt;2.2 RunLoop观察者&lt;/h2&gt;
+
+&lt;p&gt;源是在合适的同步或异步事件发生时触发，而run loop观察者则是在run loop本身运行的特定时候触发。你可以使用run loop观察者来为处理某一特定事件或是进入休眠的线程做准备。你可以将run loop观察者和以下事件关联：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt; Runloop入口&lt;/li&gt;
+&lt;li&gt; Runloop何时处理一个定时器&lt;/li&gt;
+&lt;li&gt; Runloop何时处理一个输入源&lt;/li&gt;
+&lt;li&gt; Runloop何时进入睡眠状态&lt;/li&gt;
+&lt;li&gt; Runloop何时被唤醒，但在唤醒之前要处理的事件&lt;/li&gt;
+&lt;li&gt; Runloop终止&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;和定时器类似，在创建的时候你可以指定run loop观察者可以只用一次或循环使用。若只用一次，那么在它启动后，会把它自己从run loop里面移除，而循环的观察者则不会。定义观察者并把它添加到run loop，只能使用Core Fundation。下面的例子演示了如何创建run loop的观察者：&lt;/p&gt;
+
+&lt;div id=&quot;crayon-56e5af776a928242797628&quot; class=&quot;crayon-syntax crayon-theme-familiar-copy crayon-font-consolas crayon-os-mac print-yes notranslate&quot; data-settings=&quot; minimize scroll-always disable-anim&quot; style=&quot; margin-top: 12px; margin-bottom: 12px; margin-right: 24px; font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-main&quot; style=&quot;&quot;&gt;
+
+&lt;table class=&quot;crayon-table&quot;&gt;
+
+&lt;tbody&gt;
+
+&lt;tr class=&quot;crayon-row&quot;&gt;
+
+&lt;td class=&quot;crayon-nums &quot; data-settings=&quot;show&quot;&gt;
+
+&lt;div class=&quot;crayon-nums-content&quot; style=&quot;font-size: 15px !important; line-height: 20px !important;&quot;&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a928242797628-1&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a928242797628-2&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a928242797628-3&quot;&gt;3&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a928242797628-4&quot;&gt;4&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a928242797628-5&quot;&gt;5&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a928242797628-6&quot;&gt;6&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a928242797628-7&quot;&gt;7&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a928242797628-8&quot;&gt;8&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a928242797628-9&quot;&gt;9&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a928242797628-10&quot;&gt;10&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a928242797628-11&quot;&gt;11&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a928242797628-12&quot;&gt;12&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a928242797628-13&quot;&gt;13&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a928242797628-14&quot;&gt;14&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a928242797628-15&quot;&gt;15&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a928242797628-16&quot;&gt;16&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num&quot; data-line=&quot;crayon-56e5af776a928242797628-17&quot;&gt;17&lt;/div&gt;
+
+&lt;div class=&quot;crayon-num crayon-striped-num&quot; data-line=&quot;crayon-56e5af776a928242797628-18&quot;&gt;18&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;td class=&quot;crayon-code&quot;&gt;&lt;/p&gt;
+
+&lt;div class=&quot;crayon-pre&quot; style=&quot;font-size: 15px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;&quot;&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a928242797628-2&quot;&gt;&lt;span class=&quot;crayon-o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;addObserverToCurrentRunloop&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;{&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a928242797628-3&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-c&quot;&gt;// The application uses garbage collection, so noautorelease pool is needed.&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a928242797628-5&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSRunLoop&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;*myRunLoop&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NSRunLoop&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;currentRunLoop&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a928242797628-6&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;  &lt;/span&gt; &lt;span class=&quot;crayon-c&quot;&gt;// Create a run loop observer and attach it to the runloop.&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a928242797628-8&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopObserverContext&lt;/span&gt;&lt;span class=&quot;crayon-h&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;crayon-cn&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-r&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a928242797628-9&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;  &lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopObserverRef&lt;/span&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;observer&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopObserverCreate&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;kCFAllocatorDefault&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a928242797628-11&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;                                                              &lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;kCFRunLoopBeforeTimers&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-cn&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;&amp;&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;myRunLoopObserver&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;&amp;&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a928242797628-13&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-st&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;observer&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;{&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a928242797628-14&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopRef&lt;/span&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;cfLoop&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-sy&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;myRunLoopgetCFRunLoop&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a928242797628-15&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;      &lt;/span&gt; &lt;span class=&quot;crayon-t&quot;&gt;CFRunLoopAddObserver&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;crayon-v&quot;&gt;cfLoop&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;observer&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;crayon-h&quot;&gt;&lt;/span&gt; &lt;span class=&quot;crayon-v&quot;&gt;kCFRunLoopDefaultMode&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line crayon-striped-line&quot; id=&quot;crayon-56e5af776a928242797628-16&quot;&gt;&lt;span class=&quot;crayon-h&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;crayon-sy&quot;&gt;}&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;crayon-line&quot; id=&quot;crayon-56e5af776a928242797628-17&quot;&gt;&lt;span class=&quot;crayon-sy&quot;&gt;}&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/td&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tr&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/tbody&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/table&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;其中，kCFRunLoopBeforeTimers表示选择监听定时器触发前处理事件，后面的YES表示循环监听。&lt;/p&gt;
+
+&lt;h2&gt;2.3 RunLoop的事件队列&lt;/h2&gt;
+
+&lt;p&gt;每次运行run loop，你线程的run loop对会自动处理之前未处理的消息，并通知相关的观察者。具体的顺序如下：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt; 通知观察者run loop已经启动&lt;/li&gt;
+&lt;li&gt; 通知观察者任何即将要开始的定时器&lt;/li&gt;
+&lt;li&gt; 通知观察者任何即将启动的非基于端口的源&lt;/li&gt;
+&lt;li&gt; 启动任何准备好的非基于端口的源&lt;/li&gt;
+&lt;li&gt; 如果基于端口的源准备好并处于等待状态，立即启动；并进入步骤9。&lt;/li&gt;
+&lt;li&gt; 通知观察者线程进入休眠&lt;/li&gt;
+&lt;li&gt; 将线程置于休眠直到任一下面的事件发生：
+
+&lt;ul&gt;
+&lt;li&gt;  某一事件到达基于端口的源&lt;/li&gt;
+&lt;li&gt;  定时器启动&lt;/li&gt;
+&lt;li&gt;  Run loop设置的时间已经超时&lt;/li&gt;
+&lt;li&gt;  run loop被显式唤醒&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt; 通知观察者线程将被唤醒。&lt;/li&gt;
+&lt;li&gt; 处理未处理的事件
+
+&lt;ul&gt;
+&lt;li&gt;  如果用户定义的定时器启动，处理定时器事件并重启run loop。进入步骤2&lt;/li&gt;
+&lt;li&gt;  如果输入源启动，传递相应的消息&lt;/li&gt;
+&lt;li&gt;  如果run loop被显式唤醒而且时间还没超时，重启run loop。进入步骤2&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt; 通知观察者run loop结束。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;因为定时器和输入源的观察者是在相应的事件发生之前传递消息，所以通知的时间和实际事件发生的时间之间可能存在误差。如果需要精确时间控制，你可以使用休眠和唤醒通知来帮助你校对实际发生事件的时间。&lt;/p&gt;
+
+&lt;p&gt;因为当你运行run loop时定时器和其它周期性事件经常需要被传递，撤销run loop也会终止消息传递。典型的例子就是鼠标路径追踪。因为你的代码直接获取到消息而不是经由程序传递，因此活跃的定时器不会开始直到鼠标追踪结束并将控制权交给程序。&lt;/p&gt;
+
+&lt;p&gt;Run loop可以由run loop对象显式唤醒。其它消息也可以唤醒run loop。例如，添加新的非基于端口的源会唤醒run loop从而可以立即处理输入源而不需要等待其他事件发生后再处理。&lt;/p&gt;
+
+&lt;p&gt;从这个事件队列中可以看出：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  ①如果是事件到达，消息会被传递给相应的处理程序来处理， runloop处理完当次事件后，run loop会退出，而不管之前预定的时间到了没有。你可以重新启动run loop来等待下一事件。&lt;/li&gt;
+&lt;li&gt;  ②如果线程中有需要处理的源，但是响应的事件没有到来的时候，线程就会休眠等待相应事件的发生。这就是为什么run loop可以做到让线程有工作的时候忙于工作，而没工作的时候处于休眠状态。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;2.4 什么时候使用run loop&lt;/h2&gt;
+
+&lt;p&gt;仅当在为你的程序创建辅助线程的时候，你才需要显式运行一个run loop。Run loop是程序主线程基础设施的关键部分。所以，Cocoa和Carbon程序提供了代码运行主程序的循环并自动启动run loop。IOS程序中UIApplication的run方法（或Mac OS X中的NSApplication）作为程序启动步骤的一部分，它在程序正常启动的时候就会启动程序的主循环。类似的，RunApplicationEventLoop函数为Carbon程序启动主循环。如果你使用xcode提供的模板创建你的程序，那你永远不需要自己去显式的调用这些例程。&lt;/p&gt;
+
+&lt;p&gt;对于辅助线程，你需要判断一个run loop是否是必须的。如果是必须的，那么你要自己配置并启动它。你不需要在任何情况下都去启动一个线程的run loop。比如，你使用线程来处理一个预先定义的长时间运行的任务时，你应该避免启动run loop。Run loop在你要和线程有更多的交互时才需要，比如以下情况：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  使用端口或自定义输入源来和其他线程通信&lt;/li&gt;
+&lt;li&gt;  使用线程的定时器&lt;/li&gt;
+&lt;li&gt;  Cocoa中使用任何performSelector…的方法&lt;/li&gt;
+&lt;li&gt;  使线程周期性工作&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果你决定在程序中使用run loop，那么它的配置和启动都很简单。和所有线程编程一样，你需要计划好在辅助线程退出线程的情形。让线程自然退出往往比强制关闭它更好。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 15 Feb 2016 14:32:24 +0800</pubDate>
+        <link>http://liushaoxing.github.io/2016/02/sample-post/</link>
+        <guid isPermaLink="true">http://liushaoxing.github.io/2016/02/sample-post/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>IOS 获取网络图片大小</title>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;遇到很多次，大家都会去问，在获取服务器url的时候如何获取图片的大小；&lt;/p&gt;
+
+&lt;p&gt;之前的解决方案一直在回避这个问题，要么回答缓存下载到本地 然后去获取；不会影响到性能；还有就是让服务器把图片的大小也传过来&lt;/p&gt;
+
+&lt;p&gt;现在直面问题的 解决下这个问题&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1&gt;通过图片的类型分成几个部分来解析&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;JPG&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;+ (CGSize)downloadJPGImageSizeWithString:(NSString *)URLString
+{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:URLString]];
+    [request setValue:@&amp;quot;bytes=0-209&amp;quot; forHTTPHeaderField:@&amp;quot;Range&amp;quot;];
+    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+
+    if ([data length] &amp;lt;= 0x58) {
+        return CGSizeZero;
+    }
+
+    if ([data length] &amp;lt; 210) {// 肯定只有一个DQT字段
+        short w1 = 0, w2 = 0;
+        [data getBytes:&amp;amp;w1 range:NSMakeRange(0x60, 0x1)];
+        [data getBytes:&amp;amp;w2 range:NSMakeRange(0x61, 0x1)];
+        short w = (w1 &amp;lt;&amp;lt; 8) + w2;
+        short h1 = 0, h2 = 0;
+        [data getBytes:&amp;amp;h1 range:NSMakeRange(0x5e, 0x1)];
+        [data getBytes:&amp;amp;h2 range:NSMakeRange(0x5f, 0x1)];
+        short h = (h1 &amp;lt;&amp;lt; 8) + h2;
+        return CGSizeMake(w, h);
+    } else {
+        short word = 0x0;
+        [data getBytes:&amp;amp;word range:NSMakeRange(0x15, 0x1)];
+        if (word == 0xdb) {
+            [data getBytes:&amp;amp;word range:NSMakeRange(0x5a, 0x1)];
+            if (word == 0xdb) {// 两个DQT字段
+                short w1 = 0, w2 = 0;
+                [data getBytes:&amp;amp;w1 range:NSMakeRange(0xa5, 0x1)];
+                [data getBytes:&amp;amp;w2 range:NSMakeRange(0xa6, 0x1)];
+                short w = (w1 &amp;lt;&amp;lt; 8) + w2;
+                short h1 = 0, h2 = 0;
+                [data getBytes:&amp;amp;h1 range:NSMakeRange(0xa3, 0x1)];
+                [data getBytes:&amp;amp;h2 range:NSMakeRange(0xa4, 0x1)];
+                short h = (h1 &amp;lt;&amp;lt; 8) + h2;
+                return CGSizeMake(w, h);
+            } else {// 一个DQT字段
+                short w1 = 0, w2 = 0;
+                [data getBytes:&amp;amp;w1 range:NSMakeRange(0x60, 0x1)];
+                [data getBytes:&amp;amp;w2 range:NSMakeRange(0x61, 0x1)];
+                short w = (w1 &amp;lt;&amp;lt; 8) + w2;
+                short h1 = 0, h2 = 0;
+                [data getBytes:&amp;amp;h1 range:NSMakeRange(0x5e, 0x1)];
+                [data getBytes:&amp;amp;h2 range:NSMakeRange(0x5f, 0x1)];
+                short h = (h1 &amp;lt;&amp;lt; 8) + h2;
+                return CGSizeMake(w, h);
+
+            }
+        } else {
+            return CGSizeZero;
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PNG&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;+ (CGSize)downloadPngImageSizeWithString:(NSString *)URLString
+{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:URLString]];
+    [request setValue:@&amp;quot;bytes=16-23&amp;quot; forHTTPHeaderField:@&amp;quot;Range&amp;quot;];
+    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    if(data.length == 8)
+    {
+        int w1 = 0, w2 = 0, w3 = 0, w4 = 0;
+        [data getBytes:&amp;amp;w1 range:NSMakeRange(0, 1)];
+        [data getBytes:&amp;amp;w2 range:NSMakeRange(1, 1)];
+        [data getBytes:&amp;amp;w3 range:NSMakeRange(2, 1)];
+        [data getBytes:&amp;amp;w4 range:NSMakeRange(3, 1)];
+        int w = (w1 &amp;lt;&amp;lt; 24) + (w2 &amp;lt;&amp;lt; 16) + (w3 &amp;lt;&amp;lt; 8) + w4;
+        int h1 = 0, h2 = 0, h3 = 0, h4 = 0;
+        [data getBytes:&amp;amp;h1 range:NSMakeRange(4, 1)];
+        [data getBytes:&amp;amp;h2 range:NSMakeRange(5, 1)];
+        [data getBytes:&amp;amp;h3 range:NSMakeRange(6, 1)];
+        [data getBytes:&amp;amp;h4 range:NSMakeRange(7, 1)];
+        int h = (h1 &amp;lt;&amp;lt; 24) + (h2 &amp;lt;&amp;lt; 16) + (h3 &amp;lt;&amp;lt; 8) + h4;
+        return CGSizeMake(w, h);
+    }
+    return CGSizeZero;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GIF&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;+ (CGSize)downloadGIFImageSizeWithString:(NSString *)URLString
+{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:URLString]];
+    [request setValue:@&amp;quot;bytes=6-9&amp;quot; forHTTPHeaderField:@&amp;quot;Range&amp;quot;];
+    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    if(data.length == 4)
+    {
+        short w1 = 0, w2 = 0;
+        [data getBytes:&amp;amp;w1 range:NSMakeRange(1, 1)];
+        [data getBytes:&amp;amp;w2 range:NSMakeRange(0, 1)];
+        short w = (w1 &amp;lt;&amp;lt; 8) + w2;
+
+        short h1 = 0, h2 = 0;
+        [data getBytes:&amp;amp;h1 range:NSMakeRange(3, 1)];
+        [data getBytes:&amp;amp;h2 range:NSMakeRange(2, 1)];
+        short h = (h1 &amp;lt;&amp;lt; 8) + h2;
+
+        return CGSizeMake(w, h);
+    }
+    return CGSizeZero;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;把所有的格式统一起来&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;/**
+ *  获取url的图片大小
+ */
++ (CGSize)downloadImageSizeWithString:(NSString *)URLString;
+
+
++ (CGSize)downloadImageSizeWithString:(NSString *)URLString
+{
+    if ([URLString hasSuffix:@&amp;quot;.jpg&amp;quot;]) {
+        return [self downloadJPGImageSizeWithString:URLString];
+    } else if ([URLString hasSuffix:@&amp;quot;.png&amp;quot;]) {
+        return [self downloadPngImageSizeWithString:URLString];
+    } else if ([URLString hasSuffix:@&amp;quot;.gif&amp;quot;]) {
+        return [self downloadGIFImageSizeWithString:URLString];
+    }
+    return CGSizeZero;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最终封装成UIImage的分类来解决&lt;/p&gt;
+
+&lt;p&gt;UIImage+itdCategory.h&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#import &amp;lt;UIKit/UIKit.h&amp;gt;
+
+typedef void(^ImageSizeBlock)(CGSize size);
+
+@interface UIImage (itdCategory)
+/**
+ *  获取网络url图片的具体大小
+ */
++ (CGSize)itd_sizeOfImageWithUrlStr:(NSString *)imgUrlStr;
+
+/**
+ *  获取网络url图片的具体大小
+ */
++ (void)itd_sizeOfImageWithUrlStr:(NSString *)imgUrlStr sizeGetDo:(ImageSizeBlock)doBlock;
+
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;UIImage+itdCategory.m&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#import &amp;quot;UIImage+itdCategory.h&amp;quot;
+
+NSString *const kPngRangeValue = @&amp;quot;bytes=16-23&amp;quot;;
+NSString *const kJpgRangeValue = @&amp;quot;bytes=0-209&amp;quot;;
+NSString *const kGifRangeValue = @&amp;quot;bytes=6-9&amp;quot;;
+
+@implementation UIImage (itdCategory)
+
++ (CGSize)itd_sizeOfImageWithUrlStr:(NSString *)imgUrlStr{
+    if ([imgUrlStr hasSuffix:@&amp;quot;.png&amp;quot;]) {
+        return [self size_downloadPNGImageWithUrlString:imgUrlStr];
+    }else if ([imgUrlStr hasSuffix:@&amp;quot;.gif&amp;quot;])
+    {
+        return [self size_downloadGIFImageWithUrlString:imgUrlStr];
+    }else{
+        return [self size_downloadJPGImageWithUrlString:imgUrlStr];
+    }
+    return CGSizeZero;
+}
+
+
++ (void)itd_sizeOfImageWithUrlStr:(NSString *)imgUrlStr sizeGetDo:(ImageSizeBlock)doBlock
+{
+    NSString *extensionStr = [[imgUrlStr pathExtension] lowercaseString];
+    CGSize imgSize = CGSizeZero;
+    if ([extensionStr isEqualToString:@&amp;quot;png&amp;quot;]) {
+        imgSize = [UIImage size_downloadPNGImageWithUrlString:imgUrlStr];
+    }else if ([extensionStr isEqualToString:@&amp;quot;gif&amp;quot;])
+    {
+         imgSize = [UIImage size_downloadGIFImageWithUrlString:imgUrlStr];
+    }else{
+        imgSize = [UIImage size_downloadJPGImageWithUrlString:imgUrlStr];
+    }
+
+    if (doBlock) {
+        doBlock(imgSize);
+    }
+    return ;
+}
+
++ (CGSize)size_downloadJPGImageWithUrlString:(NSString *)urlString{
+    NSString *URLString = urlString;
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:URLString]];
+    [request setValue:kJpgRangeValue forHTTPHeaderField:@&amp;quot;Range&amp;quot;];
+    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+
+    if (data == nil || [data length] &amp;lt;= 0x58) {
+        return CGSizeZero;
+    }
+
+    if ([data length] &amp;lt; 210) {// 肯定只有一个DQT字段
+        short w1 = 0, w2 = 0;
+        [data getBytes:&amp;amp;w1 range:NSMakeRange(0x60, 0x1)];
+        [data getBytes:&amp;amp;w2 range:NSMakeRange(0x61, 0x1)];
+        short w = (w1 &amp;lt;&amp;lt; 8) + w2;
+        short h1 = 0, h2 = 0;
+        [data getBytes:&amp;amp;h1 range:NSMakeRange(0x5e, 0x1)];
+        [data getBytes:&amp;amp;h2 range:NSMakeRange(0x5f, 0x1)];
+        short h = (h1 &amp;lt;&amp;lt; 8) + h2;
+        return CGSizeMake(w, h);
+    } else {
+        short word = 0x0;
+        [data getBytes:&amp;amp;word range:NSMakeRange(0x15, 0x1)];
+        if (word == 0xdb) {
+            [data getBytes:&amp;amp;word range:NSMakeRange(0x5a, 0x1)];
+            if (word == 0xdb) {// 两个DQT字段
+                short w1 = 0, w2 = 0;
+                [data getBytes:&amp;amp;w1 range:NSMakeRange(0xa5, 0x1)];
+                [data getBytes:&amp;amp;w2 range:NSMakeRange(0xa6, 0x1)];
+                short w = (w1 &amp;lt;&amp;lt; 8) + w2;
+                short h1 = 0, h2 = 0;
+                [data getBytes:&amp;amp;h1 range:NSMakeRange(0xa3, 0x1)];
+                [data getBytes:&amp;amp;h2 range:NSMakeRange(0xa4, 0x1)];
+                short h = (h1 &amp;lt;&amp;lt; 8) + h2;
+                return CGSizeMake(w, h);
+            } else {// 一个DQT字段
+                short w1 = 0, w2 = 0;
+                [data getBytes:&amp;amp;w1 range:NSMakeRange(0x60, 0x1)];
+                [data getBytes:&amp;amp;w2 range:NSMakeRange(0x61, 0x1)];
+                short w = (w1 &amp;lt;&amp;lt; 8) + w2;
+                short h1 = 0, h2 = 0;
+                [data getBytes:&amp;amp;h1 range:NSMakeRange(0x5e, 0x1)];
+                [data getBytes:&amp;amp;h2 range:NSMakeRange(0x5f, 0x1)];
+                short h = (h1 &amp;lt;&amp;lt; 8) + h2;
+                return CGSizeMake(w, h);
+            }
+        } else {
+            return CGSizeZero;
+        }
+    }
+}
+
++ (CGSize)size_downloadPNGImageWithUrlString:(NSString *)urlString{
+    NSString *URLString = urlString;
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:URLString]];
+    [request setValue:kPngRangeValue forHTTPHeaderField:@&amp;quot;Range&amp;quot;];
+    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+
+    if(data &amp;amp;&amp;amp; data.length == 8)
+    {
+        int w1 = 0, w2 = 0, w3 = 0, w4 = 0;
+        [data getBytes:&amp;amp;w1 range:NSMakeRange(0, 1)];
+        [data getBytes:&amp;amp;w2 range:NSMakeRange(1, 1)];
+        [data getBytes:&amp;amp;w3 range:NSMakeRange(2, 1)];
+        [data getBytes:&amp;amp;w4 range:NSMakeRange(3, 1)];
+        int w = (w1 &amp;lt;&amp;lt; 24) + (w2 &amp;lt;&amp;lt; 16) + (w3 &amp;lt;&amp;lt; 8) + w4;
+        int h1 = 0, h2 = 0, h3 = 0, h4 = 0;
+        [data getBytes:&amp;amp;h1 range:NSMakeRange(4, 1)];
+        [data getBytes:&amp;amp;h2 range:NSMakeRange(5, 1)];
+        [data getBytes:&amp;amp;h3 range:NSMakeRange(6, 1)];
+        [data getBytes:&amp;amp;h4 range:NSMakeRange(7, 1)];
+        int h = (h1 &amp;lt;&amp;lt; 24) + (h2 &amp;lt;&amp;lt; 16) + (h3 &amp;lt;&amp;lt; 8) + h4;
+        return CGSizeMake(w, h);
+    }
+    return CGSizeZero;
+}
+
++ (CGSize)size_downloadGIFImageWithUrlString:(NSString *)urlString{
+    NSString *URLString = urlString;
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:URLString]];
+    [request setValue:kGifRangeValue forHTTPHeaderField:@&amp;quot;Range&amp;quot;];
+    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    if(data &amp;amp;&amp;amp; data.length == 4)
+    {
+        short w1 = 0, w2 = 0;
+        [data getBytes:&amp;amp;w1 range:NSMakeRange(1, 1)];
+        [data getBytes:&amp;amp;w2 range:NSMakeRange(0, 1)];
+        short w = (w1 &amp;lt;&amp;lt; 8) + w2;
+
+        short h1 = 0, h2 = 0;
+        [data getBytes:&amp;amp;h1 range:NSMakeRange(3, 1)];
+        [data getBytes:&amp;amp;h2 range:NSMakeRange(2, 1)];
+        short h = (h1 &amp;lt;&amp;lt; 8) + h2;
+
+        return CGSizeMake(w, h);
+    }
+    return CGSizeZero;
+}
+
+@end
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h1&gt;开始你的IOS 获取网络图片大小之旅吧&lt;/h1&gt;
+</description>
+        <pubDate>Fri, 18 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://liushaoxing.github.io/2015/12/get-cgsize-from-urlstr/</link>
+        <guid isPermaLink="true">http://liushaoxing.github.io/2015/12/get-cgsize-from-urlstr/</guid>
+        
+        
+        <category>技术</category>
+        
+      </item>
+    
+      <item>
+        <title>如何简单使用极光推送</title>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;做过几次极光推送的iOS端；发现每次都有那么几个坑，希望能对你有帮助&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1&gt;坑1&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;导出的push的证书上没有小小的三角让你点击；让人感到诧异&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;原因；因为你制作这个push证书的时候；你本机上没有私钥
+那么；很多人要问了 什么是私钥；我怎么能得到私有钥匙呢&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;解决方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;在制作push证书的时候会要求你导入一个钥匙串的东西
+那么问题来了；你是不是使用的之前的这个钥匙串呢？没有重新导出呢？ 问题找到了
+因为每次 导出   钥匙串访问-从证书颁发机构请求证书  就会自动在机器上面生成私钥
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;那么重新请求一次证书；你的电脑商就生成了私钥了；再次去申请push证书；导出运行就能看到小三角了&lt;/p&gt;
+
+&lt;h1&gt;坑2&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;导出的push的证书使用不对&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;原因：导出的时候选择的是里面的私钥导出的&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;解决方法
+直接点击push证书导出p12 文件就可以了&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1&gt;开始你的极光推送之旅吧&lt;/h1&gt;
+</description>
+        <pubDate>Thu, 17 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://liushaoxing.github.io/2015/12/push-jpush/</link>
+        <guid isPermaLink="true">http://liushaoxing.github.io/2015/12/push-jpush/</guid>
+        
+        
+        <category>技术</category>
+        
+      </item>
+    
+      <item>
+        <title>如何简单使用oschina的git上传删除操作</title>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;很多时候大家都懒的使用命令来进行操作；而是使用简单易用的客户端；其实呢！使用命令更方便更快捷&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1&gt;oschina&lt;/h1&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;https://git.oschina.net
+git 切换里面的文件呢  的使用方法
+1 . 桌面创建一个文件夹 git
+2. git init
+git config --global user.name &amp;quot;XXX&amp;quot;
+git config --global user.email XXX@usuretech.com
+git config -l 查看是否配置对
+3.  clone https://git.oschina.net/2xxxyz/U.git  下载源
+4. git config --global push.default matching    设置推送的源是matching 主枝干
+5. mv  WholeNet.ipa 到当前目录
+6. git add WholeNet.ipa
+7. git commit -m &amp;quot;切换WholeNet.ipa”  提交
+8. git push   推送到主目录
+
+删除呢
+git rm  &amp;quot;LICENSE&amp;quot; &amp;quot;README.md&amp;quot; &amp;quot;udianfang.plist&amp;quot;
+git commit -m &amp;quot;删除不需要的&amp;quot;
+git push
+
+git pull origin master  下载 服务器的和本地合并
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h1&gt;开始你的oschina托管之旅吧&lt;/h1&gt;
+</description>
+        <pubDate>Thu, 17 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://liushaoxing.github.io/2015/12/git-oschina/</link>
+        <guid isPermaLink="true">http://liushaoxing.github.io/2015/12/git-oschina/</guid>
+        
+        
+        <category>技术</category>
+        
+      </item>
+    
+      <item>
+        <title>IOS企业开发者帐号如何把ipa包和plist文件托管在oschina</title>
+        <description>&lt;h1&gt;oschina企业分发iOS步骤&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;存放ipa包&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;本地搭建服务器地址为http的，把ipa上传到本地服务器 例如：http://test.qwzt.net:8084/WholeNet.ipa
+or
+使用oschina 来做，把包传到oschina 然后使用http的oschina地址登陆；然后得到ipa包的http地址 如：
+http://git.oschina.net/2xxxyz/U/raw/master/WholeNet.ipa
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;存放plist文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;使用https://git.oschina.net登陆oschina  必须后面是https
+oschina中新建一个项目 然后点击项目中的+号
+新建一个文件manifest.plist(文件格式是苹果的规范)  是可以通过xcode编译的时候导出来的 这个文件 可以使用xcode得到规范的文件
+    &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+    &amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt;
+    &amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt;
+    &amp;lt;dict&amp;gt;
+        &amp;lt;key&amp;gt;items&amp;lt;/key&amp;gt;
+        &amp;lt;array&amp;gt;
+            &amp;lt;dict&amp;gt;
+                &amp;lt;key&amp;gt;assets&amp;lt;/key&amp;gt;
+                &amp;lt;array&amp;gt;
+                    &amp;lt;dict&amp;gt;
+                        &amp;lt;key&amp;gt;kind&amp;lt;/key&amp;gt;
+                        &amp;lt;string&amp;gt;software-package&amp;lt;/string&amp;gt;
+                        &amp;lt;key&amp;gt;url&amp;lt;/key&amp;gt;
+                        &amp;lt;string&amp;gt;http://test.qwzt.net:8084/WholeNet.ipa&amp;lt;/string&amp;gt;
+                    &amp;lt;/dict&amp;gt;
+                &amp;lt;/array&amp;gt;
+                &amp;lt;key&amp;gt;metadata&amp;lt;/key&amp;gt;
+                &amp;lt;dict&amp;gt;
+                    &amp;lt;key&amp;gt;bundle-identifier&amp;lt;/key&amp;gt;
+                    &amp;lt;string&amp;gt;com.company.wholeNet2&amp;lt;/string&amp;gt;
+                    &amp;lt;key&amp;gt;bundle-version&amp;lt;/key&amp;gt;
+                    &amp;lt;string&amp;gt;2.2&amp;lt;/string&amp;gt;
+                    &amp;lt;key&amp;gt;kind&amp;lt;/key&amp;gt;
+                    &amp;lt;string&amp;gt;software&amp;lt;/string&amp;gt;
+                    &amp;lt;key&amp;gt;title&amp;lt;/key&amp;gt;
+                    &amp;lt;string&amp;gt;WholeNet&amp;lt;/string&amp;gt;
+                &amp;lt;/dict&amp;gt;
+            &amp;lt;/dict&amp;gt;
+        &amp;lt;/array&amp;gt;
+    &amp;lt;/dict&amp;gt;
+    &amp;lt;/plist&amp;gt;
+
+修改plist中文件
+    （&amp;lt;string&amp;gt;http://test.qwzt.net:8084/WholeNet.ipa&amp;lt;/string&amp;gt;
+这个改成前面得到的ipa包的http地址
+http://git.oschina.net/2xxxyz/U/raw/master/WholeNet.ipa
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;获取plist地址&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;点击oschina右上角的原始数据；获取一个https的地址(注意是https的)；例如：
+https://git.oschina.net/2xxxyz/U/raw/master/manifest.plist
+--
+##对plist地址封装上itms协议使得苹果手机浏览器能够识别
+在前面plist的地址拼接 加入前缀
+实际的下载地址为：
+itms-services://?action=download-manifest&amp;amp;url=https://git.oschina.net/2xxxyz/U/raw/master/manifest.plist
+
+&amp;gt;直接打开 会提示appstore打开，所以需要嵌入到网页中，就可以不提示该东西，直接提示安装软件
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在网页中嵌入该下载地址&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;a href=“itms-services://?action=download-manifest&amp;amp;url=https://git.oschina.net/2xxxyz/U/raw/master/manifest.plist&amp;quot;&amp;gt;Install App&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h1&gt;开始你的oschina托管之旅吧&lt;/h1&gt;
+</description>
+        <pubDate>Thu, 17 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://liushaoxing.github.io/2015/12/enterprise-ipaandplist-trusteeship-oschina/</link>
+        <guid isPermaLink="true">http://liushaoxing.github.io/2015/12/enterprise-ipaandplist-trusteeship-oschina/</guid>
+        
+        
+        <category>技术</category>
+        
+      </item>
+    
+      <item>
+        <title>IOS企业开发者帐号自动化打包脚本</title>
+        <description>&lt;h1&gt;xcodebuild 和 xcrun 简单介绍&lt;/h1&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;xctool 是FaceBook开源的一个命令行工具，用来替代苹果的xcodebuild工具。
+xcodebuild —help   ——有用
+xcodebuild 是一款用来打包 Xcode projects 或者 workspaces 的命令行工具。用 xcodebuild 把工程打成 app 格式后再用 xcrun 来签名和打成 ipa 格式的包。关于 xcrun 请参看我的另一篇博文 xcrun 命令详解。
+
+-exportArchive
+指定一个可以被导出的 archive 文件。需要 -exportFormat，-archivePath和-exportPath` 配合使用，不能在编译时单独使用。
+-exportFormat format
+指定需要被导出的 archive 文件的格式。可行的格式是 IPA（iOS 包文件），PKG（Mac 包文件）和 APP。如果未指定，则 xcodebuild 则会自动检测使用IPA 或 PKG 格式。
+-archivePath xcarchivepath
+指定 archive 路径。
+-exportPath destinationpath
+指定导出的目标文件路径。
+-exportProvisioningProfile profilename
+指定导出 archive 文件时所使用的 provisioning pofile。
+
+-worksace workspacename
+
+指定 workspace 的名称。
+
+-scheme schemename
+指定 scheme 的名称，编译 workspace 时是必须的。
+localhost:WholeNet master$ xcodebuild -workspace WholeNet.xcworkspace  -scheme WholeNet   ——可以编译
+-arch architecture
+当编译每个 target 时使用 architecture 指定的架构类型。
+---
+-exportProvisioningProfile profilename
+指定导出 archive 文件时所使用的 provisioning pofile。
+-exportSigningIdentity identityname
+指定导出 archive 文件时所使用的应用签名 id。在可能的情况下，这个可以被 -exportProvisioningProfile自动推导出来。
+-exportInstallerIdentity identityname
+指定导出 archive 文件时所使用的安装签名 id。如果可能，这个可以被 -exportSigningIdentity 或 -exportProvisioningProfile 自动推导出来。
+-exportWithOriginalSigningIdentity
+指定创建可被导出的 archive 文件时所使用的签名文件。
+---
+
+使用示例
+xcodebuild clean install
+
+xcodebuild -workspace MyWorkspace.xcworkspace -scheme MyScheme archive
+
+xcodebuild -exportArchive -exportFormat IPA -archivePath MyMobileApp.xcarchive -exportPath MyMobileApp.ipa -exportProvisioningProfile &amp;#39;MyMobileApp Distribution Profile&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h1&gt;实际使用介绍&lt;/h1&gt;
+
+&lt;h2&gt;清理项目&lt;/h2&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;localhost:WholeNet master$ xcodebuild clean -workspace WholeNet.xcworkspace  -scheme WholeNet
+** CLEAN SUCCEEDED **
+ Archive
+xcodebuild archive -workspace WholeNet.xcworkspace  -scheme WholeNet -archivePath WholeNet.xcarchive
+xcodebuild archive -project ${PROJECT_NAME}.xcodeproj \
+                  -scheme ${SCHEME_NAME} \
+                  -destination generic/platform=iOS \
+                   -archivePath bin/${PROJECT_NAME}.xcarchive
+xcodebuild archive -project WholeNet\ WholeNet.xcworkspace \
+                   -scheme WholeNet \
+                   -archivePath bin/WholeNet.xcarchive \
+                   || failed &amp;quot;xcodebuild archive&amp;quot;
+** ARCHIVE SUCCEEDED **
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h2&gt;Export ipa&lt;/h2&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;xcodebuild -exportArchive -archivePath WholeNet.xcarchive -exportPath WholeNet -exportFormat ipa -exportProvisioningProfile 11111111111  uploadBitcode NO
+WholeNet22222222   这个是WholeNet 导出的
+11111111111  这个是 TodayViewController 导出的    这个是可以成功的
+
+xcodebuild -exportArchive -archivePath ${PROJECT_NAME}.xcarchive \
+                          -exportPath ${PROJECT_NAME} \
+                          -exportFormat ipa \
+                          -exportProvisioningProfile ${PROFILE_NAME}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h2&gt;上传ipa包到occhina来托管&lt;/h2&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#! /bin/sh
+PAM=$(date)
+
+cd /Users/master/Desktop/git/U
+sleep 1
+rm -rf WholeNet.ipa
+sleep 3
+mv /Users/master/Desktop/WholeNet.ipa .
+sleep 3
+git add WholeNet.ipa
+sleep 3
+git commit -m &amp;quot;$PAM.WholeNet&amp;quot;
+sleep 3
+git push
+sleep 10
+echo &amp;quot;chenggong&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h2&gt;发送邮件给相关人员&lt;/h2&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;echo &amp;#39;hi,\n\nThe app is updated recently. Use the safari browser on iOS device to download the app. Here is the URL: http://www.udianfang.cn/downloadPage/ .\n\nThanks!&amp;#39; | mail -s &amp;#39;iOS客户端更新&amp;#39; jia85860161@163.com
+##使用root来执行发送邮件的操作
+    #! /bin/bash
+    expect -c &amp;quot;
+    spawn su - root
+    expect \&amp;quot;Password:\&amp;quot;
+    send \&amp;quot;123456\r\&amp;quot;
+    interact
+    &amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h1&gt;具体的shell脚本集合iOSipabuildArchiveMailMustRoot.sh&lt;/h1&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#!/bin/sh
+
+#用来标示成功还是失败的
+function failed() {
+    echo &amp;quot;Failed: $@&amp;quot; &amp;gt;&amp;amp;2
+    exit 1
+}
+
+# unlock login keygen  打开系统的 密码的
+LOGIN_KEYCHAIN=~/Library/Keychains/login.keychain
+security unlock-keychain -p 123456 ${LOGIN_KEYCHAIN} || failed &amp;quot;unlock-keygen&amp;quot;
+sleep 3
+
+
+# clean 清理
+xcodebuild clean -workspace WholeNet.xcworkspace \
+                 -scheme WholeNet \
+                 || failed &amp;quot;xcodebuild clean&amp;quot;
+sleep 15
+# archive 打包
+xcodebuild archive -workspace WholeNet.xcworkspace \
+           -scheme WholeNet \
+           -archivePath WholeNet.xcarchive \
+              || failed &amp;quot;xcodebuild archive&amp;quot;
+sleep 15               
+#sleep 310
+# export ipa 导出包
+xcodebuild -exportArchive -archivePath WholeNet.xcarchive \                       -exportPath WholeNet \
+              -exportFormat ipa \                                 -exportProvisioningProfile WholeNet2 \
+              uploadBitcode NO \
+                  || failed &amp;quot;xcodebuild export archive&amp;quot; 
+sleep 15
+#sleep 25
+# move ipa to dest directory
+PAM=$(date)
+cd ~/Desktop/git/U || failed &amp;quot;cd ~/Desktop/git/U&amp;quot; 
+sleep 2
+rm -rf WholeNet.ipa || failed &amp;quot;rm ipa&amp;quot; 
+sleep 3
+mv ~/Desktop/U/CRM/code/ios/WholeNet/WholeNet.ipa . || failed &amp;quot;mv ipa&amp;quot;
+sleep 3
+git add WholeNet.ipa || failed &amp;quot;git add WholeNet.ipa&amp;quot;
+sleep 3
+git commit -m &amp;quot;$PAM.WholeNet&amp;quot; || failed &amp;quot;git commit -m&amp;quot;
+sleep 3
+git push || failed &amp;quot;git push&amp;quot;
+sleep 10
+echo &amp;quot;git push Success&amp;quot;
+
+# clean bin files
+echo &amp;quot;clean xcarchive files ...&amp;quot;
+rm -rf ~/Desktop/U/CRM/code/ios/WholeNet/WholeNet.xcarchive
+sleep 3
+echo &amp;quot;clean bin Success.&amp;quot;
+
+#echo &amp;quot;su -root&amp;quot;
+#expect -c &amp;quot;
+#spawn su - root
+#expect \&amp;quot;Password:\&amp;quot;
+#send \”123456\r\&amp;quot;
+#interact
+#&amp;quot;
+expect -c &amp;quot;
+spawn su - root
+expect \&amp;quot;Password:\&amp;quot;
+send \&amp;quot;123456\r\&amp;quot;
+interact
+&amp;quot;
+sleep 3
+
+su root
+
+sleep 3
+echo &amp;quot;发送邮件给suw@usuretech.com&amp;quot;
+echo &amp;#39;hi,\n\nThe app is updated recently. Use the safari browser on iOS device to download the app. Here is the URL: http://www.udianfang.cn/downloadPage/ .\n\nThanks!&amp;#39; | mail -s &amp;#39;iOS客户端更新&amp;#39; jia85860161@163.com
+#suw@usuretech.com &amp;gt;&amp;gt;build.log
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h1&gt;开始你的一键打包发送吧&lt;/h1&gt;
+</description>
+        <pubDate>Thu, 17 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://liushaoxing.github.io/2015/12/enterprise-Archive-shell-mail/</link>
+        <guid isPermaLink="true">http://liushaoxing.github.io/2015/12/enterprise-Archive-shell-mail/</guid>
+        
+        
+        <category>技术</category>
+        
+      </item>
+    
+      <item>
+        <title>如何导出推送证书P12</title>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;之前导出很多次推送的证书，最后都是误打误撞的成功了；在网上也查了很多相似的例子；都不能解决，知道今天彻底领悟为什么失败的原因；因为缺少私钥。&lt;/p&gt;
+
+&lt;p&gt;那么如何得到私钥呢，其实很简单&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;步骤&lt;/h2&gt;
+
+&lt;p&gt;首先要做的是导出 钥匙串访问-从证书颁发机构请求证书
+就会自动在机器上面生成私钥&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;# 和后面所有的 操作都无关啦
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.2cto.com/kf/201401/270748.html&quot;&gt;生成私钥的文章说明&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;1.首先要 搞一个develop的 安装下来     不要删除 系统原来的 所有的系统的证书&lt;/p&gt;
+
+&lt;p&gt;2.appid  不要在里面 自动生成
+3.添加push的 develop的 和product的
+4. 最后生成 最后的 文件&lt;/p&gt;
+
+&lt;p&gt;然后首先安装 develop的  然后安装最后的   然后安装push的 2个&lt;/p&gt;
+
+&lt;p&gt;如果之前的 不行 就把push的 自动生成  然后手动生成  然后导出
+可以解决不能见到 key的 情况&lt;/p&gt;
+</description>
+        <pubDate>Tue, 15 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://liushaoxing.github.io/2015/12/export-P12/</link>
+        <guid isPermaLink="true">http://liushaoxing.github.io/2015/12/export-P12/</guid>
+        
+        
+        <category>技术</category>
+        
+      </item>
+    
+      <item>
+        <title>七种常见经典排序算法总结（C++实现）</title>
+        <description>&lt;p&gt;排序算法是非常常见也非常基础的算法，以至于大部分情况下它们都被集成到了语言的辅助库中。排序算法虽然已经可以很方便的使用，但是理解排序算法可以帮助我们找到解题的方向。&lt;/p&gt;
+
+&lt;h2&gt;1. 冒泡排序 (Bubble Sort)&lt;/h2&gt;
+
+&lt;p&gt;冒泡排序是最简单粗暴的排序方法之一。它的原理很简单，每次从左到右两两比较，把大的交换到后面，每次可以确保将前M个元素的最大值移动到最右边。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;步骤&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;从左开始比较相邻的两个元素x和y，如果 x &amp;gt; y 就交换两者&lt;/li&gt;
+&lt;li&gt;执行比较和交换，直到到达数组的最后一个元素&lt;/li&gt;
+&lt;li&gt;重复执行1和2，直到执行n次，也就是n个最大元素都排到了最后&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-CPP&quot; data-lang=&quot;CPP&quot;&gt;void bubble_sort(vector&amp;lt;int&amp;gt; &amp;amp;nums)
+{
+    for (int i = 0; i &amp;lt; nums.size() - 1; i++) { // times
+        for (int j = 0; j &amp;lt; nums.size() - i - 1; j++) { // position
+            if (nums[j] &amp;gt; nums[j + 1]) {
+                int temp = nums[j];
+                nums[j] = nums[j + 1];
+                nums[j + 1] = temp;
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;交换的那一步可以不借助temp，方法是&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-CPP&quot; data-lang=&quot;CPP&quot;&gt;nums[j] += nums[j + 1];
+nums[j + 1] = num[j] - nums[j + 1];
+nums[j] -= num[j + 1];
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;复杂度分析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;由于我们要重复执行n次冒泡，每次冒泡要执行n次比较（实际是1到n的等差数列，也就是&lt;code&gt;(a1 + an) * n / 2&lt;/code&gt;），也就是 &lt;code&gt;O(n^2)&lt;/code&gt;。 空间复杂度是&lt;code&gt;O(n)&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2&gt;2. 插入排序（Insertion Sort）&lt;/h2&gt;
+
+&lt;p&gt;插入排序的原理是从左到右，把选出的一个数和前面的数进行比较，找到最适合它的位置放入，使前面部分有序。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;步骤&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;从左开始，选出当前位置的数x，和它之前的数y比较，如果x &amp;lt; y则交换两者&lt;/li&gt;
+&lt;li&gt;对x之前的数都执行1步骤，直到前面的数字都有序&lt;/li&gt;
+&lt;li&gt;选择有序部分后一个数字，插入到前面有序部分，直到没有数字可选择&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-CPP&quot; data-lang=&quot;CPP&quot;&gt;void insert_sort(vector&amp;lt;int&amp;gt; &amp;amp;nums)
+{
+    for (int i = 1; i &amp;lt; nums.size(); i++) { // position
+        for (int j = i; j &amp;gt; 0; j--) {
+            if (nums[j] &amp;lt; nums[j - 1]) {
+                int temp = nums[j];
+                nums[j] = nums[j - 1];
+                nums[j - 1] = temp;
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;复杂度分析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;因为要选择n次，而且插入时最坏要比较n次，所以时间复杂度同样是&lt;code&gt;O(n^2)&lt;/code&gt;。空间复杂度是&lt;code&gt;O(n)&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2&gt;3. 选择排序（Selection Sort）&lt;/h2&gt;
+
+&lt;p&gt;选择排序的原理是，每次都从乱序数组中找到最大（最小）值，放到当前乱序数组头部，最终使数组有序。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;步骤&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;从左开始，选择后面元素中最小值，和最左元素交换&lt;/li&gt;
+&lt;li&gt;从当前已交换位置往后执行，直到最后一个元素&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-CPP&quot; data-lang=&quot;CPP&quot;&gt;void selection_sort(vector&amp;lt;int&amp;gt; &amp;amp;nums)
+{
+    for (int i = 0; i &amp;lt; nums.size(); i++) { // position
+        int min = i;
+        for (int j = i + 1; j &amp;lt; nums.size(); j++) {
+            if (nums[j] &amp;lt; nums[min]) {
+                min = j;
+            }
+        }
+
+        int temp = nums[i];
+        nums[i] = nums[min];
+        nums[min] = temp;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;复杂度分析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;每次要找一遍最小值，最坏情况下找n次，这样的过程要执行n次，所以时间复杂度还是&lt;code&gt;O(n^2)&lt;/code&gt;。空间复杂度是&lt;code&gt;O(n)&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2&gt;4. 希尔排序（Shell Sort）&lt;/h2&gt;
+
+&lt;p&gt;希尔排序从名字上看不出来特点，因为它是以发明者命名的。它的另一个名字是“递减增量排序算法“。这个算法可以看作是插入排序的优化版，因为插入排序需要一位一位比较，然后放置到正确位置。为了提升比较的跨度，希尔排序将数组按照一定步长分成几个子数组进行排序，通过逐渐减短步长来完成最终排序。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;例子&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;例如 &lt;code&gt;[10, 80, 70, 100, 90, 30, 20]&lt;/code&gt;
+如果我们按照一次减一半的步长来算， 这个数组第一次排序时以3为步长，子数组是：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;10 80 70&lt;/code&gt;
+&lt;code&gt;90 30 20&lt;/code&gt;
+&lt;code&gt;100&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这里其实按照列划分的4个子数组，排序后结果为&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;10 30 20&lt;/code&gt;
+&lt;code&gt;90 80 70&lt;/code&gt;
+&lt;code&gt;100&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;也就是 &lt;code&gt;[10, 30 20 90 80 70 100]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;然后再以1为步长生成子数组&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;10&lt;/code&gt;
+&lt;code&gt;30&lt;/code&gt;
+&lt;code&gt;20&lt;/code&gt;
+&lt;code&gt;..&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这个时候就是一纵列了，也就是说最后一定是以一个数组来排序的。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;步骤&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;计算当前步长，按步长划分子数组&lt;/li&gt;
+&lt;li&gt;子数组内插入排序&lt;/li&gt;
+&lt;li&gt;步长除以2后继续12两步，直到步长最后变成1&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-CPP&quot; data-lang=&quot;CPP&quot;&gt;void shell_sort(vector&amp;lt;int&amp;gt; &amp;amp;nums)
+{
+    for (int gap = nums.size() &amp;gt;&amp;gt; 1; gap &amp;gt; 0; gap &amp;gt;&amp;gt;= 1) { // times
+        for (int i = gap; i &amp;lt; nums.size(); i++) { // position
+            int temp = nums[i];
+
+            int j = i - gap;
+            for (; j &amp;gt;= 0 &amp;amp;&amp;amp; nums[j] &amp;gt; temp; j -= gap) {
+                nums[j + gap] = nums[j];
+            }
+
+            nums[j + gap] = temp;
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;复杂度分析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;希尔排序的时间复杂度受步长的影响，具体分析在&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F#.E6.AD.A5.E9.95.BF.E5.BA.8F.E5.88.97&quot;&gt;维基百科&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2&gt;5. 归并排序（Merge Sort）&lt;/h2&gt;
+
+&lt;p&gt;归并排序是采用分治法（Divide and Conquer）的一个典型例子。这个排序的特点是把一个数组打散成小数组，然后再把小数组拼凑再排序，直到最终数组有序。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;步骤&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;把当前数组分化成n个单位为1的子数组，然后两两比较合并成单位为2的n/2个子数组&lt;/li&gt;
+&lt;li&gt;继续进行这个过程，按照2的倍数进行子数组的比较合并，直到最终数组有序&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-CPP&quot; data-lang=&quot;CPP&quot;&gt;void merge_array(vector&amp;lt;int&amp;gt; &amp;amp;nums, int b, int m, int e, vector&amp;lt;int&amp;gt; &amp;amp;temp)
+{
+    int lb = b, rb = m, tb = b;
+    while (lb != m &amp;amp;&amp;amp; rb != e)
+        if (nums[lb] &amp;lt; nums[rb])
+            temp[tb++] = nums[lb++];
+        else
+            temp[tb++] = nums[rb++];
+
+    while (lb &amp;lt; m)
+        temp[tb++] = nums[lb++];
+
+    while (rb &amp;lt; e)
+        temp[tb++] = nums[rb++];
+
+    for (int i = b;i &amp;lt; e; i++)
+        nums[i] = temp[i];
+}
+
+void merge_sort(vector&amp;lt;int&amp;gt; &amp;amp;nums, int b, int e, vector&amp;lt;int&amp;gt; &amp;amp;temp)
+{
+    int m = (b + e) / 2;
+    if (m != b) {
+        merge_sort(nums, b, m, temp);
+        merge_sort(nums, m, e, temp);
+        merge_array(nums, b, m, e, temp);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;这个实现中加了一个temp，是和原数组一样大的一个空间，用来临时存放排序后的子数组的。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;复杂度分析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在&lt;code&gt;merge_array&lt;/code&gt;过程中，实际的操作是当前两个子数组的长度，即2m。又因为打散数组是二分的，最终循环执行数是&lt;code&gt;logn&lt;/code&gt;。所以这个算法最终时间复杂度是&lt;code&gt;O(nlogn)&lt;/code&gt;，空间复杂度是&lt;code&gt;O(n)&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2&gt;6. 快速排序（Quick Sort）&lt;/h2&gt;
+
+&lt;p&gt;快速排序也是利用分治法实现的一个排序算法。快速排序和归并排序不同，它不是一半一半的分子数组，而是选择一个基准数，把比这个数小的挪到左边，把比这个数大的移到右边。然后不断对左右两部分也执行相同步骤，直到整个数组有序。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;步骤&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;用一个基准数将数组分成两个子数组&lt;/li&gt;
+&lt;li&gt;将大于基准数的移到右边，小于的移到左边&lt;/li&gt;
+&lt;li&gt;递归的对子数组重复执行1，2，直到整个数组有序&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-CPP&quot; data-lang=&quot;CPP&quot;&gt;void quick_sort(vector&amp;lt;int&amp;gt; &amp;amp;nums, int b, int e, vector&amp;lt;int&amp;gt; &amp;amp;temp)
+{
+    int m = (b + e) / 2;
+    if (m != b) {
+        int lb = b, rb = e - 1;
+
+        for (int i = b; i &amp;lt; e; i++) {
+            if (i == m)
+                continue;
+            if (nums[i] &amp;lt; nums[m])
+                temp[lb++] = nums[i];
+            else
+                temp[rb--] = nums[i];
+        }
+        temp[lb] = nums[m];
+
+        for (int i = b; i &amp;lt; e; i++)
+            nums[i] = temp[i];
+
+        quick_sort(nums, b, lb, temp);
+        quick_sort(nums, lb + 1, e, temp);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;解法2: 不需要辅助空间&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-CPP&quot; data-lang=&quot;CPP&quot;&gt;void quick_sort(vector&amp;lt;int&amp;gt; &amp;amp;nums, int b, int e)
+{
+    if (b &amp;lt; e - 1) {
+        int lb = b, rb = e - 1;
+        while (lb &amp;lt; rb) {
+            while (nums[rb] &amp;gt;= nums[b] &amp;amp;&amp;amp; lb &amp;lt; rb)
+                rb--;
+            while (nums[lb] &amp;lt;= nums[b] &amp;amp;&amp;amp; lb &amp;lt; rb)
+                lb++;
+            swap(nums[lb], nums[rb]);
+        }
+        swap(nums[b], nums[lb]);
+        quick_sort(nums, b, lb);
+        quick_sort(nums, lb + 1, e);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;复杂度分析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;快速排序也是一个不稳定排序，时间复杂度看&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F#.E5.B9.B3.E5.9D.87.E8.A4.87.E9.9B.9C.E5.BA.A6&quot;&gt;维基百科&lt;/a&gt;。空间复杂度是&lt;code&gt;O(n)&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2&gt;7. 堆排序（Heap Sort）&lt;/h2&gt;
+
+&lt;p&gt;堆排序经常用于求一个数组中最大k个元素时。因为堆实际上是一个完全二叉树，所以用它可以用一维数组来表示。因为最大堆的第一位总为当前堆中最大值，所以每次将最大值移除后，调整堆即可获得下一个最大值，通过一遍一遍执行这个过程就可以得到前k大元素，或者使堆有序。&lt;/p&gt;
+
+&lt;p&gt;在了解算法之前，首先了解在一维数组中节点的下标：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;i节点的父节点 parent(i) = floor((i-1)/2) &lt;/li&gt;
+&lt;li&gt;i节点的左子节点 left(i) = 2i + 1&lt;/li&gt;
+&lt;li&gt;i节点的右子节点 right(i) = 2i + 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;步骤&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;构造最大堆（Build Max Heap）：首先将当前元素放入最大堆下一个位置，然后将此元素依次和它的父节点比较，如果大于父节点就和父节点交换，直到比较到根节点。重复执行到最后一个元素。&lt;/li&gt;
+&lt;li&gt;最大堆调整（Max Heapify）：调整最大堆即将根节点移除后重新整理堆。整理方法为将根节点和最后一个节点交换，然后把堆看做n-1长度，将当前根节点逐步移动到其应该在的位置。&lt;/li&gt;
+&lt;li&gt;堆排序（HeapSort）：重复执行2，直到所有根节点都已移除。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-CPP&quot; data-lang=&quot;CPP&quot;&gt;void heap_sort(vector&amp;lt;int&amp;gt; &amp;amp;nums)
+{
+    int n = nums.size();
+    for (int i = n / 2 - 1; i &amp;gt;= 0; i--) { // build max heap
+        max_heapify(nums, i, nums.size() - 1);
+    }
+
+    for (int i = n - 1; i &amp;gt; 0; i--) { // heap sort
+        int temp = nums[i];
+        num[i] = nums[0];
+        num[0] = temp;
+        max_heapify(nums, 0, i);
+    }
+}
+
+void max_heapify(vector&amp;lt;int&amp;gt; &amp;amp;nums, int beg, int end)
+{
+    int curr = beg;
+    int child = curr * 2 + 1;
+    while (child &amp;lt; end) {
+        if (child + 1 &amp;lt; end &amp;amp;&amp;amp; nums[child] &amp;lt; nums[child + 1]) {
+            child++;
+        }
+        if (nums[curr] &amp;lt; nums[child]) {
+            int temp = nums[curr];
+            nums[curr] = nums[child];
+            num[child] = temp;
+            curr = child;
+            child = 2 * curr + 1;
+        } else {
+            break;
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;复杂度分析&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;堆执行一次调整需要&lt;code&gt;O(logn)&lt;/code&gt;的时间，在排序过程中需要遍历所有元素执行堆调整，所以最终时间复杂度是&lt;code&gt;O(nlogn)&lt;/code&gt;。空间复杂度是&lt;code&gt;O(n)&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2&gt;0. 参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;维基百科&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wuchong.me/blog/2014/02/09/algorithm-sort-summary/&quot;&gt;经典排序算法总结与实现&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://segmentfault.com/a/1190000002466215&quot;&gt;堆排序C++实现&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bubkoo.com/2014/01/14/sort-algorithm/heap-sort/&quot;&gt;常见排序算法 - 堆排序 (Heap Sort)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 07 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://liushaoxing.github.io/2015/09/sort-algorithms/</link>
+        <guid isPermaLink="true">http://liushaoxing.github.io/2015/09/sort-algorithms/</guid>
+        
+        <category>算法</category>
+        
+        
+        <category>技术</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>刘少星</title>
+  <meta name="description" content="我叫刘少星(一名在帝都漂了三年的iOS开发工程师)">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="刘少星">
+  <meta name="twitter:description" content="我叫刘少星(一名在帝都漂了三年的iOS开发工程师)">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="刘少星">
+  <meta property="og:description" content="我叫刘少星(一名在帝都漂了三年的iOS开发工程师)">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/page/2/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover " style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星" class="blog-button">刘少星</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <div class="main-post-list hidden">
+
+  <ol class="post-list">
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/01/conflict-between-camel-and-snake-in-laravel/" title="访问 Laravel 关联模型由于名称一致性导致的问题">Laravel 关联模型由于名称一致性导致的问题</a></h2>
+      <p class="excerpt">1. 定义关联模型在Laravel里面，我们可以通过定义以下Model来完成关联查询。class MyPost extends Eloquent {    public function myPostInfo () {        return $this-&gt;hasOne(&#39;MyPostInfo&#39;);    }}class MyPostInfo extends Eloquent {}2. 使用关联模型这里myPostInfo()用的是Camel命名规则，但是我们在读...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2015-01-08 00:00:00 +0800" class="post-list__meta--date date">2015-01-08</time> &#8226; <span class="post-list__meta--tags tags">PHPLaravel</span><a class="btn-border-small" href=/2015/01/conflict-between-camel-and-snake-in-laravel/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2014/12/ioc-and-facade-in-laravel/" title="访问 Laravel 核心：控制反转（Inversion of Control）和门面模式（Facade）">Laravel 核心：控制反转（Inversion of Control）和门面模式（Facade）</a></h2>
+      <p class="excerpt">这两个概念对于 Laravel 的使用者来说应该并不陌生，尤其是当你希望扩展或者替换 Laravel 核心库的时候，理解和合理使用它们可以极大提升 Laravel 的战斗力。这里以创建一个自己的 ServiceProvider 为例理解 Inversion of Control 和 Facade 在 Laravel 中的应用。控制反转（Inversion of Control）什么是 IoC控制反转（Inversion of Control，缩写为IoC），是面向对象编程中的一种设计原则，...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2014-12-06 00:00:00 +0800" class="post-list__meta--date date">2014-12-06</time> &#8226; <span class="post-list__meta--tags tags">PHPLaravel</span><a class="btn-border-small" href=/2014/12/ioc-and-facade-in-laravel/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2014/09/use-old-version-of-brew-php/" title="访问 回退Mac上用Brew安装的PHP版本">回退Mac上用Brew安装的PHP版本</a></h2>
+      <p class="excerpt">昨天随手一点brew upadte &amp; brew upgrade后phpunit出现了各种F，细查下来原来是 php 5.5.17 的一个bug fix 引起的。为了暂时正常使用phpunit，只能回退php的版本。版本切换方式通过brew安装的php可以通过brew link和brew unlink来切换不同版本。例如brew listbrew unlink php56brew link php55大版本可以用brew list来查，如果是小版本的话只能去/usr/local/C...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2014-09-26 00:00:00 +0800" class="post-list__meta--date date">2014-09-26</time> &#8226; <span class="post-list__meta--tags tags">PHPMac</span><a class="btn-border-small" href=/2014/09/use-old-version-of-brew-php/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2014/05/set-environment-variables-of-server-for-php/" title="访问 为PHP设置服务器(Apache/Nginx)环境变量">为PHP设置服务器(Apache/Nginx)环境变量</a></h2>
+      <p class="excerpt">设置环境变量常见的地方为区分开发环境/生产环境，或者定义一些数据库的帐号密码设置Apache环境变量指令设置当前环境变量为DEVSetEnv RUNTIME_ENVIROMENT DEV数据库帐号密码SetEnv MYSQL_USERNAME rootSetEnv MYSQL_PASSWORD root配置文件格式&lt;VirtualHost *:80&gt;    ServerAdmin admin@admin.com    DocumentRoot &quot;/var/www/&q...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2014-05-04 00:00:00 +0800" class="post-list__meta--date date">2014-05-04</time> &#8226; <span class="post-list__meta--tags tags">PHPNginxApache</span><a class="btn-border-small" href=/2014/05/set-environment-variables-of-server-for-php/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2014/04/magic-methods-and-magic-constants-in-php/" title="访问 PHP中的魔术方法和魔术常量简介和使用">PHP中的魔术方法和魔术常量简介和使用</a></h2>
+      <p class="excerpt">有些东西如果不是经常使用，很容易忘记，比如魔术方法和魔术常量。魔术方法(Magic methods)PHP中把以两个下划线__开头的方法称为魔术方法，这些方法在PHP中充当了举足轻重的作用。 魔术方法包括：__construct()，类的构造函数__destruct()，类的析构函数__call()，在对象中调用一个不可访问方法时调用__callStatic()，用静态方式中调用一个不可访问方法时调用__get()，获得一个类的成员变量时调用__set()，设置一个类的成员变量时调用__i...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2014-04-27 00:00:00 +0800" class="post-list__meta--date date">2014-04-27</time> &#8226; <span class="post-list__meta--tags tags">PHP</span><a class="btn-border-small" href=/2014/04/magic-methods-and-magic-constants-in-php/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2014/04/roc-curve/" title="访问 ROC曲线">ROC曲线</a></h2>
+      <p class="excerpt">最近在读的几篇论文中都使用ROC曲线来分析算法的好坏，这里总结一下这个曲线的一些名词和用法。我这里只列举一些很简单的内容，想要掌握详细的用法请移步参考中维基百科链接，那里讲解非常详细。ROC曲线在信号检测理论中，接收者操作特征曲线（receiver operating characteristic curve，或者叫ROC曲线）是一种座标图式的分析工具，用于：选择最佳的信号侦测模型、舍弃次佳的模型。 在同一模型中设定最佳阈值。在做决策时，ROC分析能不受成本／效益的影响，给出客观中立的建议...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2014-04-23 00:00:00 +0800" class="post-list__meta--date date">2014-04-23</time> &#8226; <span class="post-list__meta--tags tags">Concept</span><a class="btn-border-small" href=/2014/04/roc-curve/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2014/04/design-patterns-of-php/" title="访问 设计模式详解及PHP实现">设计模式详解及PHP实现</a></h2>
+      <p class="excerpt">由于工作中需要写一个比较复杂的类库，这个类库需要很高的扩展性、维护性及复用性。为了麻烦现在简单未来，使用设计模式思想来优化类库可以使工作事半功倍，在这里记录一下各种设计模式，总结一下知识，顺便也可以做为自己日后的参考。设计模式（Design Patterns）设计模式（Design pattern）是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。   --百度百科In software enginee...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2014-04-19 00:00:00 +0800" class="post-list__meta--date date">2014-04-19</time> &#8226; <span class="post-list__meta--tags tags">PatternPHP</span><a class="btn-border-small" href=/2014/04/design-patterns-of-php/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2014/04/insert-large-number-of-data-in-mysql/" title="访问 MySQL大量数据插入各种方法性能分析与比较">MySQL大量数据插入各种方法性能分析与比较</a></h2>
+      <p class="excerpt">不管是日常业务数据处理中，还是数据库的导入导出，都可能遇到需要处理大量数据的插入。插入的方式和数据库引擎都会对插入速度造成影响，这篇文章旨在从理论和实践上对各种方法进行分析和比较，方便以后应用中插入方法的选择。插入分析MySQL中插入一个记录需要的时间由下列因素组成，其中的数字表示大约比例：连接：（3）发送查询给服务器：（2）分析查询：（2）插入记录：（1x记录大小）插入索引：（1x索引）关闭：（1）如果我们每插入一条都执行一个SQL语句，那么我们需要执行除了连接和关闭之外的所有步骤N次，...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2014-04-16 00:00:00 +0800" class="post-list__meta--date date">2014-04-16</time> &#8226; <span class="post-list__meta--tags tags">MySQL</span><a class="btn-border-small" href=/2014/04/insert-large-number-of-data-in-mysql/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2014/04/redis-queue-in-laravel/" title="访问 Laravel中使用Redis作为队列系统的工作流程">Laravel中使用Redis作为队列系统的工作流程</a></h2>
+      <p class="excerpt">利用Redis可以很方便的实现一个任务队列，但是在Laravel中，Redis的队列总会出现一个任务多次执行的问题。究其原因是它写死了reserved的时长，也就是如果1分钟后任务没有执行完成，那么这个任务就会被重新放回队列。下面是队列的简单使用和执行原理。设置设置队列使用Redis非常容易，在app/config/queue.php中配置...&#39;default&#39; =&gt; &#39;redis&#39;,...&#39;connections&#39; =&gt; ar...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2014-04-11 00:00:00 +0800" class="post-list__meta--date date">2014-04-11</time> &#8226; <span class="post-list__meta--tags tags">Laravel</span><a class="btn-border-small" href=/2014/04/redis-queue-in-laravel/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2014/03/managing-your-larrvel-queue-by-supervisor/" title="访问 使用Supervisor来管理你的Laravel队列">使用Supervisor来管理你的Laravel队列</a></h2>
+      <p class="excerpt">Laravel官网教程中，并没有提到用它来写CLI应用，即守护进程或者可执行脚本。但是它却提供了更加便捷的队列(Queue)功能。Laravel队列我们在开发应用过程中难免会遇到处理耗时任务的需求，这些任务如果直接在用户的请求中处理，必然会导致页面显示被阻塞。虽然利用fastcgi的一些特性可以先输出页面，后台任务继续执行，但是这样远远不如将任务交给异步队列来处理方便。配置和启动Laravel队列功能为我们提供了一个便捷的方式去处理这些异步任务，配置一个队列只需要以下几步：配置app/co...&hellip;</p>
+      <div class="post-list__meta"><time datetime="2014-03-22 00:00:00 +0800" class="post-list__meta--date date">2014-03-22</time> &#8226; <span class="post-list__meta--tags tags">LaravelPHP</span><a class="btn-border-small" href=/2014/03/managing-your-larrvel-queue-by-supervisor/>继续阅读</a></div>
+      <hr class="post-list__divider" />
+    </li>
+    
+  </ol>
+
+  <hr class="post-list__divider " />
+
+<nav class="pagination" role="navigation">
+    
+        <a class="newer-posts pagination__newer btn btn-small btn-tertiary" href="/#blog">&larr; 最近</a>
+    
+    <span class="pagination__page-number">2 / 7</span>
+    
+        <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/page/3/#blog">更早 &rarr;</a>
+    
+</nav>
+
+
+</div>
+
+            <!-- <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-18 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+ -->
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

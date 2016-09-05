@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>了解GitHub工作流【译】</title>
+  <meta name="description" content="GitHub流是一个轻量级，基于分支的工作流，它使得小组和项目的部署变得标准化。这个向导解释了GitHub流是如何&amp;为什么工作的。">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="了解GitHub工作流【译】">
+  <meta name="twitter:description" content="GitHub流是一个轻量级，基于分支的工作流，它使得小组和项目的部署变得标准化。这个向导解释了GitHub流是如何&amp;为什么工作的。">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="了解GitHub工作流【译】">
+  <meta property="og:description" content="GitHub流是一个轻量级，基于分支的工作流，它使得小组和项目的部署变得标准化。这个向导解释了GitHub流是如何&amp;为什么工作的。">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://liushaoxing.github.io/2014/01/understanding-the-github-workflow/">
+  <link rel="alternate" type="application/rss+xml" title="刘少星" href="http://liushaoxing.github.io/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 刘少星 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="刘少星 logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 刘少星" class="blog-button">刘少星</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">我叫刘少星(一名在帝都漂了三年的iOS开发工程师)</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">欢迎来到我的博客</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+  <!-- Weibo -->
+  <li class="navigation__item">
+    <a href="http://weibo.com/liushaoxing321@163.com" title="@liushaoxing321@163.com 的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/https://www.github.com/liushaoxing321" title="@https://www.github.com/liushaoxing321 的 Github" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+  
+  
+  
+  <!-- Twitter -->
+  <li class="navigation__item">
+    <a href="http://twitter.com/liu_shaoxing@163.com" title="@liu_shaoxing@163.com" target="_blank">
+      <i class='social fa fa-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+  
+
+  
+  <!-- Google Plus -->
+  <li class="navigation__item">
+    <a href="https://plus.google.com/107108267983477358170" rel="author" title="Google+" target="_blank">
+      <i class='social fa fa-google-plus-square'></i>
+      <span class="label">Google Plus</span>
+    </a>
+  </li>
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml/" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:liu_shaoxing@163.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2014-01-30 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2014-01-30</time> &#8226; <span class="post-meta__tags tags">Git</span>
+    </div>
+    <h1 class="post-title">了解GitHub工作流【译】</h1>
+  </header>
+
+  <section class="post">
+    <blockquote>
+<p>GitHub流是一个轻量级，基于分支的工作流，它使得小组和项目的部署变得标准化。这个向导解释了GitHub流是如何&amp;为什么工作的。</p>
+</blockquote>
+
+<p><img src="http://7u2ho6.com1.z0.glb.clouddn.com/tech-github-flow.png" alt="github-flow"></p>
+
+<h2>创建一个分支</h2>
+
+<p>当你工作在一个项目中，你可能会在任何时间产生不同的想法和特性计划--这些都是准备完成的，或者其他不准备完成的。分支的存在可以帮助你管理工作流。</p>
+
+<p>当你在自己的项目中创建一个分支的时候，也就等于创建了一个尝试自己想法的环境。你在这个分支修改的东西不会影响到主分支，所以你可以尽情的测试和提交改变。这些改变直到你的合作伙伴审查过，确保安全才会被合并到主分支中。</p>
+
+<p>分支是Git的一个核心概念，并且GitHub流完全基于这个概念。只有一个规则，<strong>那就是<code>master</code>分支必须是可部署的。</strong></p>
+
+<p>因此，当你在修复bug或者创建新功能时，你的新分支必须创建在master之外。你的分支名称应该是自描述的（如：<code>refactor-authentication</code>，<code>user-content-cache-key</code>，<code>make-retina-avatars</code>），所以其他人可以了解什么正在进行。</p>
+
+<h2>增加提交</h2>
+
+<p>一但你的分支创建完成，就可以进行修改了。不管你进行了增加、修改或者删除一个文件，你都可以进行提交代码，将他们增加到分支中去。这个过程可以保持跟踪你对一个特性分支工作的发展。</p>
+
+<p>提交同样为你的项目创建了一个清晰的历史，这样别人就可以了解你做这些的原因以及内容。每一个提交有一个相关的描述，这个描述可以解释你具体做了什么修改。另外，每一个提交都应该是分开的修改单元。这个使得你可以在发现bug的时候回滚修改，或者你决定朝向不同的方向。</p>
+
+<p>提交描述是非常重要的，尤其因为Git跟踪你的改变并且在他们被推送到服务器上的时候显示他们。通过写出清楚的提交描述，你可以使得别人容易遵从和提供反馈。</p>
+
+<h2>开启一个Pull Request</h2>
+
+<p>Pull Request最初开始于对你的提交的讨论。因为他们紧密集成在Git库下，如果你的请求被接受，所有人可以看到被合并的改变具体包含什么。</p>
+
+<p>你可以开启一个Pull Request在开发过程工任何部分：当你有少量代码，或者你希望分享一些截图或平常的想法，或者当你被卡住希望获得帮助及建议，又或者当你准备好让别人来审查你的工作。通过在请求描述中使用GitHub的 @方式 ，你可以向某一个人或者团队要求反馈，不论他们不在线或者在别的时区。</p>
+
+<p>Pull Request对于开元项目的管理和分享都非常有用。如果你使用一个Fork&amp;Pull模型，Pull Request提供了一个方式来告知项目管理者他们希望关注的改变。如果你使用Shared repository Model，Pull Request有助于开始审查和讨论即将合并到master分支的改变。</p>
+
+<h2>讨论并审核你的代码</h2>
+
+<p>一但一个Pull Request被开启，负责审核代码改变的人们或团队可能会有一些问题或者评论。可能代码风格不符合项目指导，修改缺少单元测试，或者所有修改都做的非常好。Pull Request被设计来促进和不活这种类型的会话。</p>
+
+<p>在对你提交进行讨论和反馈的过程中，你可以继续推送你的分支。如果有人评论你忘了做一些事情，或者有一些bug在你的代码中，你可以在自己分支中修复并且推送这些修改。GitHub将在统一的Pull Request视图中给你显示新的提交和其他额外的反馈。</p>
+
+<p>Pull Request评论用Markdown写成，所以你可以嵌入图片和表情符号，使用pre-formatted的文字块，和高亮的格式。</p>
+
+<h2>合并和部署</h2>
+
+<p>一但你的Pull Request审核通过并且分支通过测试，这些代码就可以被合并到master分支以便部署。如果你需要在合并到GitHub库前进行测试，你可以在本地先进行合并。这些在你推送到库中前都是非常容易控制的。</p>
+
+<p>一但被合并，Pull Request会对你的代码保存一个历史修改记录。因为它们是可搜索的，所以所有人都可以回顾到历史纪录去了解一个决定是为什么或者怎么完成的。</p>
+
+<p>通过在Pull Request的文字中包含某些关键字，你可以关联代码和issues。当你的Pull Request被合并，相关的issues同样会被关闭。比如，输入<code>Closes #32</code>将会关闭库中的32号issue。想要获得更多信息，点<a href="https://help.github.com/articles/closing-issues-via-commit-messages">这里</a>。</p>
+
+<p>原文链接：<a href="http://guides.github.com/overviews/flow/">http://guides.github.com/overviews/flow/</a></p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">最近的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2014/02/apache-and-nginx/" title="link to 从运行原理及使用场景看Apache和Nginx">从运行原理及使用场景看Apache和Nginx</a></h2>
+       <p class="excerpt">用正确的工具，做正确的事情。本文只作为了解Apache和Nginx知识的一个梳理，想详细了解的请阅读文末参考链接中的博文。Web服务器Web服务器也称为WWW(WORLD WIDE WEB)服务器，主要功能是提供网上信息浏览服务。 应用层使用HTTP协议。 HTML文档格式。 浏览器统一资源定位器(URL)。 Web服务器常常以B/S（Browser/Server）方式提供服务。浏览器和服务器的交互方式如下：                 GET /index.php HTTP/1.1 ...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2014-02-15 00:00:00 +0800" class="post-list__meta--date date">2014-02-15</time> &#8226; <span class="post-list__meta--tags tags">ApacheNginx</span><a class="btn-border-small" href=/2014/02/apache-and-nginx/>继续阅读</a></div>
+   </div>
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2014/01/how-to-use-php-socket/" title="link to PHP Socket的使用">PHP Socket的使用</a></h2>
+       <p class="excerpt">最近在做的项目有一项需要耗时任务在后台运行的功能，虽然PHP并不是非常适合做常驻后台的守护进程，但是由于项目主要代码都是基于PHP实现，如果运行在后台的守护进程改换别的语言会非常不方便。所以不可避免会涉及到Web端和Daemon部分的通信，Socket是一个不错的方式。Socket是什么socket的英文原义是“孔”或“插座”。作为BSD UNIX的进程通信机制，取后一种意思。通常也称作&quot;套接字&quot;，用于描述IP地址和端口，是一个通信链的句柄。在Internet上的主机一...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2014-01-25 00:00:00 +0800" class="post-list__meta--date date">2014-01-25</time> &#8226; <span class="post-list__meta--tags tags">PHP</span><a class="btn-border-small" href=/2014/01/how-to-use-php-socket/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://liushaoxing.github.io/2014/01/understanding-the-github-workflow/";
+        this.page.identifier = "/2014/01/understanding-the-github-workflow/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <!-- <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2016-03-18 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2016</span>
+    </footer>
+</section>
+ -->
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>
